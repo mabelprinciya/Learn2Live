@@ -1,0 +1,1282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tax Basics Course | Learn2Live</title>
+
+    <link
+        rel="stylesheet"
+        href="banking.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="theme.css">
+    <script src="auth.js"></script>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <div class="header-content">
+
+        <div class="header-icon">
+            💰
+        </div>
+
+        <div>
+
+            <span class="header-label">
+                LEARN2LIVE • LIFE SKILLS
+            </span>
+
+            <h1>
+                Tax Basics
+            </h1>
+
+            <p>
+                Learn essential tax concepts, taxable income,
+                deductions and tax filing basics.
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     RANDOM TAX FACT
+========================================================= -->
+
+<section class="fact-section">
+
+    <div class="fact-icon">
+        <i class="fa-solid fa-lightbulb"></i>
+    </div>
+
+    <div class="fact-content">
+
+        <span>
+            TAX FACT
+        </span>
+
+        <p id="taxFact">
+            Loading fact...
+        </p>
+
+    </div>
+
+    <button
+        type="button"
+        id="nextFact"
+        aria-label="Show another tax fact"
+    >
+        <i class="fa-solid fa-rotate"></i>
+    </button>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOPIC HEADING
+========================================================= -->
+
+<section class="topic-title">
+
+    <span class="section-label">
+        TAX BASICS
+    </span>
+
+    <h2>
+        Choose a Topic
+    </h2>
+
+    <p>
+        Select a topic to understand important tax concepts
+        and test your knowledge.
+    </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOPIC CARDS
+========================================================= -->
+
+<main class="topic-container">
+
+
+    <!-- =====================================================
+         TAX FUNDAMENTALS
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="taxFundamentalsCard"
+        data-topic="Tax Fundamentals"
+        data-topic-key="taxFundamentals"
+        data-href="tax-Fundamentals.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon tax-fundamentals">
+                📋
+            </div>
+
+            <span class="topic-number">
+                01
+            </span>
+
+        </div>
+
+
+        <h3>
+            Tax Fundamentals
+        </h3>
+
+
+        <p>
+            Learn the basic purpose of taxes, important tax
+            terms and how taxation works.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="taxFundamentalsActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="taxFundamentalsStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="tax-Fundamentals.html"
+                id="taxFundamentalsContinue"
+                class="topic-link"
+            >
+
+                <span id="taxFundamentalsContinueText">
+                    Start Tax Fundamentals
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="tax-Fundamentals.html?mode=review"
+                id="taxFundamentalsReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         INCOME TAX
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="incomeTaxCard"
+        data-topic="Income Tax"
+        data-topic-key="incomeTax"
+        data-href="income-tax.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon income-tax">
+                🧾
+            </div>
+
+            <span class="topic-number">
+                02
+            </span>
+
+        </div>
+
+
+        <h3>
+            Income Tax
+        </h3>
+
+
+        <p>
+            Learn the basics of income tax and how tax can
+            apply to different types of income.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="incomeTaxActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="incomeTaxStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="income-tax.html"
+                id="incomeTaxContinue"
+                class="topic-link"
+            >
+
+                <span id="incomeTaxContinueText">
+                    Start Income Tax
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="income-tax.html?mode=review"
+                id="incomeTaxReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TAXABLE INCOME
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="taxableIncomeCard"
+        data-topic="Taxable Income"
+        data-topic-key="taxableIncome"
+        data-href="taxable-income.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon taxable-income">
+                💵
+            </div>
+
+            <span class="topic-number">
+                03
+            </span>
+
+        </div>
+
+
+        <h3>
+            Taxable Income
+        </h3>
+
+
+        <p>
+            Understand what taxable income means and how
+            income may be considered for tax purposes.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="taxableIncomeActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="taxableIncomeStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="taxable-income.html"
+                id="taxableIncomeContinue"
+                class="topic-link"
+            >
+
+                <span id="taxableIncomeContinueText">
+                    Start Taxable Income
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="taxable-income.html?mode=review"
+                id="taxableIncomeReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TAX DEDUCTIONS
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="taxDeductionsCard"
+        data-topic="Tax Deductions"
+        data-topic-key="taxDeductions"
+        data-href="tax-deductions.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon tax-deductions">
+                ➖
+            </div>
+
+            <span class="topic-number">
+                04
+            </span>
+
+        </div>
+
+
+        <h3>
+            Tax Deductions
+        </h3>
+
+
+        <p>
+            Learn how eligible deductions can reduce taxable
+            income and why proper documentation matters.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="taxDeductionsActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="taxDeductionsStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="tax-deductions.html"
+                id="taxDeductionsContinue"
+                class="topic-link"
+            >
+
+                <span id="taxDeductionsContinueText">
+                    Start Tax Deductions
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="tax-deductions.html?mode=review"
+                id="taxDeductionsReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TAX FILING
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="taxFilingCard"
+        data-topic="Tax Filing"
+        data-topic-key="taxFiling"
+        data-href="tax-filing.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon tax-filing">
+                📤
+            </div>
+
+            <span class="topic-number">
+                05
+            </span>
+
+        </div>
+
+
+        <h3>
+            Tax Filing
+        </h3>
+
+
+        <p>
+            Learn the basic steps involved in preparing and
+            filing a tax return accurately.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="taxFilingActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="taxFilingStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="tax-filing.html"
+                id="taxFilingContinue"
+                class="topic-link"
+            >
+
+                <span id="taxFilingContinueText">
+                    Start Tax Filing
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="tax-filing.html?mode=review"
+                id="taxFilingReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     ALL TOPICS COMPLETED
+========================================================= -->
+
+<section
+    id="certificateSection"
+    style="display:none;"
+>
+
+    <div class="certificate-content">
+
+        <div class="certificate-icon">
+            <i class="fa-solid fa-certificate"></i>
+        </div>
+
+        <h2>
+            All Tax Basics Topics Completed!
+        </h2>
+
+        <p>
+            You have successfully completed all five
+            Tax Basics learning categories.
+        </p>
+
+        <button
+            type="button"
+            id="downloadCertificate"
+            class="certificate-btn"
+        >
+
+            <i class="fa-solid fa-download"></i>
+
+            Download Certificate
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+"use strict";
+
+
+/* =========================================================
+   RANDOM TAX FACTS
+========================================================= */
+
+const taxFacts = [
+
+    "Taxes are compulsory payments collected by governments to fund public services and government activities.",
+
+    "Income tax is generally based on taxable income according to the applicable tax rules.",
+
+    "Taxable income is not always the same as total income because eligible deductions and exemptions may affect the amount considered for tax.",
+
+    "Keeping accurate records of income and eligible expenses can make tax filing easier.",
+
+    "Tax deductions may reduce the amount of income that is subject to tax when the applicable rules allow them.",
+
+    "Tax rules, rates, exemptions and deductions can change, so always check the current official tax guidance.",
+
+    "A tax return is used to report relevant income and other required information to the tax authority.",
+
+    "Important documents such as income statements, receipts and deduction records should be kept safely when required.",
+
+    "Filing a tax return accurately helps reduce the risk of errors and potential compliance problems.",
+
+    "Different types of income may be subject to different tax rules depending on the applicable tax system.",
+
+    "Before claiming a deduction, check whether you meet the conditions required under the applicable tax rules.",
+
+    "Never share sensitive tax-account passwords, OTPs or authentication details with unknown people.",
+
+    "Use official government tax portals and verified sources when submitting tax-related information online.",
+
+    "Review your tax return carefully before submitting it to make sure the information entered is accurate.",
+
+    "Tax filing deadlines can vary depending on the taxpayer and applicable tax rules, so check the current deadline.",
+
+    "Good financial record keeping can help you identify income, deductions and documents needed during tax filing."
+
+];
+
+
+const factElement =
+    document.getElementById("taxFact");
+
+
+const nextFactButton =
+    document.getElementById("nextFact");
+
+
+let currentFact = -1;
+
+
+function showRandomFact() {
+
+    let randomIndex;
+
+
+    do {
+
+        randomIndex =
+            Math.floor(
+                Math.random() *
+                taxFacts.length
+            );
+
+    }
+
+    while (
+        taxFacts.length > 1 &&
+        randomIndex === currentFact
+    );
+
+
+    currentFact =
+        randomIndex;
+
+
+    factElement.textContent =
+        taxFacts[currentFact];
+
+}
+
+
+nextFactButton.addEventListener(
+    "click",
+    showRandomFact
+);
+
+
+showRandomFact();
+
+
+
+/* =========================================================
+   LOGGED-IN USER
+========================================================= */
+
+const loggedInEmail =
+    localStorage.getItem(
+        "loggedInEmail"
+    );
+
+
+
+/* =========================================================
+   TOPIC CONFIGURATION
+========================================================= */
+
+const topics = [
+
+    {
+        key: "taxFundamentals",
+        name: "Tax Fundamentals",
+        page: "tax-Fundamentals.html"
+    },
+
+    {
+        key: "incomeTax",
+        name: "Income Tax",
+        page: "income-tax.html"
+    },
+
+    {
+        key: "taxableIncome",
+        name: "Taxable Income",
+        page: "taxable-income.html"
+    },
+
+    {
+        key: "taxDeductions",
+        name: "Tax Deductions",
+        page: "tax-deductions.html"
+    },
+
+    {
+        key: "taxFiling",
+        name: "Tax Filing",
+        page: "tax-filing.html"
+    }
+
+];
+
+
+
+/* =========================================================
+   STORAGE KEY
+========================================================= */
+
+function getTopicStorageKey(
+    topicKey,
+    type
+) {
+
+    if (!loggedInEmail) {
+
+        return null;
+
+    }
+
+
+    return (
+        "learn2live_" +
+        topicKey +
+        "_" +
+        type +
+        "_" +
+        loggedInEmail
+    );
+
+}
+
+
+
+/* =========================================================
+   CHECK COMPLETED
+========================================================= */
+
+function isTopicCompleted(
+    topicKey
+) {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    const completedKey =
+        getTopicStorageKey(
+            topicKey,
+            "completed"
+        );
+
+
+    return (
+        localStorage.getItem(
+            completedKey
+        ) === "true"
+    );
+
+}
+
+
+
+/* =========================================================
+   CHECK PROGRESS
+========================================================= */
+
+function hasTopicProgress(
+    topicKey
+) {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    const progressKey =
+        getTopicStorageKey(
+            topicKey,
+            "progress"
+        );
+
+
+    const savedProgress =
+        localStorage.getItem(
+            progressKey
+        );
+
+
+    if (!savedProgress) {
+
+        return false;
+
+    }
+
+
+    try {
+
+        const progress =
+            JSON.parse(
+                savedProgress
+            );
+
+
+        return (
+            progress &&
+            typeof progress === "object"
+        );
+
+    }
+
+    catch (error) {
+
+        return false;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   UPDATE TOPIC CARD
+========================================================= */
+
+function updateTopicCard(
+    topic
+) {
+
+    const key =
+        topic.key;
+
+
+    const status =
+        document.getElementById(
+            key + "Status"
+        );
+
+
+    const continueButton =
+        document.getElementById(
+            key + "Continue"
+        );
+
+
+    const continueText =
+        document.getElementById(
+            key + "ContinueText"
+        );
+
+
+    const reviewButton =
+        document.getElementById(
+            key + "Review"
+        );
+
+
+    if (
+        !status ||
+        !continueButton ||
+        !continueText ||
+        !reviewButton
+    ) {
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    status.style.display =
+        "none";
+
+    reviewButton.style.display =
+        "none";
+
+    continueButton.style.display =
+        "inline-flex";
+
+
+
+    /* =====================================================
+       NO LOGIN
+    ====================================================== */
+
+    if (!loggedInEmail) {
+
+        continueText.textContent =
+            "Start " + topic.name;
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       COMPLETED
+    ====================================================== */
+
+    if (
+        isTopicCompleted(
+            key
+        )
+    ) {
+
+        status.style.display =
+            "inline-flex";
+
+        continueButton.style.display =
+            "none";
+
+        reviewButton.style.display =
+            "inline-flex";
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       RESUME
+    ====================================================== */
+
+    if (
+        hasTopicProgress(
+            key
+        )
+    ) {
+
+        continueText.textContent =
+            "Resume " + topic.name;
+
+    }
+
+    else {
+
+        continueText.textContent =
+            "Start " + topic.name;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CHECK ALL TOPICS
+========================================================= */
+
+function areAllTopicsCompleted() {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    return topics.every(
+        function(topic) {
+
+            return isTopicCompleted(
+                topic.key
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   CERTIFICATE SECTION
+========================================================= */
+
+function updateCertificateSection() {
+
+    const section =
+        document.getElementById(
+            "certificateSection"
+        );
+
+
+    if (!section) {
+
+        return;
+
+    }
+
+
+    if (
+        areAllTopicsCompleted()
+    ) {
+
+        section.style.display =
+            "block";
+
+    }
+
+    else {
+
+        section.style.display =
+            "none";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   UPDATE EVERYTHING
+========================================================= */
+
+function updateAllTopics() {
+
+    topics.forEach(
+        function(topic) {
+
+            updateTopicCard(
+                topic
+            );
+
+        }
+    );
+
+
+    updateCertificateSection();
+
+}
+
+
+updateAllTopics();
+
+
+
+/* =========================================================
+   CARD CLICK
+========================================================= */
+
+document.querySelectorAll(
+    ".topic-card"
+).forEach(
+    function(card) {
+
+        card.addEventListener(
+            "click",
+            function(event) {
+
+                /*
+                 * Do not interfere with
+                 * Start / Resume / Review.
+                 */
+
+                if (
+                    event.target.closest(
+                        "a, button"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                const page =
+                    card.dataset.href;
+
+
+                if (page) {
+
+                    window.location.href =
+                        page;
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   CERTIFICATE BUTTON
+========================================================= */
+
+const downloadCertificate =
+    document.getElementById(
+        "downloadCertificate"
+    );
+
+
+if (downloadCertificate) {
+
+    downloadCertificate.addEventListener(
+        "click",
+        function() {
+
+            /*
+             * Safety check:
+             * all 5 must be completed.
+             */
+
+            if (
+                !areAllTopicsCompleted()
+            ) {
+
+                alert(
+                    "Please complete all Tax Basics topics first."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * OPEN CERTIFICATE PAGE
+             */
+
+            window.location.href =
+                "certificate.html";
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   REFRESH WHEN RETURNING
+========================================================= */
+
+window.addEventListener(
+    "pageshow",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+window.addEventListener(
+    "focus",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+window.addEventListener(
+    "storage",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>

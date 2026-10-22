@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications - Learn2Live</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+
+    <link rel="stylesheet"
+          href="notification.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-image">
+                <img src="logo.png" alt="Learn2Live">
+            </div>
+
+            <div class="logo-text">
+
+                <strong>LEARN2LIVE</strong>
+
+                <span>LEARN • GROW • LEAD</span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <span class="nav-label">
+                MAIN MENU
+            </span>
+
+
+            <a href="dashboard.html"
+               class="nav-item">
+
+                <span class="nav-icon">
+                    <i class="ri-dashboard-line"></i>
+                </span>
+
+                Dashboard
+
+            </a>
+
+
+            <a href="learning.html"
+               class="nav-item">
+
+                <span class="nav-icon">
+                    <i class="ri-book-open-line"></i>
+                </span>
+
+                My Learning
+
+            </a>
+
+
+            <a href="certificate.html"
+               class="nav-item">
+
+                <span class="nav-icon">
+                    <i class="ri-award-line"></i>
+                </span>
+
+                Certificates
+
+            </a>
+
+
+            <span class="nav-label second-label">
+                ACCOUNT
+            </span>
+
+
+            <a href="notification.html"
+               class="nav-item active">
+
+                <span class="nav-icon">
+                    <i class="ri-notification-3-line"></i>
+                </span>
+
+                Notifications
+
+            </a>
+
+
+            <a href="profile.html"
+               class="nav-item">
+
+                <span class="nav-icon">
+                    <i class="ri-user-line"></i>
+                </span>
+
+                Profile
+
+            </a>
+
+
+            <a href="#"
+               class="nav-item logout-link"
+               onclick="showLogoutModal(); return false;">
+
+                <span class="nav-icon">
+                    <i class="ri-logout-box-r-line"></i>
+                </span>
+
+                Logout
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+
+                <div class="help-icon">
+                    <i class="ri-question-line"></i>
+                </div>
+
+                <div>
+
+                    <strong>Need Help?</strong>
+
+                    <span>
+                        We're here to help you learn.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div class="sidebar-overlay"
+         id="sidebarOverlay"></div>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="top-header">
+
+
+            <button class="mobile-menu-btn"
+                    id="mobileMenuBtn">
+
+                <i class="ri-menu-line"></i>
+
+            </button>
+
+
+            <div class="header-title">
+
+                <span class="header-small">
+                    LEARN2LIVE
+                </span>
+
+                <h1>
+                    Notifications
+                </h1>
+
+            </div>
+
+
+            <div class="header-actions">
+
+
+                <button class="icon-btn"
+                        title="Notifications">
+
+                    <i class="ri-notification-3-line"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <a href="profile.html"
+                   class="header-profile">
+
+                    <div class="profile-avatar">
+
+                        <img id="headerAvatarImage"
+                             src=""
+                             alt="Profile"
+                             style="display:none;">
+
+                        <span id="headerAvatarInitials">
+                            U
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-details">
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+
+                    <i class="ri-arrow-down-s-line profile-arrow"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             NOTIFICATION CONTENT
+        ================================================== -->
+
+        <section class="notification-page">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        STAY UPDATED
+                    </span>
+
+                    <h2>
+                        Latest Notifications
+                    </h2>
+
+                </div>
+
+
+                <div class="section-count"
+                     id="notificationCount">
+
+                    0 Notifications
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 NOTIFICATION LIST
+            ================================================== -->
+
+            <div class="notification-list"
+                 id="notificationList">
+
+
+                <!-- Loading -->
+
+                <div class="notification-loading"
+                     id="notificationLoading">
+
+                    <div class="notification-loading-icon">
+
+                        <i class="ri-loader-4-line"></i>
+
+                    </div>
+
+                    <h3>
+                        Loading Notifications
+                    </h3>
+
+                    <p>
+                        Please wait while we get the latest updates.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EMPTY STATE
+            ================================================== -->
+
+            <div class="empty-state"
+                 id="emptyNotification"
+                 style="display:none;">
+
+                <div class="empty-icon">
+
+                    <i class="ri-notification-off-line"></i>
+
+                </div>
+
+                <h3>
+                    No Notifications
+                </h3>
+
+                <p>
+                    You don't have any notifications right now.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ERROR STATE
+            ================================================== -->
+
+            <div class="empty-state notification-error"
+                 id="notificationError"
+                 style="display:none;">
+
+                <div class="empty-icon">
+
+                    <i class="ri-error-warning-line"></i>
+
+                </div>
+
+                <h3>
+                    Unable to Load Notifications
+                </h3>
+
+                <p>
+                    Something went wrong. Please try again later.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="dashboard-footer">
+
+            <div>
+
+                <strong>
+                    Learn2Live
+                </strong>
+
+                <span>
+                    Learn • Grow • Lead
+                </span>
+
+            </div>
+
+            <span>
+                © 2026 Learn2Live. All rights reserved.
+            </span>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     LOGOUT MODAL
+========================================================= -->
+
+<div class="logout-overlay"
+     id="logoutOverlay">
+
+
+    <div class="logout-modal">
+
+
+        <div class="logout-icon">
+
+            <i class="ri-logout-box-r-line"></i>
+
+        </div>
+
+
+        <h2>
+            Logout?
+        </h2>
+
+
+        <p>
+            Are you sure you want to logout from Learn2Live?
+        </p>
+
+
+        <div class="logout-actions">
+
+            <button class="cancel-btn"
+                    onclick="hideLogoutModal()">
+
+                Cancel
+
+            </button>
+
+
+            <button class="confirm-logout-btn"
+                    onclick="confirmLogout()">
+
+                Logout
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<script src="auth.js"></script>
+<script src="notification.js"></script>
+
+</body>
+
+</html>

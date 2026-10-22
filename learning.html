@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Learn2Live - My Learning</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         LEARNING CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="learning.css"
+    >
+
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="theme.css">
+    <script src="auth.js"></script>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     DASHBOARD LAYOUT
+========================================================= -->
+
+<div class="dashboard-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <!-- =================================================
+             LOGO
+        ================================================== -->
+
+        <div
+            class="sidebar-logo"
+            id="learn2liveLogo"
+        >
+
+            <div class="logo-image">
+
+                <img
+                    src="logo.png"
+                    alt="Learn2Live Logo"
+                >
+
+            </div>
+
+
+            <div class="logo-text">
+
+                <strong>
+                    Learn2Live
+                </strong>
+
+                <span>
+                    Life Skills
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav class="sidebar-nav">
+
+
+            <div class="nav-label">
+                MAIN MENU
+            </div>
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <a
+                href="dashboard.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 MY LEARNING
+            ================================================== -->
+
+            <a
+                href="learning.html"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </span>
+
+                <span>
+                    My Learning
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 MY CERTIFICATES
+            ================================================== -->
+
+            <a
+                href="mycertificates.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-certificate"></i>
+
+                </span>
+
+                <span>
+                    My Certificates
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 ACCOUNT
+            ================================================== -->
+
+            <div class="nav-label second-label">
+                ACCOUNT
+            </div>
+
+
+
+            <!-- PROFILE -->
+
+            <a
+                href="profile.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+                <span>
+                    Profile
+                </span>
+
+            </a>
+
+
+
+            <!-- LOGOUT -->
+
+            <a
+                href="#"
+                class="nav-item logout-link"
+                id="logoutBtn"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="sidebar-bottom">
+
+
+            <div class="sidebar-help">
+
+
+                <div class="help-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Keep Learning
+                    </strong>
+
+                    <span>
+                        Build one skill at a time.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="top-header">
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                type="button"
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open Menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- PAGE TITLE -->
+
+            <div class="header-title">
+
+                <span class="header-small">
+                    LEARN2LIVE
+                </span>
+
+                <h1>
+                    My Learning
+                </h1>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 HEADER ACTIONS
+            ================================================== -->
+
+            <div class="header-actions">
+
+
+                <!-- =================================================
+                     NOTIFICATION
+                ================================================== -->
+
+                <a
+                    href="notification.html"
+                    class="icon-btn notification-link"
+                    id="notificationBtn"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+
+                    <span
+                        class="notification-dot"
+                        id="notificationDot"
+                    ></span>
+
+                </a>
+
+
+
+                <!-- =================================================
+                     PROFILE
+                ================================================== -->
+
+                <a
+                    href="profile.html"
+                    class="header-profile"
+                >
+
+
+                    <div
+                        class="profile-avatar"
+                        id="profileInitials"
+                    >
+
+                        <!-- PROFILE PHOTO -->
+
+                        <img
+                            id="headerAvatarImage"
+                            src=""
+                            alt="Profile Photo"
+                            style="display:none;"
+                        >
+
+
+                        <!-- INITIALS FALLBACK -->
+
+                        <span id="headerAvatarInitials">
+                            U
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- USER DETAILS -->
+
+                    <div class="profile-details">
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <span>
+                            Learner
+                        </span>
+
+                    </div>
+
+
+
+                    <i
+                        class="fa-solid fa-chevron-down profile-arrow"
+                    ></i>
+
+
+                </a>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             LEARNING INTRO
+        ================================================== -->
+
+        <section class="learning-intro">
+
+
+            <div class="intro-content">
+
+
+                <span class="intro-label">
+                    YOUR LEARNING JOURNEY
+                </span>
+
+
+                <h2>
+                    Keep learning, keep growing.
+                </h2>
+
+
+                <p>
+                    Continue the skills you started,
+                    review completed courses, and
+                    discover what you can learn next.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="intro-icon">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             LEARNING SUMMARY
+        ================================================== -->
+
+        <section class="learning-summary">
+
+
+            <!-- IN PROGRESS -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon blue">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        In Progress
+                    </span>
+
+                    <strong id="inProgressCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COMPLETED -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <strong id="completedCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NOT STARTED -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon gray">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Not Started
+                    </span>
+
+                    <strong id="notStartedCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- OVERALL PROGRESS -->
+
+            <div class="summary-card">
+
+                <div class="summary-icon navy">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Overall Progress
+                    </span>
+
+                    <strong id="overallLearningProgress">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             IN PROGRESS
+        ================================================== -->
+
+        <section class="learning-section">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+                    <span>
+                        KEEP GOING
+                    </span>
+
+                    <h2>
+                        In Progress
+                    </h2>
+
+                </div>
+
+
+                <div class="section-count">
+
+                    <span id="inProgressLabel">
+                        0 courses
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div
+                class="learning-grid"
+                id="inProgressContainer"
+            >
+
+                <!-- JAVASCRIPT WILL LOAD COURSES -->
+
+            </div>
+
+
+
+            <div
+                class="empty-state"
+                id="inProgressEmpty"
+                style="display:none;"
+            >
+
+                <div class="empty-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+
+                <h3>
+                    No courses in progress
+                </h3>
+
+
+                <p>
+                    Start learning a skill and it
+                    will appear here.
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             COMPLETED
+        ================================================== -->
+
+        <section
+            class="learning-section completed-section"
+        >
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+                    <span>
+                        YOUR ACHIEVEMENTS
+                    </span>
+
+
+                    <h2>
+                        Completed
+                    </h2>
+
+                </div>
+
+
+                <div class="section-count completed-count">
+
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+
+                    <span id="completedLabel">
+                        0 courses
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div
+                class="learning-grid"
+                id="completedContainer"
+            >
+
+                <!-- JAVASCRIPT WILL LOAD COURSES -->
+
+            </div>
+
+
+
+            <div
+                class="empty-state"
+                id="completedEmpty"
+                style="display:none;"
+            >
+
+                <div class="empty-icon">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                </div>
+
+
+                <h3>
+                    No completed courses yet
+                </h3>
+
+
+                <p>
+                    Complete your first course and
+                    your achievement will appear here.
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             NOT STARTED
+        ================================================== -->
+
+        <section class="learning-section">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+                    <span>
+                        READY TO LEARN
+                    </span>
+
+
+                    <h2>
+                        Not Started
+                    </h2>
+
+                </div>
+
+
+                <div class="section-count">
+
+                    <span id="notStartedLabel">
+                        0 courses
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div
+                class="learning-grid"
+                id="notStartedContainer"
+            >
+
+                <!-- JAVASCRIPT WILL LOAD COURSES -->
+
+            </div>
+
+
+
+            <div
+                class="empty-state"
+                id="notStartedEmpty"
+                style="display:none;"
+            >
+
+                <div class="empty-icon">
+
+                    <i class="fa-solid fa-compass"></i>
+
+                </div>
+
+
+                <h3>
+                    You are all caught up
+                </h3>
+
+
+                <p>
+                    You have started every available
+                    learning category.
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="dashboard-footer">
+
+
+            <div>
+
+                <strong>
+                    Learn2Live
+                </strong>
+
+
+                <span>
+                    Practical skills for everyday life.
+                </span>
+
+
+            </div>
+
+
+            <span>
+                © 2026 Learn2Live
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     MOBILE SIDEBAR OVERLAY
+========================================================= -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+
+<!-- =========================================================
+     LOGOUT MODAL
+========================================================= -->
+
+<div
+    class="logout-overlay"
+    id="logoutOverlay"
+>
+
+
+    <div class="logout-modal">
+
+
+        <div class="logout-icon">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+        </div>
+
+
+        <h2>
+            Logout
+        </h2>
+
+
+        <p>
+            Are you sure you want to logout?
+        </p>
+
+
+        <div class="logout-actions">
+
+
+            <button
+                type="button"
+                class="cancel-btn"
+                id="cancelLogout"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                class="confirm-logout-btn"
+                id="confirmLogout"
+            >
+                Logout
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     LEARNING JAVASCRIPT
+========================================================= -->
+
+<script src="learning.js"></script>
+
+
+</body>
+
+</html>

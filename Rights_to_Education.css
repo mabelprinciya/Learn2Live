@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    padding: 40px;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+    color: #0b1736;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #0b1736;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+    color: #222;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+ol,
+ul {
+    padding-left: 25px;
+    line-height: 2;
+}
+
+li {
+    color: #222;
+    font-weight: 500;
+}
+
+li strong {
+    color: #0b1736;
+}
+
+
+/* =========================
+   YOUTUBE VIDEO
+========================= */
+
+.video-wrapper {
+    width: 800px;
+    max-width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    margin: 15px auto;
+
+    background: #000;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    display: block;
+}
+
+
+/* =========================
+   QUIZ SECTION
+========================= */
+
+.quiz-section {
+    text-align: center;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.quiz-icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+
+    text-align: center;
+}
+
+.quiz-section h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+
+    text-align: center;
+}
+
+.quiz-section p {
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* =========================
+   START QUIZ BUTTON
+========================= */
+
+.start-quiz-btn {
+    display: inline-block;
+
+    margin: 10px auto 0;
+
+    background: #2454ff;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 28px;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.start-quiz-btn:hover {
+    background: #0b1736;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   COMPLETION SECTION
+========================= */
+
+.completion-section {
+    text-align: center;
+
+    border: 2px solid #22c55e;
+}
+
+.completion-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.completion-section h2 {
+    color: #166534;
+}
+
+.completion-section p {
+    margin: 12px 0 20px;
+}
+
+
+/* =========================
+   COMPLETED BADGE
+========================= */
+
+.completed-badge {
+    display: inline-block;
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    font-weight: 600;
+
+    pointer-events: none;
+
+    cursor: default;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .video-wrapper {
+        width: 100%;
+    }
+
+    .quiz-section {
+        padding: 25px;
+    }
+
+    .quiz-section h2 {
+        font-size: 23px;
+    }
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    padding: 40px;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+    color: #0b1736;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #0b1736;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+    color: #222;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+ol,
+ul {
+    padding-left: 25px;
+    line-height: 2;
+}
+
+li {
+    color: #222;
+    font-weight: 500;
+}
+
+li strong {
+    color: #0b1736;
+}
+
+
+/* =========================
+   YOUTUBE VIDEO
+========================= */
+
+.video-wrapper {
+    width: 800px;
+    max-width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    margin: 15px auto;
+
+    background: #000;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    display: block;
+}
+
+
+/* =========================
+   QUIZ SECTION
+========================= */
+
+.quiz-section {
+    text-align: center;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.quiz-icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+
+    text-align: center;
+}
+
+.quiz-section h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+
+    text-align: center;
+}
+
+.quiz-section p {
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* =========================
+   START QUIZ BUTTON
+========================= */
+
+.start-quiz-btn {
+    display: inline-block;
+
+    margin: 10px auto 0;
+
+    background: #2454ff;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 28px;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.start-quiz-btn:hover {
+    background: #0b1736;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   COMPLETION SECTION
+========================= */
+
+.completion-section {
+    text-align: center;
+
+    border: 2px solid #22c55e;
+}
+
+.completion-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.completion-section h2 {
+    color: #166534;
+}
+
+.completion-section p {
+    margin: 12px 0 20px;
+}
+
+
+/* =========================
+   COMPLETED BADGE
+========================= */
+
+.completed-badge {
+    display: inline-block;
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    font-weight: 600;
+
+    pointer-events: none;
+
+    cursor: default;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .video-wrapper {
+        width: 100%;
+    }
+
+    .quiz-section {
+        padding: 25px;
+    }
+
+    .quiz-section h2 {
+        font-size: 23px;
+    }
+}

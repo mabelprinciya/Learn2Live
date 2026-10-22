@@ -1,0 +1,34 @@
+/* =====================================================
+   LEARN2LIVE - GLOBAL THEME (theme.css)
+   Loaded LAST on every page => one font, one palette.
+===================================================== */
+:root {
+    --l2l-navy: #0b1736;
+    --l2l-navy-light: #16254d;
+    --l2l-blue: #2454ff;
+    --l2l-blue-dark: #1741d1;
+    --l2l-blue-light: #edf2ff;
+    --l2l-blue-soft: #f1f4ff;
+    --l2l-bg: #f5f7fa;
+    --l2l-text: #222222;
+    --l2l-muted: #777777;
+    --l2l-font: "Poppins", -apple-system, "Segoe UI", sans-serif;
+}
+
+html, body {
+    font-family: var(--l2l-font);
+    background-color: var(--l2l-bg);
+    color: var(--l2l-text);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* one font for all text (icons & certificate excluded) */
+body :where(h1, h2, h3, h4, h5, h6, p, a, li, td, th, label,
+            button, input, select, textarea, small, strong, span, div):not([class*="fa-"]):not(.fa):not([class*="cert"]) {
+    font-family: var(--l2l-font);
+}
+
+h1, h2, h3, h4, h5, h6 { color: var(--l2l-navy); }
+a { color: var(--l2l-blue); }
+
+button, input, select, textarea { font-family: var(--l2l-font); }

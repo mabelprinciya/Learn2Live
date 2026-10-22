@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Learn2Live | Profile</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         PROFILE CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="profile.css"
+    >
+
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="theme.css">
+    <script src="auth.js"></script>
+</head>
+
+
+<body>
+
+<div class="profile-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <div
+            class="sidebar-logo"
+            id="learn2liveLogo"
+        >
+
+            <div class="logo-image">
+
+                <img
+                    src="logo.png"
+                    alt="Learn2Live Logo"
+                >
+
+            </div>
+
+
+            <div class="logo-text">
+
+                <strong>
+                    Learn2Live
+                </strong>
+
+                <span>
+                    Life Skills Hub
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <div class="nav-label">
+                MAIN MENU
+            </div>
+
+
+            <a
+                href="dashboard.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-house"></i>
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="learning.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </span>
+
+                <span>
+                    My Learning
+                </span>
+
+            </a>
+
+
+            <a
+                href="mycertificates.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-certificate"></i>
+                </span>
+
+                <span>
+                    My Certificates
+                </span>
+
+            </a>
+
+
+            <div class="nav-label second-label">
+                ACCOUNT
+            </div>
+
+
+            <a
+                href="profile.html"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                <span>
+                    Profile
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item logout-link"
+                id="logoutBtn"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+
+                <div class="help-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Keep Learning
+                    </strong>
+
+                    <span>
+                        Build one skill at a time.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="top-header">
+
+            <div class="header-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open Menu"
+                >
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <div class="header-title">
+
+                    <span class="header-small">
+                        LEARN2LIVE
+                    </span>
+
+                    <h1>
+                        My Profile
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="notification.html"
+                    class="icon-btn notification-link"
+                    id="notificationBtn"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span
+                        class="notification-dot"
+                        id="notificationDot"
+                    ></span>
+
+                </a>
+
+
+                <!-- PROFILE -->
+
+                <a
+                    href="profile.html"
+                    class="header-profile"
+                >
+
+                    <div
+                        class="profile-avatar"
+                        id="headerAvatar"
+                    >
+
+                        <img
+                            id="headerAvatarImage"
+                            src=""
+                            alt="Profile Photo"
+                            style="display:none;"
+                        >
+
+                        <span id="headerInitials">
+                            U
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-details">
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <span>
+                            Learner
+                        </span>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PROFILE HERO
+        ================================================== -->
+
+        <section class="profile-hero">
+
+            <div class="profile-hero-left">
+
+
+                <div class="profile-photo-wrapper">
+
+                    <div class="profile-photo">
+
+                        <img
+                            id="profileAvatar"
+                            src=""
+                            alt="Profile Photo"
+                            style="display:none;"
+                        >
+
+                        <span id="profileInitials">
+                            U
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="change-photo-btn"
+                        id="changePhotoBtn"
+                        aria-label="Change profile photo"
+                    >
+
+                        <i class="fa-solid fa-camera"></i>
+
+                    </button>
+
+
+                    <input
+                        type="file"
+                        id="profilePhotoInput"
+                        accept="image/*"
+                        hidden
+                    >
+
+                </div>
+
+
+                <div class="profile-main-info">
+
+                    <span class="profile-welcome">
+                        Welcome back 👋
+                    </span>
+
+
+                    <h2 id="profileName">
+                        User Name
+                    </h2>
+
+
+                    <p
+                        class="profile-username"
+                        id="profileUsername"
+                    >
+                        @username
+                    </p>
+
+
+                    <p
+                        class="profile-bio"
+                        id="profileBio"
+                    >
+                        Keep learning. Keep growing.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="primary-btn"
+                id="editProfileBtn"
+            >
+
+                <i class="fa-solid fa-pen"></i>
+
+                <span>
+                    Edit Profile
+                </span>
+
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+             LEARNING POINTS
+        ================================================== -->
+
+        <section class="learning-points-card">
+
+            <div class="learning-points-content">
+
+                <div class="learning-points-icon">
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
+
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        YOUR LEARNING POWER
+                    </span>
+
+
+                    <h3>
+
+                        <span id="learnPoints">
+                            0
+                        </span>
+
+                        LearnPoints
+
+                    </h3>
+
+
+                    <p>
+                        Every quiz you complete helps you grow.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-level">
+
+                <span>
+                    Level
+                </span>
+
+                <strong id="learningLevel">
+                    Beginner
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LEARNING OVERVIEW
+        ================================================== -->
+
+        <section class="section-block">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        LEARNING OVERVIEW
+                    </span>
+
+                    <h2>
+                        Your Progress
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+
+                <!-- COMPLETED -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </div>
+
+
+                    <div class="stat-info">
+
+                        <span>
+                            Quizzes Completed
+                        </span>
+
+                        <strong id="quizCompletedCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORIES -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+
+                    <div class="stat-info">
+
+                        <span>
+                            Categories Completed
+                        </span>
+
+                        <strong id="quizPassedCount">
+                            0 / 6
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SCORE -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+
+
+                    <div class="stat-info">
+
+                        <span>
+                            Average Progress
+                        </span>
+
+                        <strong id="averageScore">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CERTIFICATE -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon gold">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+
+
+                    <div class="stat-info">
+
+                        <span>
+                            Certificates
+                        </span>
+
+                        <strong id="certificateCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LEARNING JOURNEY
+        ================================================== -->
+
+        <section class="journey-card">
+
+            <div class="journey-header">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        YOUR JOURNEY
+                    </span>
+
+                    <h2>
+                        Keep Moving Forward
+                    </h2>
+
+                    <p>
+                        Complete more skills to unlock new learning stages.
+                    </p>
+
+                </div>
+
+
+                <div class="journey-stage">
+
+                    <i class="fa-solid fa-compass"></i>
+
+                    <span id="journeyStage">
+                        Beginner
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="journey-track">
+
+                <div class="journey-line">
+
+                    <div
+                        class="journey-progress"
+                        id="journeyProgress"
+                    ></div>
+
+                </div>
+
+
+                <div class="journey-steps">
+
+
+                    <div class="journey-step active">
+
+                        <div class="journey-dot">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+
+                        <span>
+                            Beginner
+                        </span>
+
+                    </div>
+
+
+                    <div class="journey-step">
+
+                        <div class="journey-dot">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+
+                        <span>
+                            Explorer
+                        </span>
+
+                    </div>
+
+
+                    <div class="journey-step">
+
+                        <div class="journey-dot">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+
+                        <span>
+                            Skill Builder
+                        </span>
+
+                    </div>
+
+
+                    <div class="journey-step">
+
+                        <div class="journey-dot">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+
+                        <span>
+                            Knowledge Seeker
+                        </span>
+
+                    </div>
+
+
+                    <div class="journey-step">
+
+                        <div class="journey-dot">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <span>
+                            Life Ready
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DAILY MISSION
+        ================================================== -->
+
+        <section class="daily-mission-card">
+
+            <div class="mission-icon">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+
+
+            <div class="mission-content">
+
+                <span class="section-eyebrow">
+                    TODAY'S MISSION
+                </span>
+
+                <h3>
+                    Build one new life skill today.
+                </h3>
+
+                <p>
+                    Complete a quiz and keep your learning journey moving.
+                </p>
+
+
+                <div class="mission-progress">
+
+                    <div class="mission-progress-bar">
+
+                        <span
+                            id="missionProgressBar"
+                            style="width:0%;"
+                        ></span>
+
+                    </div>
+
+
+                    <small id="missionProgressText">
+                        0 / 1 completed
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="mission-reward">
+
+                <i class="fa-solid fa-sparkles"></i>
+
+                <strong>
+                    +10
+                </strong>
+
+                <span>
+                    LearnPoints
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CATEGORY PROGRESS
+        ================================================== -->
+
+        <section class="content-card category-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        SKILL DEVELOPMENT
+                    </span>
+
+                    <h2>
+                        Category Progress
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-chart-column"></i>
+
+            </div>
+
+
+            <div class="category-list">
+
+
+                <!-- FIRST AID -->
+
+                <div class="category-item">
+
+                    <div class="category-top">
+
+                        <div class="category-name">
+
+                            <div class="category-image">
+
+                                <img
+                                    src="firstaid.png"
+                                    alt="First Aid"
+                                >
+
+                            </div>
+
+                            <span>
+                                First Aid
+                            </span>
+
+                        </div>
+
+
+                        <strong id="firstAidProgressText">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <span
+                            id="firstAidProgress"
+                            style="width:0%;"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BANKING -->
+
+                <div class="category-item">
+
+                    <div class="category-top">
+
+                        <div class="category-name">
+
+                            <div class="category-image">
+
+                                <img
+                                    src="banking.png"
+                                    alt="Banking"
+                                >
+
+                            </div>
+
+                            <span>
+                                Banking
+                            </span>
+
+                        </div>
+
+
+                        <strong id="bankingProgressText">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <span
+                            id="bankingProgress"
+                            style="width:0%;"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TAX -->
+
+                <div class="category-item">
+
+                    <div class="category-top">
+
+                        <div class="category-name">
+
+                            <div class="category-image">
+
+                                <img
+                                    src="tax.png"
+                                    alt="Tax Basics"
+                                >
+
+                            </div>
+
+                            <span>
+                                Tax Basics
+                            </span>
+
+                        </div>
+
+
+                        <strong id="taxProgressText">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <span
+                            id="taxProgress"
+                            style="width:0%;"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DIGITAL -->
+
+                <div class="category-item">
+
+                    <div class="category-top">
+
+                        <div class="category-name">
+
+                            <div class="category-image">
+
+                                <img
+                                    src="digital.png"
+                                    alt="Digital Safety"
+                                >
+
+                            </div>
+
+                            <span>
+                                Digital Safety
+                            </span>
+
+                        </div>
+
+
+                        <strong id="digitalProgressText">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <span
+                            id="digitalProgress"
+                            style="width:0%;"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LEGAL -->
+
+                <div class="category-item">
+
+                    <div class="category-top">
+
+                        <div class="category-name">
+
+                            <div class="category-image">
+
+                                <img
+                                    src="legal.png"
+                                    alt="Legal Rights"
+                                >
+
+                            </div>
+
+                            <span>
+                                Legal Rights
+                            </span>
+
+                        </div>
+
+
+                        <strong id="legalProgressText">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <span
+                            id="legalProgress"
+                            style="width:0%;"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INTERVIEW -->
+
+                <div class="category-item">
+
+                    <div class="category-top">
+
+                        <div class="category-name">
+
+                            <div class="category-image">
+
+                                <img
+                                    src="interview.png"
+                                    alt="Interview Skills"
+                                >
+
+                            </div>
+
+                            <span>
+                                Interview Skills
+                            </span>
+
+                        </div>
+
+
+                        <strong id="interviewProgressText">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <span
+                            id="interviewProgress"
+                            style="width:0%;"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ACHIEVEMENTS
+        ================================================== -->
+
+        <section class="content-card achievements-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        ACHIEVEMENTS
+                    </span>
+
+                    <h2>
+                        Skills You've Unlocked
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-award"></i>
+
+            </div>
+
+
+            <div class="achievement-grid">
+
+
+                <!-- FIRST AID -->
+
+                <div
+                    class="achievement-item locked"
+                    data-achievement="firstaid"
+                    tabindex="0"
+                >
+
+                    <div class="achievement-icon">
+
+                        <i class="fa-solid fa-kit-medical"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            First Responder
+                        </strong>
+
+                        <span>
+                            Complete First Aid
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BANKING -->
+
+                <div
+                    class="achievement-item locked"
+                    data-achievement="banking"
+                    tabindex="0"
+                >
+
+                    <div class="achievement-icon">
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Smart Banker
+                        </strong>
+
+                        <span>
+                            Complete Banking
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TAX -->
+
+                <div
+                    class="achievement-item locked"
+                    data-achievement="tax"
+                    tabindex="0"
+                >
+
+                    <div class="achievement-icon">
+
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Tax Smart
+                        </strong>
+
+                        <span>
+                            Complete Tax Basics
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DIGITAL SAFETY -->
+
+                <div
+                    class="achievement-item locked"
+                    data-achievement="digital-safety"
+                    tabindex="0"
+                >
+
+                    <div class="achievement-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Digital Guardian
+                        </strong>
+
+                        <span>
+                            Complete Digital Safety
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LEGAL -->
+
+                <div
+                    class="achievement-item locked"
+                    data-achievement="legal"
+                    tabindex="0"
+                >
+
+                    <div class="achievement-icon">
+
+                        <i class="fa-solid fa-scale-balanced"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Rights Aware
+                        </strong>
+
+                        <span>
+                            Complete Legal Rights
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INTERVIEW -->
+
+                <div
+                    class="achievement-item locked"
+                    data-achievement="interview"
+                    tabindex="0"
+                >
+
+                    <div class="achievement-icon">
+
+                        <i class="fa-solid fa-briefcase"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Career Ready
+                        </strong>
+
+                        <span>
+                            Complete Interview Skills
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ALL CATEGORIES -->
+
+                <div
+                    class="achievement-item locked"
+                    data-achievement="all"
+                    tabindex="0"
+                >
+
+                    <div class="achievement-icon">
+
+                        <i class="fa-solid fa-award"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Life Learner
+                        </strong>
+
+                        <span>
+                            Complete all 6 categories
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CERTIFICATE HIGHLIGHT
+        ================================================== -->
+
+        <section class="certificate-highlight">
+
+            <div class="certificate-highlight-icon">
+
+                <i class="fa-solid fa-medal"></i>
+
+            </div>
+
+
+            <div class="certificate-highlight-content">
+
+                <span class="section-eyebrow">
+                    YOUR ACHIEVEMENTS
+                </span>
+
+                <h2>
+                    Your Certificates
+                </h2>
+
+                <p>
+                    View and celebrate the certificates you have earned.
+                </p>
+
+            </div>
+
+
+            <a
+                href="mycertificates.html"
+                class="secondary-btn"
+            >
+
+                View Certificates
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="profile-footer">
+
+            <div>
+
+                <strong>
+                    Learn2Live
+                </strong>
+
+                <span>
+                    Practical skills for everyday life.
+                </span>
+
+            </div>
+
+
+            <span>
+                © 2026 Learn2Live
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     EDIT PROFILE MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="editProfileOverlay"
+>
+
+    <div
+        class="edit-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="editProfileTitle"
+    >
+
+        <div class="modal-header">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    ACCOUNT SETTINGS
+                </span>
+
+                <h2 id="editProfileTitle">
+                    Edit Profile
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeEditProfile"
+                aria-label="Close"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <form id="profileForm">
+
+
+            <div class="modal-photo-section">
+
+                <div class="modal-avatar">
+
+                    <img
+                        id="modalAvatar"
+                        src=""
+                        alt="Profile Photo"
+                        style="display:none;"
+                    >
+
+                    <span id="modalInitials">
+                        U
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="photo-change-link"
+                    id="modalChangePhotoBtn"
+                >
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    Change Photo
+
+                </button>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="editName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="editName"
+                    name="name"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="editUsername">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="editUsername"
+                    name="username"
+                    placeholder="Enter your username"
+                    autocomplete="username"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="editBio">
+                    About You
+                </label>
+
+                <textarea
+                    id="editBio"
+                    name="bio"
+                    rows="3"
+                    maxlength="120"
+                    placeholder="Tell something about your learning journey..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    id="cancelEditProfile"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Save Changes
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     LOGOUT MODAL
+========================================================= -->
+
+<div
+    class="logout-overlay"
+    id="logoutOverlay"
+    style="display:none;"
+>
+
+    <div class="logout-modal">
+
+        <div class="logout-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h2>
+            Logout
+        </h2>
+
+        <p>
+            Are you sure you want to logout?
+        </p>
+
+
+        <div class="logout-actions">
+
+            <button
+                type="button"
+                class="cancel-btn"
+                id="cancelLogout"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                class="confirm-logout-btn"
+                id="confirmLogout"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     PROFILE JAVASCRIPT
+========================================================= -->
+
+<script src="profile.js"></script>
+
+</body>
+
+</html>

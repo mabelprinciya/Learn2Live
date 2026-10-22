@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Certificates | Learn2Live</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         MY CERTIFICATES CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="mycertificates.css"
+    >
+
+
+    <!-- =====================================================
+         CERTIFICATE CSS
+         Same design used by certificate.html
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="certificate.css"
+    >
+
+
+    <!-- =====================================================
+         CERTIFICATE PREVIEW + PDF RENDER FIXES
+    ====================================================== -->
+
+    <style>
+
+        /* =================================================
+           CERTIFICATE CARD PREVIEW
+        ================================================= */
+
+        .certificate-preview {
+
+            position: relative;
+
+            width: 100%;
+
+            aspect-ratio: 1123 / 794;
+
+            height: auto;
+
+            overflow: hidden;
+
+            background: #ffffff;
+
+            display: block;
+
+        }
+
+
+        .certificate-preview-inner {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 1123px;
+
+            height: 794px;
+
+            transform-origin: top left;
+
+        }
+
+
+        /* =================================================
+           STUDENT NAME
+        ================================================= */
+
+        .certificate-preview .student-name,
+        .certificate-preview .certificate-name {
+
+            font-family:
+                "Allura",
+                cursive !important;
+
+            font-size:
+                46px !important;
+
+            font-weight:
+                400 !important;
+
+            color:
+                #071a45 !important;
+
+            line-height:
+                1 !important;
+
+            letter-spacing:
+                0 !important;
+
+            text-transform:
+                none !important;
+
+            text-align:
+                center !important;
+
+            white-space:
+                nowrap !important;
+
+            display:
+                block !important;
+
+            visibility:
+                visible !important;
+
+            opacity:
+                1 !important;
+
+            position:
+                relative !important;
+
+            z-index:
+                20 !important;
+
+            margin:
+                8px auto 12px !important;
+
+        }
+
+
+        /* =================================================
+           PDF RENDER AREA
+           
+           IMPORTANT:
+           Do NOT use display:none.
+           Do NOT use z-index:-9999.
+           
+           html2canvas needs the element to actually render.
+        ================================================= */
+
+        #certificatePdfRender {
+
+            position: fixed;
+
+            left: 0;
+
+            top: 0;
+
+            width: 1123px;
+
+            height: 794px;
+
+            min-width: 1123px;
+
+            min-height: 794px;
+
+            background: #ffffff;
+
+            overflow: visible;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            visibility: visible;
+
+            z-index: 999999;
+
+        }
+
+
+        /* =================================================
+           PDF PREVIEW
+        ================================================= */
+
+        #certificatePdfRender .certificate-preview {
+
+            width:
+                1123px !important;
+
+            height:
+                794px !important;
+
+            min-width:
+                1123px !important;
+
+            min-height:
+                794px !important;
+
+            aspect-ratio:
+                auto !important;
+
+            overflow:
+                visible !important;
+
+            background:
+                #ffffff !important;
+
+            position:
+                relative !important;
+
+        }
+
+
+        /* =================================================
+           PDF INNER
+        ================================================= */
+
+        #certificatePdfRender
+        .certificate-preview-inner {
+
+            position:
+                relative !important;
+
+            top:
+                0 !important;
+
+            left:
+                0 !important;
+
+            width:
+                1123px !important;
+
+            height:
+                794px !important;
+
+            min-width:
+                1123px !important;
+
+            min-height:
+                794px !important;
+
+            transform:
+                none !important;
+
+            transform-origin:
+                top left !important;
+
+        }
+
+
+        /* =================================================
+           PDF CERTIFICATE
+        ================================================= */
+
+        #certificatePdfRender
+        .certificate {
+
+            width:
+                1123px !important;
+
+            height:
+                794px !important;
+
+            min-width:
+                1123px !important;
+
+            min-height:
+                794px !important;
+
+            margin:
+                0 !important;
+
+            transform:
+                none !important;
+
+            overflow:
+                hidden !important;
+
+            position:
+                relative !important;
+
+        }
+
+
+        /* =================================================
+           PDF STUDENT NAME
+        ================================================= */
+
+        #certificatePdfRender
+        .student-name {
+
+            font-family:
+                "Allura",
+                cursive !important;
+
+            font-size:
+                46px !important;
+
+            font-weight:
+                400 !important;
+
+            color:
+                #071a45 !important;
+
+            line-height:
+                1 !important;
+
+            letter-spacing:
+                0 !important;
+
+            text-align:
+                center !important;
+
+            white-space:
+                nowrap !important;
+
+            display:
+                block !important;
+
+            visibility:
+                visible !important;
+
+            opacity:
+                1 !important;
+
+            position:
+                relative !important;
+
+            z-index:
+                999 !important;
+
+        }
+
+
+        /* =================================================
+           PDF IMAGE FIX
+        ================================================= */
+
+        #certificatePdfRender img {
+
+            max-width:
+                none;
+
+        }
+
+
+        /* =================================================
+           MOBILE PREVIEW
+        ================================================= */
+
+        @media (max-width: 700px) {
+
+            .certificate-preview {
+
+                aspect-ratio:
+                    1123 / 794;
+
+            }
+
+            .certificate-preview
+            .student-name {
+
+                font-size:
+                    34px !important;
+
+            }
+
+        }
+
+
+        /* =================================================
+           SMALL MOBILE
+        ================================================= */
+
+        @media (max-width: 450px) {
+
+            .certificate-preview
+            .student-name {
+
+                font-size:
+                    28px !important;
+
+            }
+
+        }
+
+    </style>
+
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="theme.css">
+    <script src="auth.js"></script>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MAIN LAYOUT
+===================================================== -->
+
+<div class="certificates-layout">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <!-- SIDEBAR LOGO -->
+
+        <div class="sidebar-logo">
+
+            <a href="dashboard.html">
+
+                <div class="logo-image">
+
+                    <img
+                        src="logo.png"
+                        alt="Learn2Live Logo"
+                    >
+
+                </div>
+
+
+                <div class="logo-text">
+
+                    <strong>
+                        Learn2Live
+                    </strong>
+
+                    <span>
+                        LEARN • PRACTICE • GROW
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav class="sidebar-nav">
+
+
+            <div class="nav-label">
+                MAIN MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="dashboard.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- MY LEARNING -->
+
+            <a
+                href="learning.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </span>
+
+                <span>
+                    My Learning
+                </span>
+
+            </a>
+
+
+            <!-- MY CERTIFICATES -->
+
+            <a
+                href="mycertificates.html"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-award"></i>
+
+                </span>
+
+                <span>
+                    My Certificates
+                </span>
+
+            </a>
+
+
+            <div class="nav-label second-label">
+                ACCOUNT
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <a
+                href="profile.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+                <span>
+                    Profile
+                </span>
+
+            </a>
+
+
+            <!-- LOGOUT -->
+
+            <a
+                href="javascript:void(0)"
+                class="nav-item logout-link"
+                id="logoutBtn"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+
+                <div class="help-icon">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Keep Learning
+                    </strong>
+
+                    <span>
+                        Every skill makes a difference
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================================
+         SIDEBAR OVERLAY
+    ================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="top-header">
+
+
+            <div class="header-title">
+
+                <span class="header-small">
+                    LEARN2LIVE
+                </span>
+
+                <h1>
+                    My Certificates
+                </h1>
+
+            </div>
+
+
+            <div class="header-actions">
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                >
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <!-- NOTIFICATION -->
+
+                <button
+                    type="button"
+                    class="notification-link"
+                    id="notificationBtn"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- USER PROFILE -->
+
+                <a
+                    href="profile.html"
+                    class="header-profile"
+                >
+
+                    <div
+                        class="profile-avatar"
+                        id="profileAvatar"
+                    >
+
+                        <span id="profileInitials">
+                            U
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-details">
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <span>
+                            Learner
+                        </span>
+
+                    </div>
+
+
+                    <i
+                        class="fa-solid fa-chevron-down profile-arrow"
+                    ></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CERTIFICATE INTRO
+        ================================================== -->
+
+        <section class="certificate-intro">
+
+            <div class="certificate-intro-content">
+
+                <span class="certificate-intro-label">
+                    YOUR ACHIEVEMENTS
+                </span>
+
+                <h2>
+                    My Certificates
+                </h2>
+
+                <p>
+                    View and access the certificates you have earned
+                    by completing your Learn2Live courses.
+                </p>
+
+            </div>
+
+
+            <div class="certificate-intro-icon">
+
+                <i class="fa-solid fa-award"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CERTIFICATE SUMMARY
+        ================================================== -->
+
+        <section class="certificate-stats">
+
+
+            <!-- TOTAL CERTIFICATES -->
+
+            <div class="certificate-stat-card">
+
+                <div class="certificate-stat-icon blue">
+
+                    <i class="fa-solid fa-certificate"></i>
+
+                </div>
+
+                <div class="certificate-stat-info">
+
+                    <span>
+                        Certificates Earned
+                    </span>
+
+                    <strong id="certificateCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSES COMPLETED -->
+
+            <div class="certificate-stat-card">
+
+                <div class="certificate-stat-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div class="certificate-stat-info">
+
+                    <span>
+                        Courses Completed
+                    </span>
+
+                    <strong id="completedCourseCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- LEARNING STATUS -->
+
+            <div class="certificate-stat-card">
+
+                <div class="certificate-stat-icon purple">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                </div>
+
+                <div class="certificate-stat-info">
+
+                    <span>
+                        Learning Status
+                    </span>
+
+                    <strong id="learningStatus">
+                        Active
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CERTIFICATES SECTION
+        ================================================== -->
+
+        <section class="certificates-section">
+
+
+            <!-- SECTION HEADING -->
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        ACHIEVEMENTS
+                    </span>
+
+                    <h2>
+                        Your Certificates
+                    </h2>
+
+                </div>
+
+
+                <span
+                    class="certificate-count-label"
+                    id="certificateCountLabel"
+                >
+                    0 Certificates
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 CERTIFICATE GRID
+            ================================================== -->
+
+            <div
+                class="certificates-grid"
+                id="certificatesGrid"
+            ></div>
+
+
+            <!-- =================================================
+                 EMPTY STATE
+            ================================================== -->
+
+            <div
+                class="certificate-empty"
+                id="certificateEmpty"
+                style="display:none;"
+            >
+
+                <div class="certificate-empty-icon">
+
+                    <i class="fa-solid fa-award"></i>
+
+                </div>
+
+
+                <h3>
+                    No Certificates Yet
+                </h3>
+
+
+                <p>
+                    Complete a Learn2Live course to earn
+                    your first certificate.
+                </p>
+
+
+                <a
+                    href="learning.html"
+                    class="empty-learning-btn"
+                >
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    Start Learning
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="certificates-footer">
+
+            <div>
+
+                <strong>
+                    Learn2Live
+                </strong>
+
+                <span>
+                    Learn practical skills. Build confidence.
+                </span>
+
+            </div>
+
+
+            <span>
+                © 2026 Learn2Live
+            </span>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     LOGOUT MODAL
+===================================================== -->
+
+<div
+    class="logout-overlay"
+    id="logoutOverlay"
+>
+
+    <div class="logout-modal">
+
+        <div class="logout-icon">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+        </div>
+
+
+        <h2>
+            Logout?
+        </h2>
+
+
+        <p>
+            Are you sure you want to logout from Learn2Live?
+        </p>
+
+
+        <div class="logout-actions">
+
+            <button
+                type="button"
+                class="cancel-btn"
+                id="cancelLogout"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                class="confirm-logout-btn"
+                id="confirmLogout"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HIDDEN PDF RENDER AREA
+     
+     IMPORTANT:
+     This must NOT use display:none or z-index:-9999.
+===================================================== -->
+
+<div
+    id="certificatePdfRender"
+    aria-hidden="true"
+></div>
+
+
+<!-- =====================================================
+     PDF LIBRARIES
+===================================================== -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+></script>
+
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+></script>
+
+
+<!-- =====================================================
+     MY CERTIFICATES JAVASCRIPT
+===================================================== -->
+
+<script
+    src="mycertificates.js"
+></script>
+
+
+</body>
+
+</html>
