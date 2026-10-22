@@ -1,0 +1,497 @@
+/* =========================================================
+   LEARN2LIVE — CERTIFICATE (clean type scale + even spacing)
+   Type scale:  name 50 / title 40 / course 26 / body 13 / label 9
+========================================================= */
+
+:root {
+    --navy: #0b1736;
+    --blue: #2454ff;
+    --gold: #c9a227;
+    --gold-light: #e1c766;
+    --gold-soft: #f7f1dc;
+    --white: #ffffff;
+    --muted: #697386;
+    --body: #4a5363;
+    --border: #d5c58b;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { width: 100%; min-height: 100%; }
+
+body {
+    min-height: 100vh;
+    background: #edf0f5;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* ---------- Page ---------- */
+
+.certificate {
+    width: 1123px;
+    height: 794px;
+    background: var(--white);
+    box-shadow: 0 25px 70px rgba(11, 23, 54, 0.20);
+}
+
+.certificate-border {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    border: 5px solid var(--navy);
+    background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+}
+
+/* Inner area is a vertical flex column so spacing is even */
+.certificate-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    border: 2px solid var(--navy);
+    padding: 34px 72px 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate-inner::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(201, 162, 39, 0.55);
+    pointer-events: none;
+}
+
+.certificate-inner::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    right: -135px;
+    top: -135px;
+    border-radius: 50%;
+    background: var(--gold-soft);
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+.watermark {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%) rotate(-8deg);
+    font-family: "Cinzel", serif;
+    font-size: 170px;
+    font-weight: 700;
+    letter-spacing: 12px;
+    color: var(--navy);
+    opacity: 0.025;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ---------- Header ---------- */
+
+.certificate-header {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand { display: flex; align-items: center; gap: 14px; }
+
+.brand-logo { width: 62px; height: 62px; object-fit: contain; }
+
+.brand-text h1 {
+    font-family: "Cinzel", serif;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    color: var(--navy);
+}
+
+.brand-text p {
+    margin-top: 4px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    color: var(--blue);
+}
+
+.certificate-reference {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.certificate-reference span {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    color: var(--muted);
+}
+
+.certificate-reference strong {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--navy);
+}
+
+/* ---------- Title ---------- */
+
+.certificate-title {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.title-overline { display: none; }
+
+.certificate-title h2 {
+    font-family: "Cinzel", serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 9px;
+    line-height: 1.1;
+    color: var(--navy);
+    padding-left: 9px; /* balances trailing letter-spacing */
+}
+
+.certificate-title h3 {
+    margin-top: 10px;
+    font-family: "Cinzel", serif;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: var(--blue);
+    padding-left: 6px;
+}
+
+/* ---------- Presentation + Name ---------- */
+
+.presentation {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    margin-top: 22px;
+}
+
+.presentation p {
+    font-family: "Libre Baskerville", serif;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* STUDENT NAME — SIGNATURE STYLE, NO UNDERLINE */
+
+.certificate-preview .student-name,
+.certificate-preview .certificate-name,
+.certificate .student-name,
+.certificate .certificate-name {
+    display: block !important;
+    position: relative !important;
+    z-index: 20 !important;
+
+    width: 100% !important;
+    margin: 8px auto 12px !important;
+    padding: 0 !important;
+
+    font-family: "Allura", "Great Vibes", "Alex Brush", cursive !important;
+    font-size: 46px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+
+    color: #071a45 !important;
+    text-align: center !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow: visible !important;
+}
+
+/* Remove the line below the student name */
+.student-name::after,
+.certificate-name::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Mobile preview */
+@media (max-width: 600px) {
+    .certificate-preview .student-name,
+    .certificate-preview .certificate-name {
+        font-size: 30px !important;
+    }
+}
+
+
+/* underline is a separate centered element, so it never shifts with the name */
+.student-name::after {
+    content: "";
+    display: block;
+    width: 340px;
+    height: 1px;
+    margin: 4px auto 0;
+    background: var(--border);
+}
+
+/* ---------- Main text ---------- */
+
+.certification-content {
+    position: relative;
+    z-index: 5;
+    width: 840px;
+    max-width: 100%;
+    margin: 18px auto 0;
+    text-align: center;
+}
+
+.main-text,
+.course-introduction,
+.completion-text {
+    font-family: "Libre Baskerville", serif;
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: var(--body);
+}
+
+.course-introduction { margin-top: 14px; }
+
+.course-name {
+    margin-top: 10px;
+    font-family: "Cinzel", serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    color: var(--navy);
+    text-transform: uppercase;
+}
+
+.completion-text { margin-top: 10px; }
+
+/* ---------- Bottom row (seal left, signature right) ---------- */
+
+.certificate-bottom {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    margin-top: auto;               /* pushes row to the bottom evenly */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.seal-information {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.official-seal { display: flex; align-items: center; justify-content: center; }
+
+.seal-outer {
+    width: 94px;
+    height: 94px;
+    border: 3px solid var(--navy);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.seal-outer::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+}
+
+.seal-outer::after {
+    content: "★  ★  ★";
+    position: absolute;
+    bottom: 7px;
+    font-size: 6px;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+}
+
+.seal-inner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.seal-inner span,
+.seal-inner small { font-size: 5.5px; letter-spacing: 1px; }
+
+.seal-inner strong {
+    margin-top: 2px;
+    font-family: "Cinzel", serif;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--gold-light);
+}
+
+.seal-inner small { margin-top: 3px; }
+
+.seal-details {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.small-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.small-detail span {
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+
+.small-detail strong {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--navy);
+    white-space: nowrap;
+}
+
+.small-divider { width: 1px; height: 26px; background: var(--border); }
+
+/* ---------- Signature ---------- */
+
+.signature-section {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.signature-image {
+    width: 230px;
+    height: 86px;
+    object-fit: contain;
+}
+
+.signature-line {
+    width: 250px;
+    height: 1px;
+    background: var(--navy);
+    margin-top: 2px;
+}
+
+.signature-section strong {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.signature-section span {
+    margin-top: 2px;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+
+.footer-decoration {
+    position: absolute;
+    z-index: 5;
+    left: 72px;
+    right: 72px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-decoration span {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.footer-decoration div { font-size: 7px; color: var(--gold); }
+
+/* ---------- Download button ---------- */
+
+.download-btn {
+    margin-top: 25px;
+    padding: 13px 27px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--blue), var(--navy));
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    box-shadow: 0 8px 22px rgba(36, 84, 255, 0.22);
+    transition: 0.2s ease;
+}
+
+.download-btn:hover { transform: translateY(-2px); }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1200px) {
+    body { padding: 20px; overflow-x: auto; justify-content: flex-start; }
+    .certificate { flex-shrink: 0; transform-origin: top center; }
+}
+
+@media (max-width: 700px) {
+    body { align-items: flex-start; }
+}
+
+/* ---------- Print ---------- */
+
+@page { size: A4 landscape; margin: 0; }
+
+@media print {
+    html, body { width: 297mm; height: 210mm; margin: 0; padding: 0; background: #fff; }
+    body { display: block; }
+    .certificate { width: 297mm; height: 210mm; box-shadow: none; }
+    .download-btn { display: none !important; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}

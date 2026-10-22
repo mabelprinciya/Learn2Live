@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="auth.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Human Rights Quiz | Life Skills Hub</title>
+
+    <link rel="stylesheet" href="Human_Rights_quiz.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="quiz-container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="question-panel">
+
+        <h2>Questions</h2>
+
+        <div id="questionNumbers"></div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="quiz-panel">
+
+        <div class="quiz-header">
+
+            <h1>🌍 Human Rights Quiz</h1>
+
+            <p>Answer all 5 questions.</p>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <h2 id="question">
+                Loading Question...
+            </h2>
+
+            <div id="options" class="options"></div>
+
+        </div>
+
+
+        <div class="button-area">
+
+            <button id="prevBtn">
+                Previous
+            </button>
+
+            <button id="nextBtn">
+                Next
+            </button>
+
+            <button id="submitBtn" style="display:none;">
+                Submit Quiz
+            </button>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div id="resultCard" class="result-card" style="display:none;">
+
+            <div class="result-animation" id="resultIcon">
+                🎉
+            </div>
+
+            <h2 id="resultTitle">
+                Congratulations!
+            </h2>
+
+            <p id="resultSubtitle">
+                You successfully completed the quiz.
+            </p>
+
+            <div class="score-circle">
+
+                <span id="scoreText">
+                    0 / 5
+                </span>
+
+                <small id="percentageText">
+                    0%
+                </small>
+
+            </div>
+
+            <h3 id="resultMessage"></h3>
+
+
+            <div class="result-stats">
+
+                <div>
+                    <strong id="correctAnswers">0</strong>
+                    <span>Correct</span>
+                </div>
+
+                <div>
+                    <strong id="wrongAnswers">0</strong>
+                    <span>Wrong</span>
+                </div>
+
+            </div>
+
+
+            <div class="result-buttons">
+
+                <button id="reviewBtn">
+                    📋 Review Answers
+                </button>
+
+                <button id="retryBtn">
+                    🔄 Try Again
+                </button>
+
+                <a href="Human_Rights.html">
+
+                    <button id="continueBtn">
+                        Continue →
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- REVIEW -->
+
+        <div
+            id="reviewCard"
+            class="review-card"
+            style="display:none;">
+
+            <div class="review-header">
+
+                <h2>
+                    📋 Answer Review
+                </h2>
+
+                <p>
+                    Check your answers and learn from your mistakes.
+                </p>
+
+            </div>
+
+            <div id="reviewContent"></div>
+
+            <button
+                id="backResultBtn"
+                class="back-result-btn">
+
+                ← Back to Result
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="Human_Rights_quiz.js"></script>
+
+</body>
+
+</html>

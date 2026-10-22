@@ -1,0 +1,2518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Learn2Live | Admin Dashboard</title>
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         REMIX ICONS
+    ====================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         ADMIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+
+    <meta
+        http-equiv="Cache-Control"
+        content="no-store, no-cache, must-revalidate"
+    >
+
+    <meta
+        http-equiv="Pragma"
+        content="no-cache"
+    >
+
+    <script src="auth.js"></script>
+
+</head>
+
+
+<body>
+
+<div id="adminApp">
+
+
+    <!-- =====================================================
+         SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="admin-sidebar"
+        id="adminSidebar"
+    >
+
+        <!-- BRAND -->
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                <i class="ri-bookmark-3-fill"></i>
+            </div>
+
+            <div class="brand-text">
+
+                <h2>
+                    Learn2Live
+                </h2>
+
+                <span>
+                    ADMIN PANEL
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-navigation">
+
+            <div class="nav-section-title">
+                MAIN
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <button
+                type="button"
+                class="nav-item active"
+                data-section="dashboardSection"
+            >
+
+                <i class="ri-dashboard-line"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </button>
+
+
+
+            <!-- QUESTIONS -->
+
+            <button
+                type="button"
+                class="nav-item"
+                data-section="questionsSection"
+            >
+
+                <i class="ri-questionnaire-line"></i>
+
+                <span>
+                    Questions
+                </span>
+
+                <span
+                    class="nav-count"
+                    id="sidebarQuestionCount"
+                >
+                    0
+                </span>
+
+            </button>
+
+
+
+            <!-- ADD QUESTION -->
+
+            <button
+                type="button"
+                class="nav-item"
+                data-section="addQuestionSection"
+            >
+
+                <i class="ri-add-circle-line"></i>
+
+                <span>
+                    Add Question
+                </span>
+
+            </button>
+
+
+
+            <div class="nav-section-title">
+                MANAGEMENT
+            </div>
+
+
+
+            <!-- USERS -->
+
+            <button
+                type="button"
+                class="nav-item"
+                data-section="usersSection"
+            >
+
+                <i class="ri-group-line"></i>
+
+                <span>
+                    Users
+                </span>
+
+                <span
+                    class="nav-count"
+                    id="sidebarUserCount"
+                >
+                    0
+                </span>
+
+            </button>
+
+
+
+            <!-- NOTIFICATIONS -->
+
+            <button
+                type="button"
+                class="nav-item"
+                data-section="notificationsSection"
+            >
+
+                <i class="ri-notification-3-line"></i>
+
+                <span>
+                    Notifications
+                </span>
+
+                <span
+                    class="nav-count notification-count"
+                    id="notificationCount"
+                >
+                    0
+                </span>
+
+            </button>
+
+
+
+            <!-- CERTIFICATE DOWNLOADS -->
+
+            <button
+                type="button"
+                class="nav-item"
+                data-section="certificatesSection"
+            >
+
+                <i class="ri-award-line"></i>
+
+                <span>
+                    Certificate Downloads
+                </span>
+
+                <span
+                    class="nav-count"
+                    id="sidebarCertificateCount"
+                >
+                    0
+                </span>
+
+            </button>
+
+        </nav>
+
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile-mini">
+
+                <div class="admin-avatar">
+                    <i class="ri-admin-line"></i>
+                </div>
+
+                <div class="admin-profile-info">
+
+                    <strong id="adminName">
+                        Administrator
+                    </strong>
+
+                    <span>
+                        Admin
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="logout-button"
+                id="logoutButton"
+            >
+
+                <i class="ri-logout-box-r-line"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+
+                <button
+                    type="button"
+                    class="sidebar-toggle"
+                    id="sidebarToggle"
+                    aria-label="Toggle sidebar"
+                >
+
+                    <i class="ri-menu-line"></i>
+
+                </button>
+
+
+                <div class="page-heading">
+
+                    <h1 id="pageTitle">
+                        Dashboard
+                    </h1>
+
+                    <p id="pageSubtitle">
+                        Overview of your Learn2Live administration
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="header-right">
+
+                <!-- NOTIFICATION -->
+
+                <button
+                    type="button"
+                    class="header-icon-button"
+                    id="headerNotificationButton"
+                    aria-label="Notifications"
+                >
+
+                    <i class="ri-notification-3-line"></i>
+
+                    <span
+                        class="header-notification-dot"
+                        id="headerNotificationDot"
+                    ></span>
+
+                </button>
+
+
+                <!-- ADMIN -->
+
+                <div class="header-admin">
+
+                    <div class="header-admin-avatar">
+
+                        <i class="ri-admin-line"></i>
+
+                    </div>
+
+                    <div class="header-admin-info">
+
+                        <strong id="headerAdminName">
+                            Administrator
+                        </strong>
+
+                        <span>
+                            Admin
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <div class="admin-content">
+
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <section
+                class="admin-section active"
+                id="dashboardSection"
+            >
+
+
+                <!-- WELCOME -->
+
+                <div class="dashboard-welcome">
+
+                    <div>
+
+                        <span class="section-label">
+                            LEARN2LIVE ADMINISTRATION
+                        </span>
+
+                        <h2>
+                            Dashboard Overview
+                        </h2>
+
+                        <p>
+                            Monitor your question bank,
+                            users and notifications from one place.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        data-section="addQuestionSection"
+                    >
+
+                        <i class="ri-add-line"></i>
+
+                        Add Question
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     STAT CARDS
+                ================================================== -->
+
+                <div class="dashboard-stats-grid">
+
+
+                    <!-- TOTAL QUESTIONS -->
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon">
+                                <i class="ri-questionnaire-line"></i>
+                            </div>
+
+                            <span class="stat-label">
+                                QUESTION BANK
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-card-value">
+
+                            <strong id="dashboardTotalQuestions">
+                                0
+                            </strong>
+
+                            <span>
+                                Questions
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="stat-card-link"
+                            data-section="questionsSection"
+                        >
+
+                            Manage Questions
+
+                            <i class="ri-arrow-right-line"></i>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- TOTAL USERS -->
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon">
+                                <i class="ri-group-line"></i>
+                            </div>
+
+                            <span class="stat-label">
+                                USERS
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-card-value">
+
+                            <strong id="dashboardTotalUsers">
+                                0
+                            </strong>
+
+                            <span>
+                                Registered
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="stat-card-link"
+                            data-section="usersSection"
+                        >
+
+                            View Users
+
+                            <i class="ri-arrow-right-line"></i>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- NOTIFICATIONS -->
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon">
+                                <i class="ri-notification-3-line"></i>
+                            </div>
+
+                            <span class="stat-label">
+                                NOTIFICATIONS
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-card-value">
+
+                            <strong id="dashboardTotalNotifications">
+                                0
+                            </strong>
+
+                            <span>
+                                Announcements
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="stat-card-link"
+                            data-section="notificationsSection"
+                        >
+
+                            Manage Notifications
+
+                            <i class="ri-arrow-right-line"></i>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- CATEGORIES -->
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon">
+                                <i class="ri-folder-3-line"></i>
+                            </div>
+
+                            <span class="stat-label">
+                                CATEGORIES
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-card-value">
+
+                            <strong id="dashboardTotalCategories">
+                                0
+                            </strong>
+
+                            <span>
+                                Categories
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="stat-card-link"
+                            data-section="questionsSection"
+                        >
+
+                            Explore Bank
+
+                            <i class="ri-arrow-right-line"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RECENT QUESTIONS
+                ================================================== -->
+
+                <div class="dashboard-card recent-questions-card">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                LIVE GOOGLE SHEET DATA
+                            </span>
+
+                            <h3>
+                                Recently Added Questions
+                            </h3>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="text-button"
+                            data-section="questionsSection"
+                        >
+
+                            View All
+
+                            <i class="ri-arrow-right-line"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Question ID
+                                    </th>
+
+                                    <th>
+                                        Category
+                                    </th>
+
+                                    <th>
+                                        Subcategory
+                                    </th>
+
+                                    <th>
+                                        Question
+                                    </th>
+
+                                    <th>
+                                        Answer
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody
+                                id="recentQuestionsTableBody"
+                            >
+
+                                <tr>
+
+                                    <td
+                                        colspan="6"
+                                        class="table-loading"
+                                    >
+
+                                        <i class="ri-loader-4-line"></i>
+
+                                        Loading recent questions...
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 QUESTIONS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="questionsSection"
+            >
+
+
+                <div class="section-intro">
+
+                    <div>
+
+                        <span class="section-label">
+                            QUESTION MANAGEMENT
+                        </span>
+
+                        <h2>
+                            All Questions
+                        </h2>
+
+                        <p>
+                            View, search, edit and delete
+                            questions from the live Google Sheet.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        data-section="addQuestionSection"
+                    >
+
+                        <i class="ri-add-line"></i>
+
+                        Add Question
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUESTION FILTERS
+                ================================================== -->
+
+                <div class="filter-card">
+
+                    <div class="filter-card-title">
+
+                        <i class="ri-filter-3-line"></i>
+
+                        <strong>
+                            Filter Questions
+                        </strong>
+
+                    </div>
+
+
+                    <div class="question-filter-row">
+
+
+                        <!-- SEARCH -->
+
+                        <div class="search-box">
+
+                            <i class="ri-search-line"></i>
+
+                            <input
+                                type="text"
+                                id="questionSearch"
+                                placeholder="Search questions, ID or category..."
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+
+                        <!-- CATEGORY -->
+
+                        <div class="filter-field">
+
+                            <label for="questionCategoryFilter">
+                                Category
+                            </label>
+
+                            <select
+                                id="questionCategoryFilter"
+                            >
+
+                                <option value="">
+                                    All Categories
+                                </option>
+
+                                <option value="First Aid">
+                                    First Aid
+                                </option>
+
+                                <option value="Banking">
+                                    Banking
+                                </option>
+
+                                <option value="Tax Basics">
+                                    Tax Basics
+                                </option>
+
+                                <option value="Digital Safety">
+                                    Digital Safety
+                                </option>
+
+                                <option value="Legal Rights">
+                                    Legal Rights
+                                </option>
+
+                                <option value="Interview Skills">
+                                    Interview Skills
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- SUBCATEGORY -->
+
+                        <div class="filter-field">
+
+                            <label for="questionSubcategoryFilter">
+                                Subcategory
+                            </label>
+
+                            <select
+                                id="questionSubcategoryFilter"
+                                disabled
+                            >
+
+                                <option value="">
+                                    All Subcategories
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- CLEAR -->
+
+                        <button
+                            type="button"
+                            class="secondary-button"
+                            id="clearQuestionFilters"
+                        >
+
+                            <i class="ri-filter-off-line"></i>
+
+                            Clear
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUESTION TABLE
+                ================================================== -->
+
+                <div class="table-card">
+
+                    <div class="table-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                LIVE GOOGLE SHEET DATA
+                            </span>
+
+                            <h3>
+                                Question Records
+                            </h3>
+
+                        </div>
+
+
+                        <span
+                            class="table-total"
+                            id="questionTableTotal"
+                        >
+                            0 questions
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Question ID
+                                    </th>
+
+                                    <th>
+                                        Category
+                                    </th>
+
+                                    <th>
+                                        Subcategory
+                                    </th>
+
+                                    <th>
+                                        Question
+                                    </th>
+
+                                    <th>
+                                        Correct Answer
+                                    </th>
+
+                                    <th>
+                                        Actions
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody
+                                id="questionsTableBody"
+                            >
+
+                                <tr>
+
+                                    <td
+                                        colspan="6"
+                                        class="table-loading"
+                                    >
+
+                                        <i class="ri-loader-4-line"></i>
+
+                                        Loading live questions...
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- PAGINATION -->
+
+                    <div class="table-pagination">
+
+                        <button
+                            type="button"
+                            id="previousPage"
+                            disabled
+                        >
+
+                            <i class="ri-arrow-left-s-line"></i>
+
+                            Previous
+
+                        </button>
+
+
+                        <span id="pageInfo">
+                            Page 1
+                        </span>
+
+
+                        <button
+                            type="button"
+                            id="nextPage"
+                        >
+
+                            Next
+
+                            <i class="ri-arrow-right-s-line"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ADD / EDIT QUESTION
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="addQuestionSection"
+            >
+
+
+                <div class="section-intro">
+
+                    <div>
+
+                        <span class="section-label">
+                            QUESTION EDITOR
+                        </span>
+
+                        <h2 id="questionFormTitle">
+                            Add Question
+                        </h2>
+
+                        <p id="questionFormSubtitle">
+                            Create a new question in the
+                            Learn2Live question bank.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        data-section="questionsSection"
+                    >
+
+                        <i class="ri-arrow-left-line"></i>
+
+                        Back to Questions
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- FORM -->
+
+                <div class="form-card">
+
+                    <form
+                        id="questionForm"
+                        novalidate
+                    >
+
+                        <input
+                            type="hidden"
+                            id="questionId"
+                            name="QuestionID"
+                        >
+
+
+
+                        <!-- CATEGORY -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="questionCategory">
+
+                                    Category
+
+                                    <span>*</span>
+
+                                </label>
+
+
+                                <select
+                                    id="questionCategory"
+                                    name="Category"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Category
+                                    </option>
+
+                                    <option value="First Aid">
+                                        First Aid
+                                    </option>
+
+                                    <option value="Banking">
+                                        Banking
+                                    </option>
+
+                                    <option value="Tax Basics">
+                                        Tax Basics
+                                    </option>
+
+                                    <option value="Digital Safety">
+                                        Digital Safety
+                                    </option>
+
+                                    <option value="Legal Rights">
+                                        Legal Rights
+                                    </option>
+
+                                    <option value="Interview Skills">
+                                        Interview Skills
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- SUBCATEGORY -->
+
+                            <div class="form-group">
+
+                                <label for="questionSubcategory">
+
+                                    Subcategory
+
+                                    <span>*</span>
+
+                                </label>
+
+
+                                <select
+                                    id="questionSubcategory"
+                                    name="Subcategory"
+                                    required
+                                    disabled
+                                >
+
+                                    <option value="">
+                                        Select Category First
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- QUESTION -->
+
+                        <div class="form-group">
+
+                            <label for="questionText">
+
+                                Question
+
+                                <span>*</span>
+
+                            </label>
+
+
+                            <textarea
+                                id="questionText"
+                                name="Question"
+                                rows="5"
+                                placeholder="Enter the question..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- OPTIONS -->
+
+                        <div class="options-title">
+
+                            <h3>
+                                Answer Options
+                            </h3>
+
+                            <p>
+                                Add four options and choose
+                                the correct answer.
+                            </p>
+
+                        </div>
+
+
+                        <div class="options-grid">
+
+
+                            <!-- A -->
+
+                            <div class="option-form-group">
+
+                                <label for="optionA">
+                                    Option A
+                                    <span>*</span>
+                                </label>
+
+                                <div class="option-input-wrapper">
+
+                                    <span class="option-letter">
+                                        A
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="optionA"
+                                        name="OptionA"
+                                        placeholder="Enter option A"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- B -->
+
+                            <div class="option-form-group">
+
+                                <label for="optionB">
+                                    Option B
+                                    <span>*</span>
+                                </label>
+
+                                <div class="option-input-wrapper">
+
+                                    <span class="option-letter">
+                                        B
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="optionB"
+                                        name="OptionB"
+                                        placeholder="Enter option B"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- C -->
+
+                            <div class="option-form-group">
+
+                                <label for="optionC">
+                                    Option C
+                                    <span>*</span>
+                                </label>
+
+                                <div class="option-input-wrapper">
+
+                                    <span class="option-letter">
+                                        C
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="optionC"
+                                        name="OptionC"
+                                        placeholder="Enter option C"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- D -->
+
+                            <div class="option-form-group">
+
+                                <label for="optionD">
+                                    Option D
+                                    <span>*</span>
+                                </label>
+
+                                <div class="option-input-wrapper">
+
+                                    <span class="option-letter">
+                                        D
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="optionD"
+                                        name="OptionD"
+                                        placeholder="Enter option D"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CORRECT ANSWER -->
+
+                        <div class="form-group">
+
+                            <label for="correctAnswer">
+
+                                Correct Answer
+
+                                <span>*</span>
+
+                            </label>
+
+
+                            <select
+                                id="correctAnswer"
+                                name="CorrectAnswer"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Correct Answer
+                                </option>
+
+                                <option value="A">
+                                    Option A
+                                </option>
+
+                                <option value="B">
+                                    Option B
+                                </option>
+
+                                <option value="C">
+                                    Option C
+                                </option>
+
+                                <option value="D">
+                                    Option D
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- EXPLANATION -->
+
+                        <div class="form-group">
+
+                            <label for="explanation">
+                                Explanation
+                            </label>
+
+
+                            <textarea
+                                id="explanation"
+                                name="Explanation"
+                                rows="5"
+                                placeholder="Enter explanation..."
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- MESSAGE -->
+
+                        <div
+                            class="form-message"
+                            id="questionFormMessage"
+                        ></div>
+
+
+
+                        <!-- ACTIONS -->
+
+                        <div class="form-actions">
+
+                            <button
+                                type="button"
+                                class="secondary-button"
+                                id="cancelQuestionButton"
+                            >
+
+                                Cancel
+
+                            </button>
+
+
+                            <button
+                                type="submit"
+                                class="primary-button"
+                                id="saveQuestionButton"
+                            >
+
+                                <i class="ri-save-3-line"></i>
+
+                                Save Question
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 USERS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="usersSection"
+            >
+
+
+                <div class="section-intro">
+
+                    <div>
+
+                        <span class="section-label">
+                            USER MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Users
+                        </h2>
+
+                        <p>
+                            View registered Learn2Live users.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="filter-card">
+
+                    <div class="search-box">
+
+                        <i class="ri-search-line"></i>
+
+                        <input
+                            type="text"
+                            id="userSearch"
+                            placeholder="Search users..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-card">
+
+                    <div class="table-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                LIVE USER DATA
+                            </span>
+
+                            <h3>
+                                Registered Users
+                            </h3>
+
+                        </div>
+
+
+                        <span
+                            class="table-total"
+                            id="userTableTotal"
+                        >
+                            0 users
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        User ID
+                                    </th>
+
+                                    <th>
+                                        Username
+                                    </th>
+
+                                    <th>
+                                        Name
+                                    </th>
+
+                                    <th>
+                                        Email
+                                    </th>
+
+                                    <th>
+                                        Created
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody
+                                id="usersTableBody"
+                            >
+
+                                <tr>
+
+                                    <td
+                                        colspan="7"
+                                        class="table-loading"
+                                    >
+
+                                        <i class="ri-loader-4-line"></i>
+
+                                        Loading users...
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 NOTIFICATIONS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="notificationsSection"
+            >
+
+
+                <div class="section-intro">
+
+                    <div>
+
+                        <span class="section-label">
+                            COMMUNICATION
+                        </span>
+
+                        <h2>
+                            Notifications
+                        </h2>
+
+                        <p>
+                            Manage Learn2Live announcements.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        id="addNotificationButton"
+                    >
+
+                        <i class="ri-add-line"></i>
+
+                        Add Notification
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="notification-admin-list"
+                    id="notificationAdminList"
+                >
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+
+                            <i class="ri-loader-4-line"></i>
+
+                        </div>
+
+                        <h3>
+                            Loading notifications...
+                        </h3>
+
+                        <p>
+                            Please wait...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CERTIFICATE DOWNLOADS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="certificatesSection"
+            >
+
+
+                <div class="section-intro">
+
+                    <div>
+
+                        <span class="section-label">
+                            CERTIFICATE ACTIVITY
+                        </span>
+
+                        <h2>
+                            Certificate Downloads
+                        </h2>
+
+                        <p>
+                            Track which users downloaded certificates
+                            and when they downloaded them.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CERTIFICATE STATISTICS
+                ================================================== -->
+
+                <div class="dashboard-stats-grid">
+
+
+                    <!-- TOTAL DOWNLOADS -->
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon">
+                                <i class="ri-download-2-line"></i>
+                            </div>
+
+                            <span class="stat-label">
+                                TOTAL DOWNLOADS
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-card-value">
+
+                            <strong id="certificateDownloadTotal">
+                                0
+                            </strong>
+
+                            <span>
+                                Downloads
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- UNIQUE CERTIFICATES -->
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon">
+                                <i class="ri-award-line"></i>
+                            </div>
+
+                            <span class="stat-label">
+                                CERTIFICATES
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-card-value">
+
+                            <strong id="certificateUniqueTotal">
+                                0
+                            </strong>
+
+                            <span>
+                                Certificate Types
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CERTIFICATE SEARCH
+                ================================================== -->
+
+                <div class="filter-card">
+
+                    <div class="search-box">
+
+                        <i class="ri-search-line"></i>
+
+                        <input
+                            type="text"
+                            id="certificateSearch"
+                            placeholder="Search user, email, category or certificate..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CERTIFICATE TABLE
+                ================================================== -->
+
+                <div class="table-card">
+
+                    <div class="table-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                LIVE GOOGLE SHEET DATA
+                            </span>
+
+                            <h3>
+                                Certificate Download History
+                            </h3>
+
+                        </div>
+
+
+                        <span
+                            class="table-total"
+                            id="certificateTableTotal"
+                        >
+                            0 downloads
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        User
+                                    </th>
+
+                                    <th>
+                                        Email
+                                    </th>
+
+                                    <th>
+                                        Category
+                                    </th>
+
+                                    <th>
+                                        Certificate
+                                    </th>
+
+                                    <th>
+                                        Downloaded
+                                    </th>
+
+                                    <th>
+                                        Date &amp; Time
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody
+                                id="certificateDownloadsTableBody"
+                            >
+
+                                <tr>
+
+                                    <td
+                                        colspan="6"
+                                        class="table-loading"
+                                    >
+
+                                        <i class="ri-loader-4-line"></i>
+
+                                        Loading certificate activity...
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     VIEW QUESTION MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="viewQuestionModal"
+    aria-hidden="true"
+>
+
+    <div class="modal-box question-view-modal">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <span class="modal-label">
+                    QUESTION DETAILS
+                </span>
+
+                <h2>
+                    View Question
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                data-close-modal="viewQuestionModal"
+            >
+
+                <i class="ri-close-line"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <div class="modal-body">
+
+            <div class="detail-row">
+
+                <span>
+                    Question ID
+                </span>
+
+                <strong id="viewQuestionId">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>
+                    Category
+                </span>
+
+                <strong id="viewQuestionCategory">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>
+                    Subcategory
+                </span>
+
+                <strong id="viewQuestionSubcategory">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="question-detail-block">
+
+                <span>
+                    Question
+                </span>
+
+                <p id="viewQuestionText">
+                    -
+                </p>
+
+            </div>
+
+
+            <div class="view-options">
+
+
+                <div class="view-option">
+
+                    <span>
+                        A
+                    </span>
+
+                    <p id="viewOptionA">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div class="view-option">
+
+                    <span>
+                        B
+                    </span>
+
+                    <p id="viewOptionB">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div class="view-option">
+
+                    <span>
+                        C
+                    </span>
+
+                    <p id="viewOptionC">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div class="view-option">
+
+                    <span>
+                        D
+                    </span>
+
+                    <p id="viewOptionD">
+                        -
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="correct-answer-box">
+
+                <span>
+                    Correct Answer
+                </span>
+
+                <strong id="viewCorrectAnswer">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="question-detail-block">
+
+                <span>
+                    Explanation
+                </span>
+
+                <p id="viewExplanation">
+                    -
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     DELETE QUESTION MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="deleteQuestionModal"
+    aria-hidden="true"
+>
+
+    <div class="modal-box confirmation-modal">
+
+        <div class="confirmation-icon">
+
+            <i class="ri-delete-bin-6-line"></i>
+
+        </div>
+
+
+        <h2>
+            Delete Question?
+        </h2>
+
+
+        <p>
+            Are you sure you want to delete this question?
+            This action cannot be undone.
+        </p>
+
+
+        <strong id="deleteQuestionName"></strong>
+
+
+        <div class="modal-actions">
+
+            <button
+                type="button"
+                class="secondary-button"
+                data-close-modal="deleteQuestionModal"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                class="danger-button"
+                id="confirmDeleteQuestion"
+            >
+
+                <i class="ri-delete-bin-line"></i>
+
+                Delete
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     NOTIFICATION MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="notificationModal"
+    aria-hidden="true"
+>
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+
+            <div>
+
+                <span class="modal-label">
+                    NOTIFICATION
+                </span>
+
+                <h2 id="notificationModalTitle">
+                    Add Notification
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                data-close-modal="notificationModal"
+            >
+
+                <i class="ri-close-line"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="modal-body">
+
+            <form
+                id="notificationForm"
+                novalidate
+            >
+
+                <input
+                    type="hidden"
+                    id="notificationId"
+                >
+
+
+                <div class="form-group">
+
+                    <label for="notificationTitle">
+
+                        Title
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="notificationTitle"
+                        placeholder="Enter notification title"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="notificationMessage">
+
+                        Message
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <textarea
+                        id="notificationMessage"
+                        rows="5"
+                        placeholder="Enter notification message..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="notificationType">
+                        Type
+                    </label>
+
+
+                    <select id="notificationType">
+
+                        <option value="info">
+                            Information
+                        </option>
+
+                        <option value="success">
+                            Success
+                        </option>
+
+                        <option value="warning">
+                            Warning
+                        </option>
+
+                        <option value="important">
+                            Important
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div
+                    class="form-message"
+                    id="notificationFormMessage"
+                ></div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        data-close-modal="notificationModal"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+
+                        <i class="ri-save-3-line"></i>
+
+                        Save Notification
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     LOGOUT CONFIRMATION
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="logoutModal"
+    aria-hidden="true"
+>
+
+    <div class="modal-box confirmation-modal">
+
+
+        <div class="confirmation-icon logout-confirm-icon">
+
+            <i class="ri-logout-box-r-line"></i>
+
+        </div>
+
+
+        <h2>
+            Logout?
+        </h2>
+
+
+        <p>
+            Are you sure you want to logout from
+            the Learn2Live admin panel?
+        </p>
+
+
+        <div class="modal-actions">
+
+            <button
+                type="button"
+                class="secondary-button"
+                data-close-modal="logoutModal"
+            >
+
+                Cancel
+
+            </button>
+
+
+            <button
+                type="button"
+                class="danger-button"
+                id="confirmLogout"
+            >
+
+                <i class="ri-logout-box-r-line"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+    role="alert"
+>
+
+    <div class="toast-icon">
+
+        <i class="ri-check-line"></i>
+
+    </div>
+
+
+    <div class="toast-content">
+
+        <strong id="toastTitle">
+            Success
+        </strong>
+
+        <span id="toastMessage">
+            Operation completed successfully.
+        </span>
+
+    </div>
+
+
+    <button
+        type="button"
+        id="closeToast"
+        aria-label="Close"
+    >
+
+        <i class="ri-close-line"></i>
+
+    </button>
+
+</div>
+
+
+<!-- User Details Popup -->
+<div id="userDetailsModal" class="admin-modal">
+    <div class="admin-modal-card">
+        <button type="button" class="modal-close"
+            onclick="closeUserDetailsModal()">×</button>
+
+        <h2>User Details</h2>
+        <div id="userDetailsContent"></div>
+
+        <div class="modal-actions">
+            <button type="button" class="delete-btn"
+                onclick="openDeleteConfirmation()">
+                <i class="ri-delete-bin-line"></i> Delete User
+            </button>
+            <button type="button" class="cancel-btn"
+                onclick="closeUserDetailsModal()">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Confirm Delete Popup -->
+<div id="confirmDeleteModal" class="admin-modal">
+    <div class="admin-modal-card confirm-card">
+        <h2>Confirm Delete</h2>
+        <p>Are you sure you want to delete this user? This action cannot be undone.</p>
+
+        <div class="modal-actions">
+            <button type="button" class="cancel-btn"
+                onclick="closeDeleteConfirmation()">Cancel</button>
+            <button type="button" class="delete-btn"
+                id="confirmDeleteButton"
+                onclick="confirmUserDeletion()">Yes, Delete</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================
+     ADMIN JAVASCRIPT
+========================================================= -->
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

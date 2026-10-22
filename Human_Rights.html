@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="auth.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Human Rights Course | Life Skills Hub</title>
+
+    <link rel="stylesheet" href="Human_Rights.css">
+
+</head>
+
+<body>
+
+    <h1>🌍 Human Rights</h1>
+
+
+    <!-- INTRODUCTION -->
+
+    <section>
+
+        <h2>📖 Introduction</h2>
+
+        <p>
+            Human rights are the basic rights and freedoms that belong
+            to every person. They help ensure that everyone is treated
+            with dignity, equality, fairness, and respect.
+        </p>
+
+    </section>
+
+
+    <!-- TYPES OF HUMAN RIGHTS -->
+
+    <section>
+
+        <h2>📚 Important Human Rights</h2>
+
+        <ol>
+
+            <li>
+                <strong>Right to Life</strong> – Every person has the
+                right to life and personal security.
+            </li>
+
+            <li>
+                <strong>Right to Equality</strong> – Everyone should
+                be treated equally and fairly.
+            </li>
+
+            <li>
+                <strong>Right to Freedom</strong> – People have basic
+                freedoms, subject to the law.
+            </li>
+
+            <li>
+                <strong>Right to Education</strong> – Everyone should
+                have access to education.
+            </li>
+
+            <li>
+                <strong>Right to Freedom of Religion</strong> – People
+                have the freedom to follow their religion or beliefs.
+            </li>
+
+            <li>
+                <strong>Right to Dignity</strong> – Every person should
+                be treated with respect and dignity.
+            </li>
+
+        </ol>
+
+    </section>
+
+
+    <!-- WHY IMPORTANT -->
+
+    <section>
+
+        <h2>🛡️ Why Are Human Rights Important?</h2>
+
+        <ul>
+
+            <li>
+                They protect people's dignity and freedom.
+            </li>
+
+            <li>
+                They promote equality and fairness.
+            </li>
+
+            <li>
+                They help protect people from discrimination.
+            </li>
+
+            <li>
+                They encourage respect for every person.
+            </li>
+
+            <li>
+                They help create a fair and peaceful society.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- VIDEO -->
+
+   <section>
+
+    <h2>🎥 Human Rights Awareness Video</h2>
+
+    <div class="video-wrapper">
+
+        <iframe
+            src="https://www.youtube.com/embed/6e8m8L9BFa4"
+            title="Human Rights Awareness Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+    <!-- REMEMBER -->
+
+    <section>
+
+        <h2>💡 Remember</h2>
+
+        <p>
+            Human rights belong to everyone. We should know our rights,
+            respect the rights of others, and treat every person with
+            dignity, equality, and respect.
+        </p>
+
+    </section>
+
+
+    <!-- QUIZ -->
+
+    <section id="quizSection" class="quiz-section">
+
+        <div class="quiz-icon">🧠</div>
+
+        <h2>Test Your Knowledge</h2>
+
+        <p>
+            You have completed the Human Rights learning materials.
+            Take the 5-question quiz to complete this topic.
+        </p>
+
+        <a
+            href="Human_Rights_quiz.html"
+            class="start-quiz-btn">
+
+            Start Human Rights Quiz →
+
+        </a>
+
+    </section>
+
+
+    <!-- COMPLETION -->
+
+    <section
+        id="completionSection"
+        class="completion-section"
+        style="display:none;">
+
+        <div class="completion-icon">
+            🎉
+        </div>
+
+        <h2>
+            Human Rights Course Completed!
+        </h2>
+
+        <p>
+            Congratulations! You have successfully completed
+            the Human Rights topic.
+        </p>
+
+        <div class="completed-badge">
+            ✓ Human Rights Completed
+        </div>
+
+    </section>
+
+
+    <script>
+
+        const loggedInEmail =
+            localStorage.getItem("loggedInEmail");
+
+
+        const completionSection =
+            document.getElementById("completionSection");
+
+
+        const quizSection =
+            document.getElementById("quizSection");
+
+
+        const urlParams =
+            new URLSearchParams(window.location.search);
+
+
+        const reviewMode =
+            urlParams.get("mode") === "review";
+
+
+        if (loggedInEmail) {
+
+            const completionKey =
+                "humanRightsCompleted_" + loggedInEmail;
+
+
+            const completed =
+                localStorage.getItem(completionKey) === "true";
+
+
+            if (completed) {
+
+                completionSection.style.display = "block";
+
+            }
+
+
+            if (reviewMode && completed) {
+
+                quizSection.style.display = "none";
+
+                document.title =
+                    "Human Rights Review | Life Skills Hub";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

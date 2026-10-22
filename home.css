@@ -1,0 +1,1360 @@
+/* =====================================================
+   GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7fa;
+    color: #0b1736;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e7ebf2;
+    position: relative;
+    z-index: 100;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1450px;
+    min-height: 78px;
+
+    margin: auto;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    color: #0b1736;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   NAV LINKS
+===================================================== */
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 36px;
+}
+
+.nav-links li a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #35415b;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #2454ff;
+}
+
+.nav-links li a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #2454ff;
+
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   NAV BUTTONS
+===================================================== */
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn,
+.register-btn {
+    padding: 10px 21px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.login-btn {
+    background: #ffffff;
+
+    color: #0b1736;
+
+    border: 1px solid #d8deea;
+}
+
+.login-btn:hover {
+    color: #2454ff;
+    border-color: #2454ff;
+}
+
+.register-btn {
+    background: #2454ff;
+
+    color: #ffffff;
+
+    border: 1px solid #2454ff;
+}
+
+.register-btn:hover {
+    background: #0b1736;
+    border-color: #0b1736;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    width: 100%;
+
+    padding: 65px 5% 80px;
+
+    background:
+        radial-gradient(
+            circle at 12% 20%,
+            rgba(36, 84, 255, 0.04),
+            transparent 28%
+        ),
+        #f5f7fa;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1380px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(500px, 0.85fr);
+
+    gap: 48px;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.left {
+    width: 100%;
+    min-width: 0;
+}
+
+.welcome {
+    color: #2454ff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.left h1 {
+    color: #0b1736;
+
+    font-size: clamp(44px, 4vw, 58px);
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    margin-bottom: 11px;
+}
+
+.left h3 {
+    color: #17264a;
+
+    font-size: clamp(20px, 2vw, 24px);
+
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    margin-bottom: 14px;
+}
+
+.description {
+    max-width: 650px;
+
+    color: #6d778b;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   HERO SLIDER
+===================================================== */
+
+.hero-slider {
+    position: relative;
+
+    width: 100%;
+    height: 300px;
+
+    margin-top: 32px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background:
+        radial-gradient(
+            circle at 90% 5%,
+            rgba(91, 128, 255, 0.58),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 5% 100%,
+            rgba(36, 84, 255, 0.35),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #091735 0%,
+            #102554 48%,
+            #1b4298 100%
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 18px 42px rgba(11,23,54,0.18);
+}
+
+.hero-slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 290px;
+    height: 290px;
+
+    right: -130px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.10);
+}
+
+.hero-slider::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    right: 50px;
+    bottom: -135px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+
+/* =====================================================
+   SLIDES
+===================================================== */
+
+.hero-slide {
+    position: absolute;
+
+    inset: 0;
+
+    padding: 40px 44px 48px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(30px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        visibility 0.6s ease;
+
+    z-index: 2;
+}
+
+.hero-slide.active-slide {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateX(0);
+}
+
+
+/* =====================================================
+   SLIDE ICON
+===================================================== */
+
+.slide-icon {
+    width: 72px;
+    height: 72px;
+
+    flex-shrink: 0;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 29px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #416cff,
+            #2454df
+        );
+
+    box-shadow:
+        0 12px 27px rgba(36,84,255,0.35);
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =====================================================
+   SLIDE TEXT
+===================================================== */
+
+.slide-content {
+    flex: 1;
+    min-width: 0;
+
+    position: relative;
+    z-index: 5;
+}
+
+.slide-label {
+    display: block;
+
+    color: #91a9ff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 8px;
+}
+
+.hero-slide h2 {
+    color: #ffffff;
+
+    font-size: clamp(23px, 2.2vw, 29px);
+
+    line-height: 1.25;
+
+    font-weight: 600;
+
+    margin-bottom: 11px;
+}
+
+.hero-slide p {
+    max-width: 430px;
+
+    color: #d9e2f7;
+
+    font-size: 12px;
+
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   SLIDE 1 ICONS
+===================================================== */
+
+.floating-icons {
+    flex-shrink: 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 52px);
+
+    gap: 11px;
+
+    position: relative;
+    z-index: 5;
+}
+
+.floating-icons span {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    background: rgba(255,255,255,0.10);
+
+    border: 1px solid rgba(255,255,255,0.13);
+
+    backdrop-filter: blur(6px);
+
+    transition: 0.3s ease;
+}
+
+.floating-icons span:hover {
+    background: rgba(255,255,255,0.18);
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   LEARNING POINTS
+===================================================== */
+
+.learning-points {
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    position: relative;
+    z-index: 5;
+}
+
+.learning-points span {
+    min-width: 125px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 12px;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    background: rgba(255,255,255,0.10);
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.learning-points i {
+    color: #91aaff;
+}
+
+
+/* =====================================================
+   CONFIDENCE POINTS
+===================================================== */
+
+.confidence-points {
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    position: relative;
+    z-index: 5;
+}
+
+.confidence-points span {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+}
+
+.confidence-points i {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.10);
+
+    color: #91aaff;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   SLIDER DOTS
+===================================================== */
+
+.slide-controls {
+    position: absolute;
+
+    left: 44px;
+    bottom: 19px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    z-index: 10;
+}
+
+.slide-dot {
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.35);
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.slide-dot.active {
+    width: 27px;
+
+    border-radius: 10px;
+
+    background: #5d7eff;
+}
+
+
+/* =====================================================
+   RIGHT : LIFE SKILLS PANEL
+===================================================== */
+
+.hero-skills {
+    width: 100%;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e6ef;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 32px rgba(11,23,54,0.065);
+}
+
+
+/* =====================================================
+   SKILLS HEADING
+===================================================== */
+
+.skills-heading {
+    margin-bottom: 23px;
+}
+
+.skills-heading > span {
+    color: #2454ff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.skills-heading h2 {
+    color: #0b1736;
+
+    font-size: 29px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    margin-top: 4px;
+}
+
+.skills-heading p {
+    color: #7a8497;
+
+    font-size: 12px;
+
+    margin-top: 6px;
+}
+
+
+/* =====================================================
+   6 CARDS GRID
+===================================================== */
+
+.skills-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+/* =====================================================
+   BIGGER MINI CARDS
+===================================================== */
+
+.mini-skill-card {
+    width: 100%;
+
+    min-height: 150px;
+
+    padding: 20px;
+
+    border-radius: 17px;
+
+    background: #f8faff;
+
+    border: 1px solid #e2e7f0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.mini-skill-card:hover {
+    transform: translateY(-3px);
+
+    background: #ffffff;
+
+    border-color: #bdcaff;
+
+    box-shadow:
+        0 10px 25px rgba(36,84,255,0.09);
+}
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.mini-skill-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.mini-skill-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   ICON COLORS
+===================================================== */
+
+.firstaid-icon {
+    background: #fff0f0;
+    color: #e05252;
+}
+
+.banking-icon {
+    background: #edf3ff;
+    color: #3264e8;
+}
+
+.tax-icon {
+    background: #fff7e6;
+    color: #d38b20;
+}
+
+.digital-icon {
+    background: #eaf8f5;
+    color: #168576;
+}
+
+.legal-icon {
+    background: #f2edff;
+    color: #7353c8;
+}
+
+.interview-icon {
+    background: #edf0f7;
+    color: #40516f;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.mini-skill-title {
+    min-width: 0;
+}
+
+.mini-skill-title h3 {
+    color: #17213b;
+
+    font-size: 15px;
+
+    line-height: 1.35;
+
+    font-weight: 600;
+}
+
+.mini-skill-title p {
+    color: #8791a4;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    margin-top: 4px;
+}
+
+
+/* =====================================================
+   HIDDEN DESCRIPTION
+===================================================== */
+
+.skill-more {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.3s ease,
+        margin-top 0.3s ease;
+}
+
+.skill-more p {
+    color: #68748a;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   EXPANDED
+===================================================== */
+
+.mini-skill-card.expanded {
+    background: #ffffff;
+
+    border-color: #b8c7ff;
+
+    box-shadow:
+        0 10px 26px rgba(36,84,255,0.10);
+}
+
+.mini-skill-card.expanded .skill-more {
+    max-height: 80px;
+
+    opacity: 1;
+
+    margin-top: 13px;
+}
+
+
+/* =====================================================
+   LEARN MORE
+===================================================== */
+
+.learn-more-btn {
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+
+    border: none;
+
+    color: #2454ff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    color: #0b1736;
+}
+
+.learn-more-btn i {
+    font-size: 9px;
+
+    transition: transform 0.3s ease;
+}
+
+.mini-skill-card.expanded
+.learn-more-btn i {
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1500px) {
+
+    .navbar {
+        max-width: 1500px;
+    }
+
+    .hero-content {
+        max-width: 1450px;
+    }
+
+    .hero-skills {
+        padding: 34px;
+    }
+
+    .mini-skill-card {
+        min-height: 165px;
+
+        padding: 22px;
+    }
+
+    .mini-skill-icon {
+        width: 56px;
+        height: 56px;
+
+        font-size: 21px;
+    }
+
+    .mini-skill-title h3 {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =====================================================
+   LAPTOP / WEB
+===================================================== */
+
+@media (max-width: 1250px) {
+
+    .hero {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .hero-content {
+        grid-template-columns:
+            minmax(0, 1.1fr)
+            minmax(430px, 0.9fr);
+
+        gap: 30px;
+    }
+
+    .hero-skills {
+        padding: 25px;
+    }
+
+    .mini-skill-card {
+        min-height: 145px;
+
+        padding: 17px;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .left {
+        max-width: 900px;
+
+        margin: auto;
+    }
+
+    .hero-slider {
+        max-width: 100%;
+    }
+
+    .hero-skills {
+        max-width: 900px;
+
+        margin: auto;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET / SMALL LAPTOP
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        min-height: 70px;
+
+        padding: 12px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 14px;
+    }
+
+    .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 22px;
+    }
+
+    .buttons {
+        margin-left: auto;
+    }
+
+
+    .hero {
+        padding: 50px 5% 70px;
+    }
+
+    .left h1 {
+        font-size: 44px;
+    }
+
+    .left h3 {
+        font-size: 20px;
+    }
+
+
+    .hero-slider {
+        height: 310px;
+    }
+
+    .hero-slide {
+        padding: 32px 28px;
+
+        gap: 18px;
+    }
+
+    .slide-icon {
+        width: 58px;
+        height: 58px;
+
+        font-size: 23px;
+    }
+
+    .hero-slide h2 {
+        font-size: 23px;
+    }
+
+    .floating-icons,
+    .learning-points,
+    .confidence-points {
+        display: none;
+    }
+
+
+    .hero-skills {
+        padding: 25px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 13px 5%;
+
+        gap: 12px;
+    }
+
+    .logo h2 {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 37px;
+        height: 37px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links li a {
+        font-size: 11px;
+    }
+
+    .login-btn,
+    .register-btn {
+        padding: 9px 14px;
+
+        font-size: 12px;
+    }
+
+
+    .hero {
+        padding: 40px 5% 60px;
+    }
+
+    .left h1 {
+        font-size: 38px;
+    }
+
+    .left h3 {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+
+    .hero-slider {
+        height: 295px;
+
+        margin-top: 25px;
+
+        border-radius: 20px;
+    }
+
+    .hero-slide {
+        padding: 27px 22px;
+
+        gap: 13px;
+
+        align-items: flex-start;
+    }
+
+    .slide-icon {
+        width: 49px;
+        height: 49px;
+
+        border-radius: 14px;
+
+        font-size: 20px;
+    }
+
+    .slide-label {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-slide h2 {
+        font-size: 20px;
+    }
+
+    .hero-slide p {
+        font-size: 10.5px;
+
+        line-height: 1.65;
+    }
+
+    .slide-controls {
+        left: 22px;
+
+        bottom: 14px;
+    }
+
+
+    /* Skills */
+
+    .hero-skills {
+        padding: 20px;
+
+        border-radius: 20px;
+    }
+
+    .skills-heading {
+        margin-bottom: 19px;
+    }
+
+    .skills-heading h2 {
+        font-size: 25px;
+    }
+
+    .skills-heading p {
+        font-size: 11px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+    .mini-skill-card {
+        min-height: 125px;
+
+        padding: 17px;
+    }
+
+    .mini-skill-icon {
+        width: 49px;
+        height: 49px;
+
+        font-size: 19px;
+    }
+
+    .mini-skill-title h3 {
+        font-size: 14px;
+    }
+
+    .mini-skill-title p {
+        font-size: 10px;
+    }
+
+    .skill-more p {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links li a {
+        font-size: 10px;
+    }
+
+    .buttons {
+        width: 100%;
+
+        justify-content: center;
+
+        margin-left: 0;
+    }
+
+
+    .left h1 {
+        font-size: 34px;
+    }
+
+    .left h3 {
+        font-size: 16px;
+    }
+
+
+    .hero-slider {
+        height: 285px;
+    }
+
+    .hero-slide {
+        padding: 24px 18px;
+    }
+
+    .hero-slide h2 {
+        font-size: 18px;
+    }
+
+
+    .hero-skills {
+        padding: 16px;
+    }
+
+    .mini-skill-card {
+        padding: 15px;
+
+        min-height: 120px;
+    }
+
+    .mini-skill-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 17px;
+    }
+
+}

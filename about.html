@@ -1,0 +1,710 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Learn2Live</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --purple: #6254e7;
+            --dark-purple: #37308f;
+            --green: #087f70;
+            --text: #192238;
+            --muted: #65718a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            background: #f8f9ff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            min-height: 76px;
+            padding: 15px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            border-bottom: 1px solid #eceefa;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--purple);
+        }
+
+        .logo span {
+            color: var(--green);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 500;
+            color: #59647a;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--purple);
+        }
+
+        .login-btn {
+            background: var(--purple);
+            color: white !important;
+            padding: 10px 21px;
+            border-radius: 10px;
+        }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 75px 7% 80px;
+            background:
+                radial-gradient(circle at 10% 15%, #ffffff 0, transparent 30%),
+                linear-gradient(125deg, #eeedff, #f8f9ff 55%, #e4faf3);
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::before {
+            width: 250px;
+            height: 250px;
+            right: -75px;
+            top: -70px;
+            border: 35px solid rgba(98, 84, 231, 0.08);
+        }
+
+        .hero::after {
+            width: 130px;
+            height: 130px;
+            left: -60px;
+            bottom: -50px;
+            background: rgba(8, 127, 112, 0.08);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--dark-purple);
+            background: white;
+            border: 1px solid #dedbff;
+            padding: 9px 18px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.3px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            color: #172039;
+            font-size: clamp(36px, 5.5vw, 65px);
+            font-weight: 800;
+            line-height: 1.19;
+            letter-spacing: -2px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--purple);
+        }
+
+        .tagline {
+            max-width: 710px;
+            margin: 0 auto;
+            color: #515d76;
+            font-size: clamp(15px, 2vw, 18px);
+            line-height: 1.9;
+        }
+
+        /* LARGE VERSION LABEL */
+
+        .version-wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: 33px;
+        }
+
+        .version-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 16px 26px;
+            background: white;
+            border: 1px solid #dedbff;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(65, 55, 155, 0.09);
+        }
+
+        .version-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #eeedff;
+            color: var(--purple);
+            font-size: 25px;
+        }
+
+        .version-info {
+            text-align: left;
+        }
+
+        .version-info small {
+            display: block;
+            color: #7a8297;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 2px;
+        }
+
+        .version-info strong {
+            color: var(--dark-purple);
+            font-size: 25px;
+            line-height: 1.3;
+            font-weight: 800;
+        }
+
+        /* ABOUT SECTION */
+
+        .main-content {
+            max-width: 1050px;
+            padding: 55px 24px 50px;
+            margin: auto;
+        }
+
+        .about-card {
+            padding: 38px;
+            background: white;
+            border: 1px solid #e9ecf7;
+            border-radius: 23px;
+            box-shadow: 0 12px 35px rgba(34, 42, 80, 0.045);
+        }
+
+        .section-label {
+            color: var(--green);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .about-card h2 {
+            font-size: clamp(24px, 3vw, 31px);
+            color: #1b2540;
+            margin-bottom: 16px;
+        }
+
+        .about-card p {
+            font-size: 14px;
+            color: #59657b;
+            line-height: 2;
+        }
+
+        /* PURPOSE HIGHLIGHTS */
+
+        .purpose-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .purpose-card {
+            background: white;
+            border: 1px solid #e9ecf7;
+            border-radius: 19px;
+            padding: 27px 23px;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .purpose-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 30px rgba(34, 42, 80, 0.08);
+        }
+
+        .purpose-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eeedff;
+            border-radius: 15px;
+            font-size: 23px;
+            margin-bottom: 18px;
+        }
+
+        .purpose-card:nth-child(2) .purpose-icon {
+            background: #e5f8f1;
+        }
+
+        .purpose-card:nth-child(3) .purpose-icon {
+            background: #fff2df;
+        }
+
+        .purpose-card h3 {
+            font-size: 16px;
+            color: #202a42;
+            margin-bottom: 10px;
+        }
+
+        .purpose-card p {
+            color: #667188;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        /* CLOSING BANNER */
+
+        .closing-card {
+            position: relative;
+            overflow: hidden;
+            margin-top: 27px;
+            padding: 40px 25px;
+            text-align: center;
+            border-radius: 23px;
+            background: linear-gradient(120deg, #37308f, #6254e7);
+            color: white;
+        }
+
+        .closing-card h2 {
+            font-size: clamp(23px, 3vw, 30px);
+            margin-bottom: 13px;
+        }
+
+        .closing-card p {
+            max-width: 660px;
+            margin: auto;
+            color: #e9e8ff;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 30px 20px;
+            text-align: center;
+            background: white;
+            border-top: 1px solid #e9ecf7;
+            color: #778198;
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .footer-logo {
+            color: var(--purple);
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 7px;
+        }
+
+        .developer-line {
+            color: #667188;
+        }
+
+        .mabel-trigger {
+            display: inline;
+            padding: 0;
+            border: none;
+            background: transparent;
+            color: #29334c;
+            font: inherit;
+            font-weight: 800;
+            cursor: pointer;
+            border-bottom: 1px dashed #6254e7;
+            transition: color 0.2s;
+        }
+
+        .mabel-trigger:hover {
+            color: var(--purple);
+        }
+
+        .popup-message {
+            display: none;
+            width: fit-content;
+            max-width: 520px;
+            margin: 13px auto 0;
+            padding: 13px 18px;
+            border: 1px solid #dedbff;
+            border-radius: 13px;
+            background: #f0efff;
+            color: #39318f;
+            font-size: 13px;
+            line-height: 1.8;
+            font-weight: 500;
+            animation: appear 0.3s ease;
+        }
+
+        .popup-message.show {
+            display: block;
+        }
+
+        /* JANANI SECRET BUTTON — ON HERO CORNER */
+
+        .secret-button {
+            position: absolute;
+            z-index: 2;
+            right: 7%;
+            bottom: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid #d6d1ff;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--purple);
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(65, 55, 155, 0.08);
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .secret-button:hover {
+            transform: rotate(15deg) scale(1.1);
+            background: #eeedff;
+        }
+
+        .janani-message {
+            display: none;
+            position: absolute;
+            z-index: 3;
+            right: 7%;
+            bottom: 68px;
+            width: min(310px, 85%);
+            padding: 17px 19px;
+            border: 1px solid #dedbff;
+            border-radius: 17px;
+            background: white;
+            box-shadow: 0 12px 35px rgba(45, 38, 120, 0.14);
+            color: #4a408f;
+            font-size: 13px;
+            line-height: 1.8;
+            text-align: left;
+            animation: appear 0.3s ease;
+        }
+
+        .janani-message.show {
+            display: block;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(7px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 750px) {
+            .navbar {
+                padding: 15px 5%;
+            }
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 60px 6% 75px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .purpose-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-card {
+                padding: 27px 23px;
+            }
+
+            .secret-button {
+                right: 5%;
+                bottom: 17px;
+            }
+
+            .janani-message {
+                right: 5%;
+                bottom: 62px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .navbar {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .version-card {
+                padding: 13px 19px;
+            }
+
+            .version-info strong {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="home.html" class="logo">Learn<span>2</span>Live</a>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="login.html" class="login-btn" id="loginLink">Login</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+
+        <div class="hero-content">
+            <div class="eyebrow">MORE THAN JUST LEARNING</div>
+
+            <h1>
+                Life Is Better When<br>
+                <span>You Know How.</span>
+            </h1>
+
+            <p class="tagline">
+                Real-life knowledge. Everyday confidence.
+                Learn2Live helps you turn what you learn into what you can do —
+                because the most valuable lessons are the ones you use in life.
+            </p>
+
+            <div class="version-wrap">
+                <div class="version-card">
+                    <div class="version-icon">✦</div>
+                    <div class="version-info">
+                        <small>WELCOME TO LEARN2LIVE</small>
+                        <strong>Version 1.0</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JANANI'S HIDDEN SURPRISE -->
+        <button
+            type="button"
+            class="secret-button"
+            id="secretButton"
+            aria-label="Reveal a special surprise"
+            title="A little surprise"
+        >✦</button>
+
+        <div class="janani-message" id="jananiMessage">
+            💜 <strong>For Janani</strong><br>
+            Some people don't just bring ideas to life —
+            they leave a little sparkle in everything they touch.
+            This little corner is a reminder that your presence
+            makes this journey more special. ✨
+        </div>
+
+    </header>
+
+    <!-- ABOUT CONTENT -->
+    <main class="main-content">
+
+        <section class="about-card">
+            <div class="section-label">Our Story</div>
+
+            <h2>Making Everyday Life Easier</h2>
+
+            <p>
+                Learn2Live is created to make useful life knowledge simple,
+                accessible, and practical for everyone. It helps people
+                understand important everyday situations, learn at their own
+                pace, and check their understanding through interactive quizzes.
+                Whether you are beginning your journey or building on what you
+                already know, Learn2Live encourages you to grow with confidence
+                and use your knowledge beyond the screen.
+            </p>
+        </section>
+
+        <!-- WEBSITE BENEFITS -->
+        <section class="purpose-grid">
+
+            <article class="purpose-card">
+                <div class="purpose-icon">✧</div>
+                <h3>Learn with Ease</h3>
+                <p>
+                    Explore practical knowledge through clear, simple,
+                    beginner-friendly learning content.
+                </p>
+            </article>
+
+            <article class="purpose-card">
+                <div class="purpose-icon">✓</div>
+                <h3>Test Your Knowledge</h3>
+                <p>
+                    Take interactive quizzes, check your understanding,
+                    and keep track of your learning progress.
+                </p>
+            </article>
+
+            <article class="purpose-card">
+                <div class="purpose-icon">♡</div>
+                <h3>Grow with Confidence</h3>
+                <p>
+                    Build useful everyday knowledge that can help you make
+                    better-informed decisions in real-life situations.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- CLOSING -->
+        <section class="closing-card">
+            <h2>Learn Something Useful. Change Something Everyday.</h2>
+
+            <p>
+                Because learning matters most when it makes a difference
+                in the way we live. Start small, keep growing, and carry
+                your knowledge into the real world.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">Learn2Live</div>
+
+        <div class="developer-line">
+            Developed by Barzan Nisha,
+            <button
+                type="button"
+                class="mabel-trigger"
+                id="mabelTrigger"
+                aria-expanded="false"
+                aria-controls="mabelMessage"
+            >Mabel Princiya</button>
+            and Nandhini.
+        </div>
+
+        <!-- MABEL'S PERSONAL MESSAGE -->
+        <div class="popup-message" id="mabelMessage">
+            ✨ <strong>Mabel Princiya</strong> — a creative mind with the
+            dedication to turn ideas into something meaningful.
+            Her contribution adds its own special touch to the Learn2Live journey. 💜
+        </div>
+
+        <div style="margin-top: 12px;">
+            Learn practical skills. Build everyday confidence.
+        </div>
+
+        <div style="margin-top: 12px;">
+            © 2026 Learn2Live. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Reveal Janani's special message from the star in the hero section.
+        const secretButton = document.getElementById("secretButton");
+        const jananiMessage = document.getElementById("jananiMessage");
+
+        secretButton.addEventListener("click", function () {
+            jananiMessage.classList.toggle("show");
+
+            secretButton.textContent =
+                jananiMessage.classList.contains("show") ? "♥" : "✦";
+        });
+
+        // Reveal Mabel's description when her name is clicked.
+        const mabelTrigger = document.getElementById("mabelTrigger");
+        const mabelMessage = document.getElementById("mabelMessage");
+
+        mabelTrigger.addEventListener("click", function () {
+            mabelMessage.classList.toggle("show");
+
+            mabelTrigger.setAttribute(
+                "aria-expanded",
+                mabelMessage.classList.contains("show") ? "true" : "false"
+            );
+        });
+
+        // Show Dashboard when the user is already logged in.
+        const loginLink = document.getElementById("loginLink");
+        const currentUser = localStorage.getItem("currentUser");
+        const currentUserId = localStorage.getItem("currentUserId");
+
+        if (currentUser || currentUserId) {
+            loginLink.textContent = "Dashboard";
+            loginLink.href = "dashboard.html";
+        }
+    </script>
+
+</body>
+</html>

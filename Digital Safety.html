@@ -1,0 +1,1307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Digital Safety Course | Learn2Live</title>
+
+    <link
+        rel="stylesheet"
+        href="banking.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="theme.css">
+    <script src="auth.js"></script>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <div class="header-content">
+
+        <div class="header-icon">
+            🛡️
+        </div>
+
+        <div>
+
+            <span class="header-label">
+                LEARN2LIVE • LIFE SKILLS
+            </span>
+
+            <h1>
+                Digital Safety
+            </h1>
+
+            <p>
+                Learn essential digital safety skills for
+                protecting your accounts, privacy and online payments.
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     RANDOM DIGITAL SAFETY FACT
+========================================================= -->
+
+<section class="fact-section">
+
+    <div class="fact-icon">
+        <i class="fa-solid fa-lightbulb"></i>
+    </div>
+
+    <div class="fact-content">
+
+        <span>
+            DIGITAL SAFETY FACT
+        </span>
+
+        <p id="digitalSafetyFact">
+            Loading fact...
+        </p>
+
+    </div>
+
+    <button
+        type="button"
+        id="nextFact"
+        aria-label="Show another digital safety fact"
+    >
+
+        <i class="fa-solid fa-rotate"></i>
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOPIC HEADING
+========================================================= -->
+
+<section class="topic-title">
+
+    <span class="section-label">
+        DIGITAL SAFETY BASICS
+    </span>
+
+    <h2>
+        Choose a Topic
+    </h2>
+
+    <p>
+        Select a topic to learn important digital safety
+        concepts and test your knowledge.
+    </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOPIC CARDS
+========================================================= -->
+
+<main class="topic-container">
+
+
+    <!-- =====================================================
+         PASSWORD SECURITY
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="passwordSecurityCard"
+        data-topic="Password Security"
+        data-topic-key="passwordSecurity"
+        data-href="password-security.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon password-security">
+                🔐
+            </div>
+
+            <span class="topic-number">
+                01
+            </span>
+
+        </div>
+
+
+        <h3>
+            Password Security
+        </h3>
+
+
+        <p>
+            Learn how to create strong passwords, protect
+            accounts and keep login credentials secure.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="passwordSecurityActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="passwordSecurityStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="password-security.html"
+                id="passwordSecurityContinue"
+                class="topic-link"
+            >
+
+                <span id="passwordSecurityContinueText">
+                    Start Password Security
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="password-security.html?mode=review"
+                id="passwordSecurityReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ONLINE SCAMS
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="onlineScamsCard"
+        data-topic="Online Scams"
+        data-topic-key="onlineScams"
+        data-href="online-scams.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon online-scams">
+                ⚠️
+            </div>
+
+            <span class="topic-number">
+                02
+            </span>
+
+        </div>
+
+
+        <h3>
+            Online Scams
+        </h3>
+
+
+        <p>
+            Learn how to identify phishing, fake messages,
+            suspicious links and common online scams.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="onlineScamsActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="onlineScamsStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="online-scams.html"
+                id="onlineScamsContinue"
+                class="topic-link"
+            >
+
+                <span id="onlineScamsContinueText">
+                    Start Online Scams
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="online-scams.html?mode=review"
+                id="onlineScamsReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PRIVACY PROTECTION
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="privacyProtectionCard"
+        data-topic="Privacy Protection"
+        data-topic-key="privacyProtection"
+        data-href="privacy-protection.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon privacy-protection">
+                🕵️
+            </div>
+
+            <span class="topic-number">
+                03
+            </span>
+
+        </div>
+
+
+        <h3>
+            Privacy Protection
+        </h3>
+
+
+        <p>
+            Learn how to protect personal information, app
+            permissions, devices and your online identity.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="privacyProtectionActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="privacyProtectionStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="privacy-protection.html"
+                id="privacyProtectionContinue"
+                class="topic-link"
+            >
+
+                <span id="privacyProtectionContinueText">
+                    Start Privacy Protection
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="privacy-protection.html?mode=review"
+                id="privacyProtectionReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SOCIAL MEDIA SAFETY
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="socialMediaSafetyCard"
+        data-topic="Social Media Safety"
+        data-topic-key="socialMediaSafety"
+        data-href="social-media-safety.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon social-media-safety">
+                📱
+            </div>
+
+            <span class="topic-number">
+                04
+            </span>
+
+        </div>
+
+
+        <h3>
+            Social Media Safety
+        </h3>
+
+
+        <p>
+            Learn safe social media habits, privacy settings,
+            responsible sharing and account protection.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="socialMediaSafetyActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="socialMediaSafetyStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="social-media-safety.html"
+                id="socialMediaSafetyContinue"
+                class="topic-link"
+            >
+
+                <span id="socialMediaSafetyContinueText">
+                    Start Social Media Safety
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="social-media-safety.html?mode=review"
+                id="socialMediaSafetyReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SAFE ONLINE PAYMENTS
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="safeOnlinePaymentsCard"
+        data-topic="Safe Online Payments"
+        data-topic-key="safeOnlinePayments"
+        data-href="safe-online-payments.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon safe-online-payments">
+                💳
+            </div>
+
+            <span class="topic-number">
+                05
+            </span>
+
+        </div>
+
+
+        <h3>
+            Safe Online Payments
+        </h3>
+
+
+        <p>
+            Learn how to make online payments safely and
+            protect UPI, cards, OTPs and transaction details.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="safeOnlinePaymentsActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="safeOnlinePaymentsStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="safe-online-payments.html"
+                id="safeOnlinePaymentsContinue"
+                class="topic-link"
+            >
+
+                <span id="safeOnlinePaymentsContinueText">
+                    Start Safe Online Payments
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="safe-online-payments.html?mode=review"
+                id="safeOnlinePaymentsReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     ALL TOPICS COMPLETED
+========================================================= -->
+
+<section
+    id="certificateSection"
+    style="display:none;"
+>
+
+    <div class="certificate-content">
+
+        <div class="certificate-icon">
+
+            <i class="fa-solid fa-certificate"></i>
+
+        </div>
+
+        <h2>
+            All Digital Safety Topics Completed!
+        </h2>
+
+        <p>
+            You have successfully completed all five
+            Digital Safety learning categories.
+        </p>
+
+        <button
+            type="button"
+            id="downloadCertificate"
+            class="certificate-btn"
+        >
+
+            <i class="fa-solid fa-download"></i>
+
+            Download Certificate
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+"use strict";
+
+
+/* =========================================================
+   RANDOM DIGITAL SAFETY FACTS
+========================================================= */
+
+const digitalSafetyFacts = [
+
+    "Use a different strong password for each important account.",
+
+    "Never share your password, PIN or OTP with anyone.",
+
+    "Two-factor authentication adds an extra layer of protection to your accounts.",
+
+    "Phishing messages may create urgency to make you act before checking the information.",
+
+    "Do not click suspicious links received through unexpected emails, messages or social media.",
+
+    "Check the website address carefully before entering passwords or payment information.",
+
+    "Keep your phone, computer and important applications updated with security fixes.",
+
+    "Review app permissions and allow access only when it is actually needed.",
+
+    "Avoid sharing sensitive personal information publicly on social media.",
+
+    "Use privacy settings to control who can view your posts and personal information.",
+
+    "Be careful when accepting friend or follow requests from people you do not know.",
+
+    "Never share your UPI PIN or card PIN with another person.",
+
+    "An OTP should only be entered for a transaction or login that you intentionally started.",
+
+    "Before making an online payment, verify the recipient details and payment amount.",
+
+    "Avoid entering sensitive information on websites that you do not trust.",
+
+    "If someone urgently asks for money or confidential information online, verify their identity through a trusted method.",
+
+    "Do not reuse the same password across multiple important accounts.",
+
+    "Lock your phone and computer when they are not in use.",
+
+    "Log out of important accounts when using a shared or public device.",
+
+    "If you notice suspicious account activity, use the official service or bank channel to report it."
+
+];
+
+
+const factElement =
+    document.getElementById(
+        "digitalSafetyFact"
+    );
+
+
+const nextFactButton =
+    document.getElementById(
+        "nextFact"
+    );
+
+
+let currentFact = -1;
+
+
+function showRandomFact() {
+
+    let randomIndex;
+
+
+    do {
+
+        randomIndex =
+            Math.floor(
+                Math.random() *
+                digitalSafetyFacts.length
+            );
+
+    }
+
+    while (
+        digitalSafetyFacts.length > 1 &&
+        randomIndex === currentFact
+    );
+
+
+    currentFact =
+        randomIndex;
+
+
+    if (factElement) {
+
+        factElement.textContent =
+            digitalSafetyFacts[currentFact];
+
+    }
+
+}
+
+
+if (nextFactButton) {
+
+    nextFactButton.addEventListener(
+        "click",
+        showRandomFact
+    );
+
+}
+
+
+showRandomFact();
+
+
+
+/* =========================================================
+   LOGGED-IN USER
+========================================================= */
+
+const loggedInEmail =
+    localStorage.getItem(
+        "loggedInEmail"
+    );
+
+
+
+/* =========================================================
+   TOPIC CONFIGURATION
+========================================================= */
+
+const topics = [
+
+    {
+        key: "passwordSecurity",
+        name: "Password Security",
+        page: "password-security.html"
+    },
+
+    {
+        key: "onlineScams",
+        name: "Online Scams",
+        page: "online-scams.html"
+    },
+
+    {
+        key: "privacyProtection",
+        name: "Privacy Protection",
+        page: "privacy-protection.html"
+    },
+
+    {
+        key: "socialMediaSafety",
+        name: "Social Media Safety",
+        page: "social-media-safety.html"
+    },
+
+    {
+        key: "safeOnlinePayments",
+        name: "Safe Online Payments",
+        page: "safe-online-payments.html"
+    }
+
+];
+
+
+
+/* =========================================================
+   STORAGE KEY
+========================================================= */
+
+function getTopicStorageKey(
+    topicKey,
+    type
+) {
+
+    if (!loggedInEmail) {
+
+        return null;
+
+    }
+
+
+    return (
+        "learn2live_" +
+        topicKey +
+        "_" +
+        type +
+        "_" +
+        loggedInEmail
+    );
+
+}
+
+
+
+/* =========================================================
+   CHECK COMPLETED
+========================================================= */
+
+function isTopicCompleted(
+    topicKey
+) {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    const completedKey =
+        getTopicStorageKey(
+            topicKey,
+            "completed"
+        );
+
+
+    return (
+        localStorage.getItem(
+            completedKey
+        ) === "true"
+    );
+
+}
+
+
+
+/* =========================================================
+   CHECK PROGRESS
+========================================================= */
+
+function hasTopicProgress(
+    topicKey
+) {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    const progressKey =
+        getTopicStorageKey(
+            topicKey,
+            "progress"
+        );
+
+
+    const savedProgress =
+        localStorage.getItem(
+            progressKey
+        );
+
+
+    if (!savedProgress) {
+
+        return false;
+
+    }
+
+
+    try {
+
+        const progress =
+            JSON.parse(
+                savedProgress
+            );
+
+
+        return (
+            progress &&
+            typeof progress === "object"
+        );
+
+    }
+
+    catch (error) {
+
+        return false;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   UPDATE TOPIC CARD
+========================================================= */
+
+function updateTopicCard(
+    topic
+) {
+
+    const key =
+        topic.key;
+
+
+    const status =
+        document.getElementById(
+            key + "Status"
+        );
+
+
+    const continueButton =
+        document.getElementById(
+            key + "Continue"
+        );
+
+
+    const continueText =
+        document.getElementById(
+            key + "ContinueText"
+        );
+
+
+    const reviewButton =
+        document.getElementById(
+            key + "Review"
+        );
+
+
+    if (
+        !status ||
+        !continueButton ||
+        !continueText ||
+        !reviewButton
+    ) {
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    status.style.display =
+        "none";
+
+    reviewButton.style.display =
+        "none";
+
+    continueButton.style.display =
+        "inline-flex";
+
+
+
+    /* =====================================================
+       NO LOGIN
+    ====================================================== */
+
+    if (!loggedInEmail) {
+
+        continueText.textContent =
+            "Start " + topic.name;
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       COMPLETED
+    ====================================================== */
+
+    if (
+        isTopicCompleted(
+            key
+        )
+    ) {
+
+        status.style.display =
+            "inline-flex";
+
+        continueButton.style.display =
+            "none";
+
+        reviewButton.style.display =
+            "inline-flex";
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       RESUME
+    ====================================================== */
+
+    if (
+        hasTopicProgress(
+            key
+        )
+    ) {
+
+        continueText.textContent =
+            "Resume " + topic.name;
+
+    }
+
+    else {
+
+        continueText.textContent =
+            "Start " + topic.name;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CHECK ALL TOPICS
+========================================================= */
+
+function areAllTopicsCompleted() {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    return topics.every(
+        function(topic) {
+
+            return isTopicCompleted(
+                topic.key
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   CERTIFICATE SECTION
+========================================================= */
+
+function updateCertificateSection() {
+
+    const section =
+        document.getElementById(
+            "certificateSection"
+        );
+
+
+    if (!section) {
+
+        return;
+
+    }
+
+
+    if (
+        areAllTopicsCompleted()
+    ) {
+
+        section.style.display =
+            "block";
+
+    }
+
+    else {
+
+        section.style.display =
+            "none";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   UPDATE EVERYTHING
+========================================================= */
+
+function updateAllTopics() {
+
+    topics.forEach(
+        function(topic) {
+
+            updateTopicCard(
+                topic
+            );
+
+        }
+    );
+
+
+    updateCertificateSection();
+
+}
+
+
+updateAllTopics();
+
+
+
+/* =========================================================
+   CARD CLICK
+========================================================= */
+
+document.querySelectorAll(
+    ".topic-card"
+).forEach(
+    function(card) {
+
+        card.addEventListener(
+            "click",
+            function(event) {
+
+                /*
+                 * Do not interfere with
+                 * Start / Resume / Review.
+                 */
+
+                if (
+                    event.target.closest(
+                        "a, button"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                const page =
+                    card.dataset.href;
+
+
+                if (page) {
+
+                    window.location.href =
+                        page;
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   CERTIFICATE BUTTON
+========================================================= */
+
+const downloadCertificate =
+    document.getElementById(
+        "downloadCertificate"
+    );
+
+
+if (downloadCertificate) {
+
+    downloadCertificate.addEventListener(
+        "click",
+        function() {
+
+            /*
+             * Safety check:
+             * all 5 must be completed.
+             */
+
+            if (
+                !areAllTopicsCompleted()
+            ) {
+
+                alert(
+                    "Please complete all Digital Safety topics first."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * OPEN CERTIFICATE PAGE
+             */
+
+            window.location.href =
+                "certificate.html";
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   REFRESH WHEN RETURNING
+========================================================= */
+
+window.addEventListener(
+    "pageshow",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+window.addEventListener(
+    "focus",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+window.addEventListener(
+    "storage",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
+

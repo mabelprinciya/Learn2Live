@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- BASIC SETTINGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Learn2Live Certificate of Completion">
+
+    <title>Learn2Live Certificate</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CERTIFICATE CSS -->
+    <link rel="stylesheet" href="certificate.css">
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <script src="auth.js"></script>
+
+    <!-- MATCH MY CERTIFICATES STUDENT NAME FONT -->
+    <style>
+        .student-name {
+            font-family: "Allura", cursive !important;
+            font-size: 46px !important;
+            font-weight: 400 !important;
+            color: #071a45 !important;
+            line-height: 1 !important;
+            letter-spacing: 0 !important;
+            text-transform: none !important;
+            text-align: center !important;
+            white-space: nowrap !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            margin: 8px auto 12px !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CERTIFICATE -->
+    <div class="certificate" id="certificate">
+
+        <div class="certificate-border">
+
+            <div class="certificate-inner">
+
+                <!-- WATERMARK -->
+                <div class="watermark" aria-hidden="true">
+                    L2L
+                </div>
+
+                <!-- HEADER -->
+                <header class="certificate-header">
+
+                    <div class="brand">
+
+                        <img
+                            src="logo.png"
+                            class="brand-logo"
+                            alt="Learn2Live Logo"
+                        >
+
+                        <div class="brand-text">
+                            <h1>LEARN2LIVE</h1>
+                            <p>LEARNING • AWARENESS • LIFE SKILLS</p>
+                        </div>
+
+                    </div>
+
+                    <div class="certificate-reference">
+                        <span>CERTIFICATE NO.</span>
+                        <strong id="certificateId">L2L-2026-0001</strong>
+                    </div>
+
+                </header>
+
+                <!-- MAIN TITLE -->
+                <section class="certificate-title">
+
+                    <span class="title-overline">LEARN2LIVE</span>
+
+                    <h2>CERTIFICATE</h2>
+
+                    <h3>OF COMPLETION</h3>
+
+                </section>
+
+                <!-- STUDENT NAME -->
+                <section class="presentation">
+
+                    <p>This certificate is proudly presented to</p>
+
+                    <h1 id="studentName" class="student-name">
+                        Student Name
+                    </h1>
+
+                </section>
+
+                <!-- MAIN CONTENT -->
+                <section class="certification-content">
+
+                    <p class="main-text">
+                        In recognition of the successful completion of the
+                        Learn2Live learning program, and in appreciation of
+                        the recipient's dedicated participation, commitment
+                        to learning, and understanding of the knowledge,
+                        essential concepts, and practical skills covered
+                        throughout the course.
+                    </p>
+
+                    <p class="course-introduction">
+                        The recipient has successfully completed
+                    </p>
+
+                    <h2 id="category" class="course-name">
+                        FIRST AID
+                    </h2>
+
+                    <p class="completion-text">
+                        and demonstrated satisfactory understanding of the
+                        learning objectives and key concepts presented
+                        throughout the Learn2Live program.
+                    </p>
+
+                </section>
+
+                <!-- LOWER INFORMATION AREA -->
+                <section class="certificate-bottom">
+
+                    <!-- SEAL AND DETAILS -->
+                    <div class="seal-information">
+
+                        <div class="official-seal">
+
+                            <div class="seal-outer">
+
+                                <div class="seal-inner">
+                                    <span>LEARN2LIVE</span>
+                                    <strong>L2L</strong>
+                                    <small>OFFICIAL</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="seal-details">
+
+                            <div class="small-detail">
+                                <span>CERTIFICATE NO.</span>
+                                <strong>L2L-2026-0001</strong>
+                            </div>
+
+                            <div class="small-divider"></div>
+
+                            <div class="small-detail">
+                                <span>DATE OF ISSUE</span>
+                                <strong id="issueDate">21 September 2026</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- SIGNATURE -->
+                    <div class="signature-section">
+
+                        <img
+                            src="Mabel.png"
+                            class="signature-image"
+                            alt="Authorized Signature"
+                        >
+
+                        <div class="signature-line"></div>
+
+                        <strong>Authorized Signatory</strong>
+                        <span>Learn2Live</span>
+
+                    </div>
+
+                </section>
+
+                <!-- FOOTER DECORATION -->
+                <div class="footer-decoration">
+                    <span></span>
+                    <div>◆</div>
+                    <span></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- DOWNLOAD BUTTON -->
+    <button
+        type="button"
+        class="download-btn"
+        onclick="downloadPDF()"
+    >
+        <i class="fa-solid fa-download"></i>
+        Download Certificate
+    </button>
+
+    <!-- HTML2CANVAS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- JSPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- CERTIFICATE JAVASCRIPT -->
+    <script src="certificate.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Communication Skills Quiz | Learn2Live</title>
+
+<meta name="description"
+      content="Complete the Learn2Live Communication Skills quiz and test your knowledge.">
+
+
+<!-- =====================================================
+     GOOGLE FONTS
+====================================================== -->
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+
+
+<!-- =====================================================
+     FONT AWESOME
+====================================================== -->
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<!-- =====================================================
+     COMMUNICATION SKILLS QUIZ CSS
+====================================================== -->
+
+<link rel="stylesheet"
+      href="Communication Skills_quiz.css">
+
+
+<!-- =====================================================
+     EXTRA QUIZ STYLES
+====================================================== -->
+
+<style>
+
+[hidden] {
+    display: none !important;
+}
+
+.quiz-screen {
+    width: 100%;
+}
+
+
+/* =====================================================
+   QUESTION LAYOUT
+===================================================== */
+
+.quiz-question-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 24px;
+    align-items: start;
+}
+
+
+/* =====================================================
+   QUESTION SIDEBAR
+===================================================== */
+
+.question-sidebar {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+    position: sticky;
+    top: 24px;
+}
+
+.question-sidebar-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0b1736;
+    margin-bottom: 4px;
+}
+
+.question-sidebar-subtitle {
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 16px;
+}
+
+.question-number-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.question-number {
+    width: 100%;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid #e1e5ec;
+    background: #f8f9fc;
+    color: #24304a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.question-number:hover {
+    border-color: #2454ff;
+    color: #2454ff;
+}
+
+.question-number.current {
+    background: #2454ff;
+    border-color: #2454ff;
+    color: #ffffff;
+    box-shadow: 0 5px 14px rgba(36, 84, 255, 0.22);
+}
+
+.question-number.answered {
+    border-color: #22c55e;
+    background: #f0fdf4;
+    color: #15803d;
+}
+
+.question-number.current.answered {
+    background: #2454ff;
+    border-color: #2454ff;
+    color: #ffffff;
+}
+
+.question-number .check-mark {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    font-size: 8px;
+}
+
+.question-number.answered .check-mark {
+    display: block;
+}
+
+
+/* =====================================================
+   LEGEND
+===================================================== */
+
+.question-legend {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    color: #777;
+}
+
+.legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #f8f9fc;
+    border: 1px solid #dfe3ea;
+}
+
+.legend-dot.current {
+    background: #2454ff;
+    border-color: #2454ff;
+}
+
+.legend-dot.answered {
+    background: #22c55e;
+    border-color: #22c55e;
+}
+
+
+/* =====================================================
+   EXPLANATION
+===================================================== */
+
+.question-explanation {
+    margin-top: 18px;
+    padding: 18px 20px;
+    background: #f8faff;
+    border: 1px solid #dbe4ff;
+    border-left: 4px solid #2454ff;
+    border-radius: 14px;
+}
+
+.explanation-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0b1736;
+    margin-bottom: 8px;
+}
+
+.explanation-title i {
+    color: #2454ff;
+}
+
+.question-explanation p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #536079;
+}
+
+
+/* =====================================================
+   EXPLANATION REVIEW
+===================================================== */
+
+.explanation-review-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.explanation-review-header {
+    margin-bottom: 24px;
+}
+
+.explanation-review-header .review-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #2454ff;
+    margin-bottom: 6px;
+}
+
+.explanation-review-header h1 {
+    margin: 0 0 6px;
+    font-size: 26px;
+    color: #0b1736;
+}
+
+.explanation-review-header p {
+    margin: 0;
+    font-size: 13px;
+    color: #697386;
+}
+
+.explanation-review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.explanation-review-item {
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: #fbfcff;
+}
+
+.explanation-review-question-number {
+    font-size: 11px;
+    font-weight: 700;
+    color: #2454ff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.explanation-review-question {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #18243a;
+    margin-bottom: 14px;
+}
+
+.review-answer-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.review-answer-box {
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.review-answer-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    color: #777;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.review-answer-value {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #263248;
+}
+
+.review-answer-box.correct-answer {
+    border-color: #bbf7d0;
+    background: #f0fdf4;
+}
+
+.review-answer-box.wrong-answer {
+    border-color: #fecaca;
+    background: #fef2f2;
+}
+
+.review-explanation {
+    padding: 15px 16px;
+    background: #f8faff;
+    border: 1px solid #dbe4ff;
+    border-left: 4px solid #2454ff;
+    border-radius: 12px;
+}
+
+.review-explanation-title {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #0b1736;
+    margin-bottom: 6px;
+}
+
+.review-explanation-title i {
+    color: #2454ff;
+}
+
+.review-explanation-text {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #536079;
+}
+
+.explanation-review-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .quiz-question-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .question-sidebar {
+        position: static;
+        order: -1;
+    }
+
+    .question-number-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .question-sidebar-subtitle {
+        margin-bottom: 12px;
+    }
+
+    .review-answer-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .question-number-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 7px;
+    }
+
+    .question-number {
+        height: 38px;
+        font-size: 12px;
+    }
+
+    .question-explanation {
+        padding: 15px;
+    }
+
+    .explanation-title {
+        font-size: 13px;
+    }
+
+    .question-explanation p {
+        font-size: 12px;
+    }
+
+    .explanation-review-card {
+        padding: 18px;
+    }
+
+    .explanation-review-header h1 {
+        font-size: 21px;
+    }
+
+    .explanation-review-item {
+        padding: 16px;
+    }
+}
+
+</style>
+
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="theme.css">
+    <script src="auth.js"></script>
+</head>
+
+
+<body
+    data-category="Interview Skills"
+    data-subcategory="Communication Skills">
+
+
+<div class="quiz-page">
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="quiz-header">
+
+    <div class="header-left">
+
+        <button
+            type="button"
+            class="back-button"
+            id="backButton"
+            aria-label="Go back">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+
+        <div class="brand-info">
+
+            <div class="brand-name">
+                LEARN2LIVE
+            </div>
+
+            <div class="brand-divider"></div>
+
+            <div class="quiz-category">
+                INTERVIEW SKILLS
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+        <span class="quiz-label">
+            COMMUNICATION SKILLS QUIZ
+        </span>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+====================================================== -->
+
+<main class="quiz-main">
+
+
+<!-- =====================================================
+     START SCREEN
+====================================================== -->
+
+<section
+    class="quiz-screen"
+    id="quizStartScreen"
+    hidden>
+
+
+    <div class="quiz-top">
+
+        <div class="quiz-title-area">
+
+            <span class="quiz-eyebrow">
+                INTERVIEW SKILLS • COMMUNICATION SKILLS
+            </span>
+
+            <h1>
+                Communication Skills Knowledge Quiz
+            </h1>
+
+            <p>
+                Test what you learned from the Communication Skills course.
+            </p>
+
+        </div>
+
+
+        <div class="quiz-icon">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- RESUME CARD -->
+
+    <div
+        class="resume-card"
+        id="resumeCard"
+        hidden>
+
+        <div class="resume-icon">
+
+            <i class="fa-solid fa-rotate-right"></i>
+
+        </div>
+
+
+        <div class="resume-content">
+
+            <span class="resume-label">
+                QUIZ INCOMPLETE
+            </span>
+
+            <h2>
+                Resume your quiz
+            </h2>
+
+            <p id="resumeText">
+                You have an unfinished Communication Skills quiz.
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="resume-button"
+            id="resumeButton">
+
+            Resume
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- QUIZ INFO -->
+
+    <div class="quiz-info-card">
+
+
+        <div class="info-item">
+
+            <div class="info-icon">
+                <i class="fa-solid fa-list-check"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    QUESTIONS
+                </span>
+
+                <strong id="questionCount">
+                    10
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="info-item">
+
+            <div class="info-icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    TYPE
+                </span>
+
+                <strong>
+                    Multiple Choice
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="info-item">
+
+            <div class="info-icon">
+                <i class="fa-solid fa-check-circle"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    PASS MARK
+                </span>
+
+                <strong>
+                    6 / 10
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- START BUTTON -->
+
+    <div class="quiz-start-action">
+
+        <button
+            type="button"
+            class="primary-button"
+            id="startQuizButton">
+
+            Start Communication Skills Quiz
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTION SCREEN
+====================================================== -->
+
+<section
+    class="quiz-screen"
+    id="quizQuestionScreen"
+    hidden>
+
+
+    <div class="quiz-question-layout">
+
+
+        <!-- MAIN QUESTION AREA -->
+
+        <div class="quiz-question-main">
+
+
+            <div class="quiz-progress-header">
+
+                <div>
+
+                    <span class="progress-label">
+                        COMMUNICATION SKILLS QUIZ
+                    </span>
+
+                    <h2 id="questionNumber">
+                        Question 1
+                    </h2>
+
+                </div>
+
+
+                <div class="question-counter">
+
+                    <span id="currentQuestion">
+                        1
+                    </span>
+
+                    <span>
+                        /
+                    </span>
+
+                    <span id="totalQuestions">
+                        10
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROGRESS BAR -->
+
+            <div class="quiz-progress">
+
+                <div
+                    class="quiz-progress-fill"
+                    id="quizProgressFill">
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION CARD -->
+
+            <div class="question-card">
+
+                <div class="question-tag">
+                    QUESTION
+                </div>
+
+
+                <h1 id="questionText">
+                    Loading question...
+                </h1>
+
+
+                <div
+                    class="options-container"
+                    id="optionsContainer">
+                </div>
+
+
+                <!-- EXPLANATION -->
+
+                <div
+                    class="question-explanation"
+                    id="questionExplanation"
+                    hidden>
+
+                    <div class="explanation-title">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                        Explanation
+
+                    </div>
+
+                    <p id="explanationText"></p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NAVIGATION -->
+
+            <div class="question-navigation">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="previousButton">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Previous
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    id="nextQuestionButton"
+                    disabled>
+
+                    Next
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- QUESTION SIDEBAR -->
+
+        <aside class="question-sidebar">
+
+            <div class="question-sidebar-title">
+                Quiz Questions
+            </div>
+
+            <div class="question-sidebar-subtitle">
+                10 random questions
+            </div>
+
+
+            <div
+                class="question-number-grid"
+                id="questionNumberGrid">
+
+
+                <button
+                    type="button"
+                    class="question-number current"
+                    data-question="0">
+
+                    1
+
+                    <span class="check-mark">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="question-number"
+                    data-question="1">
+
+                    2
+
+                    <span class="check-mark">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="question-number"
+                    data-question="2">
+
+                    3
+
+                    <span class="check-mark">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="question-number"
+                    data-question="3">
+
+                    4
+
+                    <span class="check-mark">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="question-number"
+                    data-question="4">
+
+                    5
+
+                    <span class="check-mark">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="question-number"
+                    data-question="5">
+
+                    6
+
+                    <span class="check-mark">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="question-number"
+                    data-question="6">
+
+                    7
+
+                    <span class="check-mark">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="question-number"
+                    data-question="7">
+
+                    8
+
+                    <span class="check-mark">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="question-number"
+                    data-question="8">
+
+                    9
+
+                    <span class="check-mark">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="question-number"
+                    data-question="9">
+
+                    10
+
+                    <span class="check-mark">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- LEGEND -->
+
+            <div class="question-legend">
+
+                <div class="legend-item">
+
+                    <span class="legend-dot current"></span>
+
+                    Current
+
+                </div>
+
+
+                <div class="legend-item">
+
+                    <span class="legend-dot answered"></span>
+
+                    Answered
+
+                </div>
+
+
+                <div class="legend-item">
+
+                    <span class="legend-dot"></span>
+
+                    Not answered
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     SUBMIT SCREEN
+====================================================== -->
+
+<section
+    class="quiz-screen"
+    id="quizSubmitScreen"
+    hidden>
+
+
+    <div class="submit-card">
+
+        <div class="submit-icon">
+            <i class="fa-solid fa-clipboard-check"></i>
+        </div>
+
+
+        <span class="submit-label">
+            QUIZ COMPLETE
+        </span>
+
+
+        <h1>
+            Ready to submit?
+        </h1>
+
+
+        <p id="submitMessage">
+            Review your answers before submitting the quiz.
+        </p>
+
+
+        <div class="submit-summary">
+
+
+            <div class="summary-item">
+
+                <span>
+                    Questions
+                </span>
+
+                <strong id="submitTotal">
+                    10
+                </strong>
+
+            </div>
+
+
+            <div class="summary-item">
+
+                <span>
+                    Answered
+                </span>
+
+                <strong id="submitAnswered">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-item">
+
+                <span>
+                    Remaining
+                </span>
+
+                <strong id="submitRemaining">
+                    10
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="submit-actions">
+
+            <button
+                type="button"
+                class="secondary-button"
+                id="reviewQuizButton">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Review Answers
+
+            </button>
+
+
+            <button
+                type="button"
+                class="primary-button"
+                id="submitQuizButton">
+
+                Submit Quiz
+
+                <i class="fa-solid fa-check"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RESULT SCREEN
+====================================================== -->
+
+<section
+    class="quiz-screen"
+    id="quizResultScreen"
+    hidden>
+
+
+    <div class="result-card">
+
+
+        <div
+            class="result-icon"
+            id="resultIcon">
+
+            <i class="fa-solid fa-trophy"></i>
+
+        </div>
+
+
+        <span class="result-label">
+            COMMUNICATION SKILLS QUIZ COMPLETED
+        </span>
+
+
+        <h1>
+            Quiz Result
+        </h1>
+
+
+        <div
+            class="result-status"
+            id="resultStatus">
+        </div>
+
+
+        <p id="resultMessage">
+            Your Communication Skills quiz has been completed.
+        </p>
+
+
+
+        <!-- SCORE -->
+
+        <div class="score-area">
+
+            <span class="score-label">
+                YOUR SCORE
+            </span>
+
+
+            <div class="score-value">
+
+                <strong id="scoreValue">
+                    0
+                </strong>
+
+                <span>
+                    /
+                </span>
+
+                <span id="scoreTotal">
+                    10
+                </span>
+
+            </div>
+
+
+            <div
+                class="score-percentage"
+                id="scorePercentage">
+
+                0%
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RESULT DETAILS -->
+
+        <div class="result-summary">
+
+
+            <div class="result-summary-item">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+
+                    <span>
+                        Correct
+                    </span>
+
+                    <strong id="correctAnswers">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-summary-item">
+
+                <i class="fa-solid fa-circle-xmark"></i>
+
+                <div>
+
+                    <span>
+                        Incorrect
+                    </span>
+
+                    <strong id="wrongAnswers">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- RESULT ACTIONS -->
+
+        <div class="result-actions">
+
+
+            <button
+                type="button"
+                class="secondary-button"
+                id="viewExplanationButton">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                View Explanations
+
+            </button>
+
+
+            <button
+                type="button"
+                class="secondary-button"
+                id="retakeQuizButton">
+
+                <i class="fa-solid fa-rotate-right"></i>
+
+                Retake Quiz
+
+            </button>
+
+
+            <button
+                type="button"
+                class="primary-button"
+                id="finishQuizButton">
+
+                Finish
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPLANATION REVIEW SCREEN
+====================================================== -->
+
+<section
+    class="quiz-screen"
+    id="quizExplanationScreen"
+    hidden>
+
+
+    <div class="explanation-review-card">
+
+
+        <div class="explanation-review-header">
+
+            <span class="review-label">
+                QUIZ REVIEW
+            </span>
+
+
+            <h1>
+                Question Explanations
+            </h1>
+
+
+            <p>
+                Review the questions, your answers,
+                correct answers and explanations.
+            </p>
+
+        </div>
+
+
+        <div
+            class="explanation-review-list"
+            id="explanationReviewList">
+        </div>
+
+
+        <div class="explanation-review-actions">
+
+            <button
+                type="button"
+                class="secondary-button"
+                id="backToResultButton">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Result
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LOADING SCREEN
+====================================================== -->
+
+<section
+    class="quiz-loading"
+    id="quizLoadingScreen"
+    hidden>
+
+
+    <div class="loading-logo">
+
+        <i class="fa-solid fa-file-lines"></i>
+
+    </div>
+
+
+    <h2>
+        Loading Communication Skills Quiz
+    </h2>
+
+
+    <p>
+        Please wait while we prepare your questions.
+    </p>
+
+
+    <div class="loading-bar">
+
+        <div class="loading-bar-fill"></div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     ERROR SCREEN
+====================================================== -->
+
+<section
+    class="quiz-error"
+    id="quizErrorScreen"
+    hidden>
+
+
+    <div class="error-icon">
+
+        <i class="fa-solid fa-triangle-exclamation"></i>
+
+    </div>
+
+
+    <h2>
+        Unable to Load Quiz
+    </h2>
+
+
+    <p id="quizErrorMessage">
+        Something went wrong while loading the Communication Skills quiz.
+    </p>
+
+
+    <button
+        type="button"
+        class="primary-button"
+        id="retryQuizButton">
+
+        <i class="fa-solid fa-rotate-right"></i>
+
+        Try Again
+
+    </button>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     EXIT MODAL
+====================================================== -->
+
+<div
+    class="modal-overlay"
+    id="exitModal"
+    hidden>
+
+
+    <div class="exit-modal">
+
+
+        <button
+            type="button"
+            class="modal-close"
+            id="closeExitModal"
+            aria-label="Close">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-icon">
+
+            <i class="fa-solid fa-pause"></i>
+
+        </div>
+
+
+        <h2>
+            Leave the quiz?
+        </h2>
+
+
+        <p>
+            Your current progress will be saved as incomplete.
+            You can resume the quiz when you return.
+        </p>
+
+
+        <div class="modal-actions">
+
+
+            <button
+                type="button"
+                class="secondary-button"
+                id="stayQuizButton">
+
+                Continue Quiz
+
+            </button>
+
+
+            <button
+                type="button"
+                class="danger-button"
+                id="exitQuizButton">
+
+                Save &amp; Exit
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- =====================================================
+     AUTH JS
+====================================================== -->
+
+<!-- =====================================================
+     QUIZ JS
+====================================================== -->
+
+<script src="quiz.js"></script>
+
+
+</body>
+
+</html>

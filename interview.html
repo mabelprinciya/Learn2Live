@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Interview Skills Course | Learn2Live</title>
+
+    <link
+        rel="stylesheet"
+        href="banking.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="theme.css">
+    <script src="auth.js"></script>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <div class="header-content">
+
+        <div class="header-icon">
+            💼
+        </div>
+
+        <div>
+
+            <span class="header-label">
+                LEARN2LIVE • LIFE SKILLS
+            </span>
+
+            <h1>
+                Interview Skills
+            </h1>
+
+            <p>
+                Learn essential interview skills to build
+                confidence, communicate professionally and
+                prepare effectively for job opportunities.
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     RANDOM INTERVIEW FACT
+========================================================= -->
+
+<section class="fact-section">
+
+    <div class="fact-icon">
+        <i class="fa-solid fa-lightbulb"></i>
+    </div>
+
+    <div class="fact-content">
+
+        <span>
+            INTERVIEW FACT
+        </span>
+
+        <p id="interviewFact">
+            Loading fact...
+        </p>
+
+    </div>
+
+    <button
+        type="button"
+        id="nextFact"
+        aria-label="Show another interview fact"
+    >
+        <i class="fa-solid fa-rotate"></i>
+    </button>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOPIC HEADING
+========================================================= -->
+
+<section class="topic-title">
+
+    <span class="section-label">
+        INTERVIEW SKILLS BASICS
+    </span>
+
+    <h2>
+        Choose a Topic
+    </h2>
+
+    <p>
+        Select a topic to learn important interview concepts
+        and improve your professional skills.
+    </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOPIC CARDS
+========================================================= -->
+
+<main class="topic-container">
+
+
+    <!-- =====================================================
+         CV
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="cvCard"
+        data-topic="CV"
+        data-topic-key="cv"
+        data-href="CV.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon cv">
+                📄
+            </div>
+
+            <span class="topic-number">
+                01
+            </span>
+
+        </div>
+
+
+        <h3>
+            CV
+        </h3>
+
+
+        <p>
+            Learn how to create a clear, professional CV
+            that presents your education, skills and experience.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="cvActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="cvStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="CV.html"
+                id="cvContinue"
+                class="topic-link"
+            >
+
+                <span id="cvContinueText">
+                    Start CV
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="CV.html?mode=review"
+                id="cvReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         COMMUNICATION SKILLS
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="communicationSkillsCard"
+        data-topic="Communication Skills"
+        data-topic-key="communicationSkills"
+        data-href="Communication Skills.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon communication-skills">
+                🗣️
+            </div>
+
+            <span class="topic-number">
+                02
+            </span>
+
+        </div>
+
+
+        <h3>
+            Communication Skills
+        </h3>
+
+
+        <p>
+            Learn how to communicate clearly, listen actively
+            and express your ideas confidently during interviews.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="communicationSkillsActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="communicationSkillsStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="Communication Skills.html"
+                id="communicationSkillsContinue"
+                class="topic-link"
+            >
+
+                <span id="communicationSkillsContinueText">
+                    Start Communication Skills
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="Communication Skills.html?mode=review"
+                id="communicationSkillsReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         INTERVIEW PREPARATION
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="interviewPreparationCard"
+        data-topic="Interview Preparation"
+        data-topic-key="interviewPreparation"
+        data-href="Interview Preparation.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon interview-preparation">
+                🎯
+            </div>
+
+            <span class="topic-number">
+                03
+            </span>
+
+        </div>
+
+
+        <h3>
+            Interview Preparation
+        </h3>
+
+
+        <p>
+            Learn how to research the company, understand the
+            job role and prepare effectively before an interview.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="interviewPreparationActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="interviewPreparationStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="Interview Preparation.html"
+                id="interviewPreparationContinue"
+                class="topic-link"
+            >
+
+                <span id="interviewPreparationContinueText">
+                    Start Interview Preparation
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="Interview Preparation.html?mode=review"
+                id="interviewPreparationReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         COMMON INTERVIEW QUESTIONS
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="commonInterviewQuestionsCard"
+        data-topic="Common Interview Questions"
+        data-topic-key="commonInterviewQuestions"
+        data-href="Common Interview Questions.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon common-interview-questions">
+                ❓
+            </div>
+
+            <span class="topic-number">
+                04
+            </span>
+
+        </div>
+
+
+        <h3>
+            Common Interview Questions
+        </h3>
+
+
+        <p>
+            Learn how to approach commonly asked interview
+            questions and give clear, structured answers.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="commonInterviewQuestionsActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="commonInterviewQuestionsStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="Common Interview Questions.html"
+                id="commonInterviewQuestionsContinue"
+                class="topic-link"
+            >
+
+                <span id="commonInterviewQuestionsContinueText">
+                    Start Common Interview Questions
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="Common Interview Questions.html?mode=review"
+                id="commonInterviewQuestionsReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PROFESSIONAL ETIQUETTE
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="professionalEtiquetteCard"
+        data-topic="Professional Etiquette"
+        data-topic-key="professionalEtiquette"
+        data-href="Professional Etiquette.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon professional-etiquette">
+                🤝
+            </div>
+
+            <span class="topic-number">
+                05
+            </span>
+
+        </div>
+
+
+        <h3>
+            Professional Etiquette
+        </h3>
+
+
+        <p>
+            Learn professional behaviour, punctuality, workplace
+            manners and appropriate interview etiquette.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="professionalEtiquetteActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="professionalEtiquetteStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="Professional Etiquette.html"
+                id="professionalEtiquetteContinue"
+                class="topic-link"
+            >
+
+                <span id="professionalEtiquetteContinueText">
+                    Start Professional Etiquette
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="Professional Etiquette.html?mode=review"
+                id="professionalEtiquetteReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     ALL TOPICS COMPLETED
+========================================================= -->
+
+<section
+    id="certificateSection"
+    style="display:none;"
+>
+
+    <div class="certificate-content">
+
+        <div class="certificate-icon">
+            <i class="fa-solid fa-certificate"></i>
+        </div>
+
+        <h2>
+            All Interview Skills Topics Completed!
+        </h2>
+
+        <p>
+            You have successfully completed all five
+            Interview Skills learning categories.
+        </p>
+
+        <button
+            type="button"
+            id="downloadCertificate"
+            class="certificate-btn"
+        >
+
+            <i class="fa-solid fa-download"></i>
+
+            Download Certificate
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+"use strict";
+
+
+/* =========================================================
+   RANDOM INTERVIEW FACTS
+========================================================= */
+
+const interviewFacts = [
+
+    "A clear and well-structured CV helps employers quickly understand your qualifications.",
+
+    "Good communication includes both speaking clearly and listening carefully.",
+
+    "Researching the company before an interview helps you understand the organisation and role.",
+
+    "Practising common interview questions can help you organise your thoughts before the interview.",
+
+    "Arriving on time demonstrates respect for the interviewer's time.",
+
+    "Maintaining appropriate eye contact can support confident communication.",
+
+    "A professional greeting can create a positive first impression.",
+
+    "It is useful to prepare a few relevant questions to ask the interviewer.",
+
+    "Using specific examples can make your interview answers clearer.",
+
+    "Professional etiquette includes respectful communication and appropriate behaviour.",
+
+    "A CV should present relevant education, skills, experience and achievements clearly.",
+
+    "Listening carefully to each question helps you provide focused answers.",
+
+    "Practising your self-introduction can make the beginning of an interview smoother.",
+
+    "Being honest about your qualifications and experience is important during an interview.",
+
+    "Professional body language can support clear verbal communication.",
+
+    "Preparing required documents before an interview can reduce last-minute stress.",
+
+    "A professional email address is appropriate when applying for jobs.",
+
+    "Reviewing the job description can help you prepare relevant examples for the interview.",
+
+    "Speaking calmly and clearly can make your answers easier to understand.",
+
+    "Professional etiquette also includes polite communication after the interview."
+
+];
+
+
+const factElement =
+    document.getElementById("interviewFact");
+
+
+const nextFactButton =
+    document.getElementById("nextFact");
+
+
+let currentFact = -1;
+
+
+function showRandomFact() {
+
+    let randomIndex;
+
+
+    do {
+
+        randomIndex =
+            Math.floor(
+                Math.random() *
+                interviewFacts.length
+            );
+
+    }
+
+    while (
+        interviewFacts.length > 1 &&
+        randomIndex === currentFact
+    );
+
+
+    currentFact =
+        randomIndex;
+
+
+    factElement.textContent =
+        interviewFacts[currentFact];
+
+}
+
+
+nextFactButton.addEventListener(
+    "click",
+    showRandomFact
+);
+
+
+showRandomFact();
+
+
+
+/* =========================================================
+   LOGGED-IN USER
+========================================================= */
+
+const loggedInEmail =
+    localStorage.getItem(
+        "loggedInEmail"
+    );
+
+
+
+/* =========================================================
+   TOPIC CONFIGURATION
+========================================================= */
+
+const topics = [
+
+    {
+        key: "cv",
+        name: "CV",
+        page: "CV.html"
+    },
+
+    {
+        key: "communicationSkills",
+        name: "Communication Skills",
+        page: "Communication Skills.html"
+    },
+
+    {
+        key: "interviewPreparation",
+        name: "Interview Preparation",
+        page: "Interview Preparation.html"
+    },
+
+    {
+        key: "commonInterviewQuestions",
+        name: "Common Interview Questions",
+        page: "Common Interview Questions.html"
+    },
+
+    {
+        key: "professionalEtiquette",
+        name: "Professional Etiquette",
+        page: "Professional Etiquette.html"
+    }
+
+];
+
+
+
+/* =========================================================
+   STORAGE KEY
+========================================================= */
+
+function getTopicStorageKey(
+    topicKey,
+    type
+) {
+
+    if (!loggedInEmail) {
+
+        return null;
+
+    }
+
+
+    return (
+        "learn2live_" +
+        topicKey +
+        "_" +
+        type +
+        "_" +
+        loggedInEmail
+    );
+
+}
+
+
+
+/* =========================================================
+   CHECK COMPLETED
+========================================================= */
+
+function isTopicCompleted(
+    topicKey
+) {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    const completedKey =
+        getTopicStorageKey(
+            topicKey,
+            "completed"
+        );
+
+
+    return (
+        localStorage.getItem(
+            completedKey
+        ) === "true"
+    );
+
+}
+
+
+
+/* =========================================================
+   CHECK PROGRESS
+========================================================= */
+
+function hasTopicProgress(
+    topicKey
+) {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    const progressKey =
+        getTopicStorageKey(
+            topicKey,
+            "progress"
+        );
+
+
+    const savedProgress =
+        localStorage.getItem(
+            progressKey
+        );
+
+
+    if (!savedProgress) {
+
+        return false;
+
+    }
+
+
+    try {
+
+        const progress =
+            JSON.parse(
+                savedProgress
+            );
+
+
+        return (
+            progress &&
+            typeof progress === "object"
+        );
+
+    }
+
+    catch (error) {
+
+        return false;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   UPDATE TOPIC CARD
+========================================================= */
+
+function updateTopicCard(
+    topic
+) {
+
+    const key =
+        topic.key;
+
+
+    const status =
+        document.getElementById(
+            key + "Status"
+        );
+
+
+    const continueButton =
+        document.getElementById(
+            key + "Continue"
+        );
+
+
+    const continueText =
+        document.getElementById(
+            key + "ContinueText"
+        );
+
+
+    const reviewButton =
+        document.getElementById(
+            key + "Review"
+        );
+
+
+    if (
+        !status ||
+        !continueButton ||
+        !continueText ||
+        !reviewButton
+    ) {
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    status.style.display =
+        "none";
+
+    reviewButton.style.display =
+        "none";
+
+    continueButton.style.display =
+        "inline-flex";
+
+
+
+    /* =====================================================
+       NO LOGIN
+    ====================================================== */
+
+    if (!loggedInEmail) {
+
+        continueText.textContent =
+            "Start " + topic.name;
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       COMPLETED
+    ====================================================== */
+
+    if (
+        isTopicCompleted(
+            key
+        )
+    ) {
+
+        status.style.display =
+            "inline-flex";
+
+        continueButton.style.display =
+            "none";
+
+        reviewButton.style.display =
+            "inline-flex";
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       RESUME
+    ====================================================== */
+
+    if (
+        hasTopicProgress(
+            key
+        )
+    ) {
+
+        continueText.textContent =
+            "Resume " + topic.name;
+
+    }
+
+    else {
+
+        continueText.textContent =
+            "Start " + topic.name;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CHECK ALL TOPICS
+========================================================= */
+
+function areAllTopicsCompleted() {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    return topics.every(
+        function(topic) {
+
+            return isTopicCompleted(
+                topic.key
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   CERTIFICATE SECTION
+========================================================= */
+
+function updateCertificateSection() {
+
+    const section =
+        document.getElementById(
+            "certificateSection"
+        );
+
+
+    if (!section) {
+
+        return;
+
+    }
+
+
+    if (
+        areAllTopicsCompleted()
+    ) {
+
+        section.style.display =
+            "block";
+
+    }
+
+    else {
+
+        section.style.display =
+            "none";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   UPDATE EVERYTHING
+========================================================= */
+
+function updateAllTopics() {
+
+    topics.forEach(
+        function(topic) {
+
+            updateTopicCard(
+                topic
+            );
+
+        }
+    );
+
+
+    updateCertificateSection();
+
+}
+
+
+updateAllTopics();
+
+
+
+/* =========================================================
+   CARD CLICK
+========================================================= */
+
+document.querySelectorAll(
+    ".topic-card"
+).forEach(
+    function(card) {
+
+        card.addEventListener(
+            "click",
+            function(event) {
+
+                /*
+                 * Do not interfere with
+                 * Start / Resume / Review.
+                 */
+
+                if (
+                    event.target.closest(
+                        "a, button"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                const page =
+                    card.dataset.href;
+
+
+                if (page) {
+
+                    window.location.href =
+                        page;
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   CERTIFICATE BUTTON
+========================================================= */
+
+const downloadCertificate =
+    document.getElementById(
+        "downloadCertificate"
+    );
+
+
+if (downloadCertificate) {
+
+    downloadCertificate.addEventListener(
+        "click",
+        function() {
+
+            /*
+             * Safety check:
+             * all 5 must be completed.
+             */
+
+            if (
+                !areAllTopicsCompleted()
+            ) {
+
+                alert(
+                    "Please complete all Interview Skills topics first."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * OPEN CERTIFICATE PAGE
+             */
+
+            window.location.href =
+                "certificate.html";
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   REFRESH WHEN RETURNING
+========================================================= */
+
+window.addEventListener(
+    "pageshow",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+window.addEventListener(
+    "focus",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+window.addEventListener(
+    "storage",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>

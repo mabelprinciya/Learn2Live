@@ -1,0 +1,1160 @@
+
+/* =====================================================
+   LEARN2LIVE — BANKING COURSE
+   NAVY BLUE + BLUE THEME
+===================================================== */
+
+
+/* =====================================================
+   GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background: #f5f7fa;
+    color: #222222;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    width: 100%;
+
+    background: #0b1736;
+
+    color: #ffffff;
+
+    padding: 38px 6%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.header::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: rgba(36, 84, 255, 0.12);
+
+    right: -80px;
+    top: -100px;
+}
+
+
+.header::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    left: 38%;
+    bottom: -100px;
+}
+
+
+.header-content {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.header-icon {
+
+    width: 65px;
+    height: 65px;
+
+    min-width: 65px;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.10);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 31px;
+}
+
+
+.header-label {
+
+    display: block;
+
+    color: #9fb5ff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.4px;
+
+    margin-bottom: 4px;
+}
+
+
+.header h1 {
+
+    font-size: 38px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    color: #ffffff;
+}
+
+
+.header p {
+
+    margin-top: 6px;
+
+    color: #c8cfdf;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   RANDOM BANKING FACT
+===================================================== */
+
+.fact-section {
+
+    max-width: 1250px;
+
+    margin: 28px auto 0;
+
+    padding: 17px 20px;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    border: 1px solid #e1e5ec;
+
+    border-left: 4px solid #2454ff;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+
+.fact-icon {
+
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+
+    border-radius: 12px;
+
+    background: #f1f4ff;
+
+    color: #2454ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+.fact-content {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.fact-content span {
+
+    display: block;
+
+    color: #2454ff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+.fact-content p {
+
+    margin-top: 3px;
+
+    color: #666666;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+#nextFact {
+
+    width: 37px;
+    height: 37px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #f1f4ff;
+
+    color: #2454ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#nextFact:hover {
+
+    background: #2454ff;
+
+    color: #ffffff;
+
+    transform: rotate(20deg);
+}
+
+
+/* =====================================================
+   TOPIC TITLE
+===================================================== */
+
+.topic-title {
+
+    max-width: 1250px;
+
+    margin: 38px auto 25px;
+
+    padding: 0 5px;
+}
+
+
+.section-label {
+
+    display: inline-block;
+
+    color: #2454ff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.3px;
+
+    margin-bottom: 4px;
+}
+
+
+.topic-title h2 {
+
+    color: #0b1736;
+
+    font-size: 29px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+.topic-title p {
+
+    margin-top: 5px;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   TOPIC CONTAINER
+===================================================== */
+
+.topic-container {
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 0 5px 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 17px;
+}
+
+
+/* =====================================================
+   TOPIC CARD
+===================================================== */
+
+.topic-card {
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 22px 18px;
+
+    min-height: 280px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+
+.topic-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: #2454ff;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+
+.topic-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.13);
+
+    border-color: #d5dbeb;
+}
+
+
+.topic-card:hover::before {
+
+    opacity: 1;
+}
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.card-top {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+}
+
+
+/* =====================================================
+   ICONS
+===================================================== */
+
+.icon {
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+/* BANK ACCOUNTS */
+
+.icon.bank-accounts {
+
+    background: #edf2ff;
+
+}
+
+
+/* ATM */
+
+.icon.atm {
+
+    background: #f1f4ff;
+
+}
+
+
+/* ONLINE BANKING */
+
+.icon.online-banking {
+
+    background: #eaf3ff;
+
+}
+
+
+/* LOANS */
+
+.icon.loans {
+
+    background: #eef8f3;
+
+}
+
+
+/* BANKING SECURITY */
+
+.icon.banking-security {
+
+    background: #f2efff;
+
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.topic-number {
+
+    color: #b4bac7;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.topic-card h3 {
+
+    margin-top: 18px;
+
+    color: #0b1736;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   CARD DESCRIPTION
+===================================================== */
+
+.topic-card p {
+
+    margin-top: 7px;
+
+    color: #777777;
+
+    font-size: 11.5px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   ALL TOPIC ACTIONS
+===================================================== */
+
+.topic-actions {
+
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+/* =====================================================
+   START / RESUME LINK
+===================================================== */
+
+.topic-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    color: #2454ff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+
+.topic-link i {
+
+    font-size: 9px;
+
+    transition: 0.3s;
+}
+
+
+.topic-link:hover {
+
+    color: #0b1736;
+}
+
+
+.topic-link:hover i {
+
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   COMPLETED STATUS
+===================================================== */
+
+.topic-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 6px 9px;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.topic-status.completed {
+
+    background: #e9f8ef;
+
+    color: #16824d;
+}
+
+
+.topic-status.completed i {
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   REVIEW BUTTON
+===================================================== */
+
+.review-course-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 7px 11px;
+
+    border-radius: 8px;
+
+    background: #0b1736;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+
+.review-course-btn:hover {
+
+    background: #2454ff;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   CERTIFICATE SECTION
+===================================================== */
+
+#certificateSection {
+
+    width: calc(100% - 32px);
+
+    max-width: 1250px;
+
+    margin: 0 auto 50px;
+
+    padding: 0;
+}
+
+
+.certificate-content {
+
+    background: #ffffff;
+
+    border: 1px solid #dfe5f0;
+
+    border-radius: 16px;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.certificate-content::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 4px;
+
+    background: #2454ff;
+}
+
+
+.certificate-icon {
+
+    width: 54px;
+    height: 54px;
+
+    margin: 0 auto 12px;
+
+    border-radius: 14px;
+
+    background: #f1f4ff;
+
+    color: #2454ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+
+.certificate-content h2 {
+
+    color: #0b1736;
+
+    font-size: 21px;
+
+    font-weight: 600;
+}
+
+
+.certificate-content p {
+
+    margin-top: 6px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   CERTIFICATE BUTTON
+===================================================== */
+
+.certificate-btn {
+
+    margin-top: 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 10px 17px;
+
+    background: #2454ff;
+
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.certificate-btn:hover {
+
+    background: #0b1736;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 16px rgba(36, 84, 255, 0.20);
+}
+
+
+.certificate-btn i {
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1150px) {
+
+    .topic-container {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET SMALL
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .topic-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .fact-section {
+
+        margin-left: 20px;
+
+        margin-right: 20px;
+
+    }
+
+
+    .topic-title {
+
+        margin-left: 20px;
+
+        margin-right: 20px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .header-content {
+
+        gap: 14px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .header-icon {
+
+        width: 54px;
+        height: 54px;
+
+        min-width: 54px;
+
+        font-size: 26px;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .header p {
+
+        font-size: 12px;
+
+    }
+
+
+    .fact-section {
+
+        margin:
+            20px 16px 0;
+
+        padding:
+            14px;
+
+    }
+
+
+    .fact-content p {
+
+        font-size: 11px;
+
+    }
+
+
+    .topic-title {
+
+        margin:
+            30px 16px 22px;
+
+    }
+
+
+    .topic-title h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .topic-container {
+
+        padding:
+            0 16px 35px;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 13px;
+
+    }
+
+
+    .topic-card {
+
+        min-height: 265px;
+
+        padding: 19px 16px;
+
+    }
+
+
+    .topic-card h3 {
+
+        font-size: 16px;
+
+    }
+
+
+    .topic-card p {
+
+        font-size: 11px;
+
+    }
+
+
+    .topic-actions {
+
+        gap: 6px;
+
+    }
+
+
+    .topic-status {
+
+        font-size: 9px;
+
+        padding: 6px 8px;
+
+    }
+
+
+    .review-course-btn {
+
+        font-size: 9px;
+
+        padding: 7px 9px;
+
+    }
+
+
+    .certificate-content {
+
+        padding:
+            27px 18px;
+
+    }
+
+
+    .certificate-content h2 {
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .topic-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .topic-card {
+
+        min-height: 245px;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .fact-content p {
+
+        font-size: 10.5px;
+
+    }
+
+
+    .certificate-content h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    .certificate-content p {
+
+        font-size: 11px;
+
+    }
+
+
+    .certificate-btn {
+
+        width: 100%;
+
+        max-width: 260px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: #2454ff;
+
+    border-radius: 20px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #f1f1f1;
+
+}

@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Learn2Live - Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="theme.css">
+    <script src="auth.js"></script>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     DASHBOARD LAYOUT
+========================================================= -->
+
+<div class="dashboard-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <!-- LOGO -->
+
+        <div
+            class="sidebar-logo"
+            id="learn2liveLogo"
+        >
+
+            <div class="logo-image">
+
+                <img
+                    src="logo.png"
+                    alt="Learn2Live Logo"
+                >
+
+            </div>
+
+
+            <div class="logo-text">
+
+                <strong>
+                    Learn2Live
+                </strong>
+
+                <span>
+                    Life Skills 
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SIDEBAR NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+
+            <div class="nav-label">
+                MAIN MENU
+            </div>
+
+
+            <!-- DASHBOARD -->
+
+            <a
+                href="dashboard.html"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+
+            <!-- MY LEARNING -->
+
+            <a
+                href="learning.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </span>
+
+                <span>
+                    My Learning
+                </span>
+
+            </a>
+
+
+
+            <!-- CERTIFICATES -->
+
+            <a
+                href="mycertificates.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-certificate"></i>
+
+                </span>
+
+                <span>
+                    My Certificates
+                </span>
+
+            </a>
+
+
+
+            <div class="nav-label second-label">
+                ACCOUNT
+            </div>
+
+
+
+            <!-- PROFILE -->
+
+            <a
+                href="profile.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+                <span>
+                    Profile
+                </span>
+
+            </a>
+
+
+
+            <!-- LOGOUT -->
+
+            <a
+                href="#"
+                class="nav-item logout-link"
+                id="logoutBtn"
+            >
+
+                <span class="nav-icon">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+
+            <div class="sidebar-help">
+
+
+                <div class="help-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Keep Learning
+                    </strong>
+
+                    <span>
+                        Build one skill at a time.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="top-header">
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                type="button"
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open Menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- PAGE TITLE -->
+
+            <div class="header-title">
+
+                <span class="header-small">
+                    LEARN2LIVE
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+
+
+            <!-- HEADER ACTIONS -->
+
+            <div class="header-actions">
+
+
+                <!-- =================================================
+                     NOTIFICATION
+                ================================================== -->
+
+                <a
+                    href="notification.html"
+                    class="icon-btn notification-link"
+                    id="notificationBtn"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+
+                    <span
+                        class="notification-dot"
+                        id="notificationDot"
+                    ></span>
+
+                </a>
+
+
+
+                <!-- =================================================
+                     PROFILE
+                ================================================== -->
+
+                <a
+                    href="profile.html"
+                    class="header-profile"
+                >
+
+
+                    <div
+    class="profile-avatar"
+    id="profileInitials"
+>
+    <img
+        id="headerAvatarImage"
+        src=""
+        alt="Profile Photo"
+        style="display:none;"
+    >
+
+    <span id="headerAvatarInitials">
+        U
+    </span>
+</div>
+
+
+                    <div class="profile-details">
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <span>
+                            Learner
+                        </span>
+
+                    </div>
+
+
+                    <i
+                        class="fa-solid fa-chevron-down profile-arrow"
+                    ></i>
+
+
+                </a>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             STATS
+        ================================================== -->
+
+        <section class="stats-grid">
+
+
+            <!-- TOTAL SKILLS -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon blue">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Skills Available
+                    </span>
+
+                    <strong id="totalSkills">
+                        6
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- COMPLETED -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Skills Completed
+                    </span>
+
+                    <strong id="completedSkills">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- IN PROGRESS -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon orange">
+
+                    <i class="fa-solid fa-spinner"></i>
+
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        In Progress
+                    </span>
+
+                    <strong id="inProgressSkills">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- OVERALL PROGRESS -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon purple">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Overall Progress
+                    </span>
+
+                    <strong id="overallProgress">
+                        0%
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUICK TIPS
+        ================================================== -->
+
+        <section class="quick-tips-section">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+                    <span>
+                        LEARN SMART
+                    </span>
+
+                    <h2>
+                        Quick Tip
+                    </h2>
+
+                </div>
+
+
+                <div class="quick-tip-label">
+
+                    <i class="fa-solid fa-shuffle"></i>
+
+                    Random Tip
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="quick-tip-card">
+
+
+                <div class="quick-tip-icon">
+
+                    <i
+                        id="quickTipIcon"
+                        class="fa-solid fa-lightbulb"
+                    ></i>
+
+                </div>
+
+
+                <div class="quick-tip-content">
+
+
+                    <span
+                        class="quick-tip-category"
+                        id="quickTipCategory"
+                    >
+                        Learn2Live
+                    </span>
+
+
+                    <p
+                        class="quick-tip-text"
+                        id="quickTipText"
+                    >
+                        Loading a useful tip...
+                    </p>
+
+
+                </div>
+
+
+                <div class="quick-tip-refresh">
+
+                    <i class="fa-solid fa-arrows-rotate"></i>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CATEGORIES
+        ================================================== -->
+
+        <section
+            class="categories-section"
+            id="categories"
+        >
+
+
+            <!-- SECTION HEADING -->
+
+            <div class="section-heading">
+
+
+                <div>
+
+                    <span>
+                        EXPLORE
+                    </span>
+
+                    <h2>
+                        Categories
+                    </h2>
+
+                </div>
+
+
+                <span
+                    class="skills-count"
+                    id="skillsCount"
+                >
+                    6 Skills
+                </span>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CATEGORY GRID
+            ================================================== -->
+
+            <div class="categories-grid">
+
+
+
+                <!-- =================================================
+                     FIRST AID
+                ================================================== -->
+
+                <div
+                    class="category-card"
+                    data-category="firstaid"
+                >
+
+
+                    <div class="category-image-wrap">
+
+                        <img
+                            src="firstaid.png"
+                            alt="First Aid"
+                            class="category-image"
+                        >
+
+                    </div>
+
+
+                    <div class="category-card-content">
+
+
+                        <div class="category-header">
+
+
+                            <div>
+
+                                <h3 class="category-title">
+                                    First Aid
+                                </h3>
+
+                                <p>
+                                    Essential first-aid skills
+                                    for everyday emergencies.
+                                </p>
+
+                            </div>
+
+
+                            <div class="category-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="category-title-row">
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <span class="category-percent">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="category-progress">
+
+                            <div class="category-progress-track">
+
+                                <div
+                                    class="category-progress-fill"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="category-status">
+                            Learn First Aid
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     BANKING
+                ================================================== -->
+
+                <div
+                    class="category-card"
+                    data-category="banking"
+                >
+
+
+                    <div class="category-image-wrap">
+
+                        <img
+                            src="banking.png"
+                            alt="Banking"
+                            class="category-image"
+                        >
+
+                    </div>
+
+
+                    <div class="category-card-content">
+
+
+                        <div class="category-header">
+
+
+                            <div>
+
+                                <h3 class="category-title">
+                                    Banking
+                                </h3>
+
+                                <p>
+                                    Banking, digital payments
+                                    and financial safety.
+                                </p>
+
+                            </div>
+
+
+                            <div class="category-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="category-title-row">
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <span class="category-percent">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="category-progress">
+
+                            <div class="category-progress-track">
+
+                                <div
+                                    class="category-progress-fill"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="category-status">
+                            Learn Banking
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TAX
+                ================================================== -->
+
+                <div
+                    class="category-card"
+                    data-category="tax"
+                >
+
+
+                    <div class="category-image-wrap">
+
+                        <img
+                            src="tax.png"
+                            alt="Tax Basics"
+                            class="category-image"
+                        >
+
+                    </div>
+
+
+                    <div class="category-card-content">
+
+
+                        <div class="category-header">
+
+
+                            <div>
+
+                                <h3 class="category-title">
+                                    Tax Basics
+                                </h3>
+
+                                <p>
+                                    Tax concepts, documents
+                                    and responsibilities.
+                                </p>
+
+                            </div>
+
+
+                            <div class="category-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="category-title-row">
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <span class="category-percent">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="category-progress">
+
+                            <div class="category-progress-track">
+
+                                <div
+                                    class="category-progress-fill"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="category-status">
+                            Learn Tax Basics
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     DIGITAL SAFETY
+                ================================================== -->
+
+                <div
+                    class="category-card"
+                    data-category="digital-safety"
+                >
+
+
+                    <div class="category-image-wrap">
+
+                        <img
+                            src="digital.png"
+                            alt="Digital Safety"
+                            class="category-image"
+                        >
+
+                    </div>
+
+
+                    <div class="category-card-content">
+
+
+                        <div class="category-header">
+
+
+                            <div>
+
+                                <h3 class="category-title">
+                                    Digital Safety
+                                </h3>
+
+                                <p>
+                                    Protect accounts, data
+                                    and online identity.
+                                </p>
+
+                            </div>
+
+
+                            <div class="category-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="category-title-row">
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <span class="category-percent">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="category-progress">
+
+                            <div class="category-progress-track">
+
+                                <div
+                                    class="category-progress-fill"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="category-status">
+                            Learn Digital Safety
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     LEGAL
+                ================================================== -->
+
+                <div
+                    class="category-card"
+                    data-category="legal"
+                >
+
+
+                    <div class="category-image-wrap">
+
+                        <img
+                            src="legal.png"
+                            alt="Legal Rights"
+                            class="category-image"
+                        >
+
+                    </div>
+
+
+                    <div class="category-card-content">
+
+
+                        <div class="category-header">
+
+
+                            <div>
+
+                                <h3 class="category-title">
+                                    Legal Rights
+                                </h3>
+
+                                <p>
+                                    Everyday legal rights,
+                                    responsibilities and awareness.
+                                </p>
+
+                            </div>
+
+
+                            <div class="category-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="category-title-row">
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <span class="category-percent">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="category-progress">
+
+                            <div class="category-progress-track">
+
+                                <div
+                                    class="category-progress-fill"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="category-status">
+                            Learn Legal Rights
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     INTERVIEW
+                ================================================== -->
+
+                <div
+                    class="category-card"
+                    data-category="interview"
+                >
+
+
+                    <div class="category-image-wrap">
+
+                        <img
+                            src="interview.png"
+                            alt="Interview Skills"
+                            class="category-image"
+                        >
+
+                    </div>
+
+
+                    <div class="category-card-content">
+
+
+                        <div class="category-header">
+
+
+                            <div>
+
+                                <h3 class="category-title">
+                                    Interview Skills
+                                </h3>
+
+                                <p>
+                                    Build interview confidence,
+                                    communication and career skills.
+                                </p>
+
+                            </div>
+
+
+                            <div class="category-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="category-title-row">
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <span class="category-percent">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="category-progress">
+
+                            <div class="category-progress-track">
+
+                                <div
+                                    class="category-progress-fill"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="category-status">
+                            Learn Interview Skills
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="dashboard-footer">
+
+
+            <div>
+
+                <strong>
+                    Learn2Live
+                </strong>
+
+                <span>
+                    Practical skills for everyday life.
+                </span>
+
+            </div>
+
+
+            <span>
+                © 2026 Learn2Live
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     MOBILE SIDEBAR OVERLAY
+========================================================= -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+
+<!-- =========================================================
+     LOGOUT MODAL
+========================================================= -->
+
+<div
+    class="logout-overlay"
+    id="logoutOverlay"
+>
+
+
+    <div class="logout-modal">
+
+
+        <div class="logout-icon">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+        </div>
+
+
+        <h2>
+            Logout
+        </h2>
+
+
+        <p>
+            Are you sure you want to logout?
+        </p>
+
+
+        <div class="logout-actions">
+
+
+            <button
+                type="button"
+                class="cancel-btn"
+                id="cancelLogout"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                class="confirm-logout-btn"
+                id="confirmLogout"
+            >
+                Logout
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     ADMIN PIN MODAL
+========================================================= -->
+
+<div
+    class="admin-pin-overlay"
+    id="adminPinOverlay"
+>
+
+
+    <div class="admin-pin-modal">
+
+
+        <div class="admin-pin-icon">
+
+            <i class="fa-solid fa-lock"></i>
+
+        </div>
+
+
+        <h2>
+            Admin Access
+        </h2>
+
+
+        <p>
+            Enter the admin PIN to continue
+        </p>
+
+
+        <input
+            type="password"
+            id="adminPinInput"
+            placeholder="Enter PIN"
+            maxlength="4"
+            inputmode="numeric"
+            autocomplete="off"
+        >
+
+
+        <p
+            class="admin-pin-error"
+            id="adminPinError"
+        >
+            Incorrect PIN
+        </p>
+
+
+        <div class="admin-pin-actions">
+
+
+            <button
+                type="button"
+                class="admin-cancel-btn"
+                id="cancelAdminPin"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-confirm-btn"
+                id="confirmAdminPin"
+            >
+                Continue
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     DASHBOARD JAVASCRIPT
+========================================================= -->
+
+<script src="dashboard.js"></script>
+
+
+
+<!-- =========================================================
+     ADMIN ACCESS
+========================================================= -->
+
+<script>
+
+(function () {
+
+
+    const logo =
+        document.getElementById(
+            "learn2liveLogo"
+        );
+
+
+    const overlay =
+        document.getElementById(
+            "adminPinOverlay"
+        );
+
+
+    const pinInput =
+        document.getElementById(
+            "adminPinInput"
+        );
+
+
+    const confirmBtn =
+        document.getElementById(
+            "confirmAdminPin"
+        );
+
+
+    const cancelBtn =
+        document.getElementById(
+            "cancelAdminPin"
+        );
+
+
+    const errorMessage =
+        document.getElementById(
+            "adminPinError"
+        );
+
+
+    if (
+        !logo ||
+        !overlay ||
+        !pinInput ||
+        !confirmBtn ||
+        !cancelBtn ||
+        !errorMessage
+    ) {
+
+        return;
+
+    }
+
+
+    let tapCount = 0;
+
+    let tapTimer = null;
+
+
+
+    /* =====================================================
+       FIVE LOGO CLICKS
+    ====================================================== */
+
+    logo.addEventListener(
+        "click",
+        function () {
+
+
+            tapCount++;
+
+
+            clearTimeout(
+                tapTimer
+            );
+
+
+            tapTimer =
+                setTimeout(
+                    function () {
+
+                        tapCount = 0;
+
+                    },
+                    1500
+                );
+
+
+            if (
+                tapCount === 5
+            ) {
+
+
+                tapCount = 0;
+
+
+                clearTimeout(
+                    tapTimer
+                );
+
+
+                openAdminPopup();
+
+            }
+
+
+        }
+    );
+
+
+
+    /* =====================================================
+       OPEN POPUP
+    ====================================================== */
+
+    function openAdminPopup() {
+
+
+        overlay.style.display =
+            "flex";
+
+
+        pinInput.value =
+            "";
+
+
+        errorMessage.style.display =
+            "none";
+
+
+        setTimeout(
+            function () {
+
+                pinInput.focus();
+
+            },
+            100
+        );
+
+    }
+
+
+
+    /* =====================================================
+       CLOSE POPUP
+    ====================================================== */
+
+    function closeAdminPopup() {
+
+
+        overlay.style.display =
+            "none";
+
+
+        pinInput.value =
+            "";
+
+
+        errorMessage.style.display =
+            "none";
+
+    }
+
+
+
+    /* =====================================================
+       CHECK PIN
+    ====================================================== */
+
+    function checkAdminPin() {
+
+
+        const enteredPin =
+            pinInput.value.trim();
+
+
+        if (
+            enteredPin === "2005"
+        ) {
+
+
+            window.location.href =
+                "adminlogin.html";
+
+
+            return;
+
+        }
+
+
+        errorMessage.style.display =
+            "block";
+
+
+        pinInput.value =
+            "";
+
+
+        pinInput.focus();
+
+    }
+
+
+
+    confirmBtn.addEventListener(
+        "click",
+        checkAdminPin
+    );
+
+
+
+    /* =====================================================
+       ENTER KEY
+    ====================================================== */
+
+    pinInput.addEventListener(
+        "keydown",
+        function (event) {
+
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                checkAdminPin();
+
+            }
+
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                closeAdminPopup();
+
+            }
+
+
+        }
+    );
+
+
+
+    /* =====================================================
+       CANCEL
+    ====================================================== */
+
+    cancelBtn.addEventListener(
+        "click",
+        closeAdminPopup
+    );
+
+
+
+    /* =====================================================
+       OUTSIDE CLICK
+    ====================================================== */
+
+    overlay.addEventListener(
+        "click",
+        function (event) {
+
+
+            if (
+                event.target === overlay
+            ) {
+
+                closeAdminPopup();
+
+            }
+
+
+        }
+    );
+
+
+})();
+
+</script>
+
+
+</body>
+
+</html>

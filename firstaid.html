@@ -1,0 +1,1271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>First Aid Course | Learn2Live</title>
+
+    <link
+        rel="stylesheet"
+        href="firstaid.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="theme.css">
+    <script src="auth.js"></script>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <div class="header-content">
+
+        <div class="header-icon">
+            🩺
+        </div>
+
+        <div>
+
+            <span class="header-label">
+                LEARN2LIVE • LIFE SKILLS
+            </span>
+
+            <h1>
+                First Aid
+            </h1>
+
+            <p>
+                Learn essential first aid skills for common
+                emergency situations.
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     RANDOM FIRST AID FACT
+========================================================= -->
+
+<section class="fact-section">
+
+    <div class="fact-icon">
+        <i class="fa-solid fa-lightbulb"></i>
+    </div>
+
+    <div class="fact-content">
+
+        <span>
+            FIRST AID FACT
+        </span>
+
+        <p id="firstAidFact">
+            Loading fact...
+        </p>
+
+    </div>
+
+    <button
+        type="button"
+        id="nextFact"
+        aria-label="Show another first aid fact"
+    >
+        <i class="fa-solid fa-rotate"></i>
+    </button>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOPIC HEADING
+========================================================= -->
+
+<section class="topic-title">
+
+    <span class="section-label">
+        FIRST AID BASICS
+    </span>
+
+    <h2>
+        Choose a Topic
+    </h2>
+
+    <p>
+        Select a topic to learn the essential first aid
+        steps and test your knowledge.
+    </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOPIC CARDS
+========================================================= -->
+
+<main class="topic-container">
+
+
+    <!-- =====================================================
+         CPR
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="cprCard"
+        data-topic="CPR"
+        data-topic-key="cpr"
+        data-href="cpr.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon cpr">
+                ❤️
+            </div>
+
+            <span class="topic-number">
+                01
+            </span>
+
+        </div>
+
+
+        <h3>
+            CPR
+        </h3>
+
+
+        <p>
+            Learn the basic steps of CPR and how to respond
+            when someone is not breathing normally.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="cprActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="cprStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="cpr.html"
+                id="cprContinue"
+                class="topic-link"
+            >
+
+                <span id="cprContinueText">
+                    Start CPR
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="cpr.html?mode=review"
+                id="cprReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BLEEDING
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="bleedingCard"
+        data-topic="Bleeding"
+        data-topic-key="bleeding"
+        data-href="bleeding.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon bleeding">
+                🩸
+            </div>
+
+            <span class="topic-number">
+                02
+            </span>
+
+        </div>
+
+
+        <h3>
+            Bleeding
+        </h3>
+
+
+        <p>
+            Learn the basic first aid response for bleeding
+            and how to help control it safely.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="bleedingActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="bleedingStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="bleeding.html"
+                id="bleedingContinue"
+                class="topic-link"
+            >
+
+                <span id="bleedingContinueText">
+                    Start Bleeding
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="bleeding.html?mode=review"
+                id="bleedingReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BURNS
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="burnsCard"
+        data-topic="Burns"
+        data-topic-key="burns"
+        data-href="burns.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon burns">
+                🔥
+            </div>
+
+            <span class="topic-number">
+                03
+            </span>
+
+        </div>
+
+
+        <h3>
+            Burns
+        </h3>
+
+
+        <p>
+            Learn the appropriate first aid response for
+            common minor burns and burn injuries.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="burnsActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="burnsStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="burns.html"
+                id="burnsContinue"
+                class="topic-link"
+            >
+
+                <span id="burnsContinueText">
+                    Start Burns
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="burns.html?mode=review"
+                id="burnsReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CHOKING
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="chokingCard"
+        data-topic="Choking"
+        data-topic-key="choking"
+        data-href="choking.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon choking">
+                🫁
+            </div>
+
+            <span class="topic-number">
+                04
+            </span>
+
+        </div>
+
+
+        <h3>
+            Choking
+        </h3>
+
+
+        <p>
+            Learn how to recognise choking and understand
+            the appropriate first aid response.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="chokingActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="chokingStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="choking.html"
+                id="chokingContinue"
+                class="topic-link"
+            >
+
+                <span id="chokingContinueText">
+                    Start Choking
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="choking.html?mode=review"
+                id="chokingReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BITES & STINGS
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="bitesCard"
+        data-topic="Bites & Stings"
+        data-topic-key="bites"
+        data-href="bites.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon bites">
+                🐝
+            </div>
+
+            <span class="topic-number">
+                05
+            </span>
+
+        </div>
+
+
+        <h3>
+            Bites & Stings
+        </h3>
+
+
+        <p>
+            Learn basic first aid responses for insect
+            stings and common animal bites.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="bitesActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="bitesStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="bites.html"
+                id="bitesContinue"
+                class="topic-link"
+            >
+
+                <span id="bitesContinueText">
+                    Start Bites & Stings
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="bites.html?mode=review"
+                id="bitesReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     ALL TOPICS COMPLETED
+========================================================= -->
+
+<section
+    id="certificateSection"
+    style="display:none;"
+>
+
+    <div class="certificate-content">
+
+        <div class="certificate-icon">
+            <i class="fa-solid fa-certificate"></i>
+        </div>
+
+        <h2>
+            All First Aid Topics Completed!
+        </h2>
+
+        <p>
+            You have successfully completed all five
+            First Aid learning categories.
+        </p>
+
+        <button
+            type="button"
+            id="downloadCertificate"
+            class="certificate-btn"
+        >
+
+            <i class="fa-solid fa-download"></i>
+
+            Download Certificate
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+"use strict";
+
+
+/* =========================================================
+   RANDOM FIRST AID FACTS
+========================================================= */
+
+const firstAidFacts = [
+
+    "Stay calm and check that the area is safe before helping someone.",
+
+    "For serious bleeding, applying firm direct pressure can help control blood loss.",
+
+    "If someone is unconscious and not breathing normally, emergency medical help is needed immediately.",
+
+    "For a minor burn, cool running water can help cool the affected area.",
+
+    "Never put ice directly on a burn because it can damage the skin further.",
+
+    "If someone is choking and cannot cough, speak or breathe, immediate first aid is important.",
+
+    "Washing your hands before providing first aid helps reduce the spread of infection.",
+
+    "After a serious injury, seek professional medical help even after providing first aid.",
+
+    "A first aid kit should contain basic supplies such as gloves, sterile dressings and bandages.",
+
+    "Do not move a seriously injured person unless there is an immediate danger at the scene."
+
+];
+
+
+const factElement =
+    document.getElementById("firstAidFact");
+
+
+const nextFactButton =
+    document.getElementById("nextFact");
+
+
+let currentFact = -1;
+
+
+function showRandomFact() {
+
+    let randomIndex;
+
+
+    do {
+
+        randomIndex =
+            Math.floor(
+                Math.random() *
+                firstAidFacts.length
+            );
+
+    }
+
+    while (
+        firstAidFacts.length > 1 &&
+        randomIndex === currentFact
+    );
+
+
+    currentFact =
+        randomIndex;
+
+
+    factElement.textContent =
+        firstAidFacts[currentFact];
+
+}
+
+
+nextFactButton.addEventListener(
+    "click",
+    showRandomFact
+);
+
+
+showRandomFact();
+
+
+
+/* =========================================================
+   LOGGED-IN USER
+========================================================= */
+
+const loggedInEmail =
+    localStorage.getItem(
+        "loggedInEmail"
+    );
+
+
+
+/* =========================================================
+   TOPIC CONFIGURATION
+========================================================= */
+
+const topics = [
+
+    {
+        key: "cpr",
+        name: "CPR",
+        page: "cpr.html"
+    },
+
+    {
+        key: "bleeding",
+        name: "Bleeding",
+        page: "bleeding.html"
+    },
+
+    {
+        key: "burns",
+        name: "Burns",
+        page: "burns.html"
+    },
+
+    {
+        key: "choking",
+        name: "Choking",
+        page: "choking.html"
+    },
+
+    {
+        key: "bites",
+        name: "Bites & Stings",
+        page: "bites.html"
+    }
+
+];
+
+
+
+/* =========================================================
+   STORAGE KEY
+========================================================= */
+
+function getTopicStorageKey(
+    topicKey,
+    type
+) {
+
+    if (!loggedInEmail) {
+
+        return null;
+
+    }
+
+
+    return (
+        "learn2live_" +
+        topicKey +
+        "_" +
+        type +
+        "_" +
+        loggedInEmail
+    );
+
+}
+
+
+
+/* =========================================================
+   CHECK COMPLETED
+========================================================= */
+
+function isTopicCompleted(
+    topicKey
+) {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    const completedKey =
+        getTopicStorageKey(
+            topicKey,
+            "completed"
+        );
+
+
+    return (
+        localStorage.getItem(
+            completedKey
+        ) === "true"
+    );
+
+}
+
+
+
+/* =========================================================
+   CHECK PROGRESS
+========================================================= */
+
+function hasTopicProgress(
+    topicKey
+) {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    const progressKey =
+        getTopicStorageKey(
+            topicKey,
+            "progress"
+        );
+
+
+    const savedProgress =
+        localStorage.getItem(
+            progressKey
+        );
+
+
+    if (!savedProgress) {
+
+        return false;
+
+    }
+
+
+    try {
+
+        const progress =
+            JSON.parse(
+                savedProgress
+            );
+
+
+        return (
+            progress &&
+            typeof progress === "object"
+        );
+
+    }
+
+    catch (error) {
+
+        return false;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   UPDATE TOPIC CARD
+========================================================= */
+
+function updateTopicCard(
+    topic
+) {
+
+    const key =
+        topic.key;
+
+
+    const status =
+        document.getElementById(
+            key + "Status"
+        );
+
+
+    const continueButton =
+        document.getElementById(
+            key + "Continue"
+        );
+
+
+    const continueText =
+        document.getElementById(
+            key + "ContinueText"
+        );
+
+
+    const reviewButton =
+        document.getElementById(
+            key + "Review"
+        );
+
+
+    if (
+        !status ||
+        !continueButton ||
+        !continueText ||
+        !reviewButton
+    ) {
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    status.style.display =
+        "none";
+
+    reviewButton.style.display =
+        "none";
+
+    continueButton.style.display =
+        "inline-flex";
+
+
+
+    /* =====================================================
+       NO LOGIN
+    ====================================================== */
+
+    if (!loggedInEmail) {
+
+        continueText.textContent =
+            "Start " + topic.name;
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       COMPLETED
+    ====================================================== */
+
+    if (
+        isTopicCompleted(
+            key
+        )
+    ) {
+
+        status.style.display =
+            "inline-flex";
+
+        continueButton.style.display =
+            "none";
+
+        reviewButton.style.display =
+            "inline-flex";
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       RESUME
+    ====================================================== */
+
+    if (
+        hasTopicProgress(
+            key
+        )
+    ) {
+
+        continueText.textContent =
+            "Resume " + topic.name;
+
+    }
+
+    else {
+
+        continueText.textContent =
+            "Start " + topic.name;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CHECK ALL TOPICS
+========================================================= */
+
+function areAllTopicsCompleted() {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    return topics.every(
+        function(topic) {
+
+            return isTopicCompleted(
+                topic.key
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   CERTIFICATE SECTION
+========================================================= */
+
+function updateCertificateSection() {
+
+    const section =
+        document.getElementById(
+            "certificateSection"
+        );
+
+
+    if (!section) {
+
+        return;
+
+    }
+
+
+    if (
+        areAllTopicsCompleted()
+    ) {
+
+        section.style.display =
+            "block";
+
+    }
+
+    else {
+
+        section.style.display =
+            "none";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   UPDATE EVERYTHING
+========================================================= */
+
+function updateAllTopics() {
+
+    topics.forEach(
+        function(topic) {
+
+            updateTopicCard(
+                topic
+            );
+
+        }
+    );
+
+
+    updateCertificateSection();
+
+}
+
+
+updateAllTopics();
+
+
+
+/* =========================================================
+   CARD CLICK
+========================================================= */
+
+document.querySelectorAll(
+    ".topic-card"
+).forEach(
+    function(card) {
+
+        card.addEventListener(
+            "click",
+            function(event) {
+
+                /*
+                 * Do not interfere with
+                 * Start / Resume / Review.
+                 */
+
+                if (
+                    event.target.closest(
+                        "a, button"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                const page =
+                    card.dataset.href;
+
+
+                if (page) {
+
+                    window.location.href =
+                        page;
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   CERTIFICATE BUTTON
+========================================================= */
+
+const downloadCertificate =
+    document.getElementById(
+        "downloadCertificate"
+    );
+
+
+if (downloadCertificate) {
+
+    downloadCertificate.addEventListener(
+        "click",
+        function() {
+
+            /*
+             * Safety check:
+             * all 5 must be completed.
+             */
+
+            if (
+                !areAllTopicsCompleted()
+            ) {
+
+                alert(
+                    "Please complete all First Aid topics first."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * OPEN CERTIFICATE PAGE
+             */
+
+            window.location.href =
+                "certificate.html";
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   REFRESH WHEN RETURNING
+========================================================= */
+
+window.addEventListener(
+    "pageshow",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+window.addEventListener(
+    "focus",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+window.addEventListener(
+    "storage",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
+

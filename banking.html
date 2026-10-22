@@ -1,0 +1,1291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Banking Course | Learn2Live</title>
+
+    <link
+        rel="stylesheet"
+        href="banking.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="theme.css">
+    <script src="auth.js"></script>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <div class="header-content">
+
+        <div class="header-icon">
+            🏦
+        </div>
+
+        <div>
+
+            <span class="header-label">
+                LEARN2LIVE • LIFE SKILLS
+            </span>
+
+            <h1>
+                Banking
+            </h1>
+
+            <p>
+                Learn essential banking skills for managing
+                money, accounts and digital banking safely.
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     RANDOM BANKING FACT
+========================================================= -->
+
+<section class="fact-section">
+
+    <div class="fact-icon">
+        <i class="fa-solid fa-lightbulb"></i>
+    </div>
+
+    <div class="fact-content">
+
+        <span>
+            BANKING FACT
+        </span>
+
+        <p id="bankingFact">
+            Loading fact...
+        </p>
+
+    </div>
+
+    <button
+        type="button"
+        id="nextFact"
+        aria-label="Show another banking fact"
+    >
+        <i class="fa-solid fa-rotate"></i>
+    </button>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOPIC HEADING
+========================================================= -->
+
+<section class="topic-title">
+
+    <span class="section-label">
+        BANKING BASICS
+    </span>
+
+    <h2>
+        Choose a Topic
+    </h2>
+
+    <p>
+        Select a topic to learn important banking concepts
+        and test your knowledge.
+    </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOPIC CARDS
+========================================================= -->
+
+<main class="topic-container">
+
+
+    <!-- =====================================================
+         BANK ACCOUNTS
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="bankAccountsCard"
+        data-topic="Bank Accounts"
+        data-topic-key="bankAccounts"
+        data-href="Bank Accounts.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon bank-accounts">
+                🏦
+            </div>
+
+            <span class="topic-number">
+                01
+            </span>
+
+        </div>
+
+
+        <h3>
+            Bank Accounts
+        </h3>
+
+
+        <p>
+            Learn about different types of bank accounts,
+            their uses and how to manage them.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="bankAccountsActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="bankAccountsStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="Bank Accounts.html"
+                id="bankAccountsContinue"
+                class="topic-link"
+            >
+
+                <span id="bankAccountsContinueText">
+                    Start Bank Accounts
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="Bank Accounts.html"
+                id="bankAccountsReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ATM
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="atmCard"
+        data-topic="ATM"
+        data-topic-key="atm"
+        data-href="ATM.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon atm">
+                💳
+            </div>
+
+            <span class="topic-number">
+                02
+            </span>
+
+        </div>
+
+
+        <h3>
+            ATM
+        </h3>
+
+
+        <p>
+            Learn how ATMs work, how to use them safely and
+            how to protect your card and PIN.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="atmActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="atmStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="ATM.html"
+                id="atmContinue"
+                class="topic-link"
+            >
+
+                <span id="atmContinueText">
+                    Start ATM
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="ATM.html?mode=review"
+                id="atmReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ONLINE BANKING
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="onlineBankingCard"
+        data-topic="Online Banking"
+        data-topic-key="onlineBanking"
+        data-href="Online Banking.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon online-banking">
+                📱
+            </div>
+
+            <span class="topic-number">
+                03
+            </span>
+
+        </div>
+
+
+        <h3>
+            Online Banking
+        </h3>
+
+
+        <p>
+            Learn how to use online and mobile banking services
+            and make digital transactions safely.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="onlineBankingActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="onlineBankingStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="Online Banking.html"
+                id="onlineBankingContinue"
+                class="topic-link"
+            >
+
+                <span id="onlineBankingContinueText">
+                    Start Online Banking
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="Online Banking.html?mode=review"
+                id="onlineBankingReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         LOANS
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="loansCard"
+        data-topic="Loans"
+        data-topic-key="loans"
+        data-href="Loans.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon loans">
+                💰
+            </div>
+
+            <span class="topic-number">
+                04
+            </span>
+
+        </div>
+
+
+        <h3>
+            Loans
+        </h3>
+
+
+        <p>
+            Learn the basics of loans, interest, repayment and
+            important things to understand before borrowing.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="loansActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="loansStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="Loans.html"
+                id="loansContinue"
+                class="topic-link"
+            >
+
+                <span id="loansContinueText">
+                    Start Loans
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="Loans.html?mode=review"
+                id="loansReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BANKING SECURITY
+    ====================================================== -->
+
+    <div
+        class="topic-card"
+        id="bankingSecurityCard"
+        data-topic="Banking Security"
+        data-topic-key="bankingSecurity"
+        data-href="Banking Security.html"
+    >
+
+        <div class="card-top">
+
+            <div class="icon banking-security">
+                🔐
+            </div>
+
+            <span class="topic-number">
+                05
+            </span>
+
+        </div>
+
+
+        <h3>
+            Banking Security
+        </h3>
+
+
+        <p>
+            Learn how to protect your bank account, cards,
+            PINs, passwords and digital transactions.
+        </p>
+
+
+        <div
+            class="topic-actions"
+            id="bankingSecurityActions"
+        >
+
+            <!-- COMPLETED -->
+
+            <div
+                id="bankingSecurityStatus"
+                class="topic-status completed"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Completed
+
+            </div>
+
+
+            <!-- START / RESUME -->
+
+            <a
+                href="Banking Security.html"
+                id="bankingSecurityContinue"
+                class="topic-link"
+            >
+
+                <span id="bankingSecurityContinueText">
+                    Start Banking Security
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <!-- REVIEW -->
+
+            <a
+                href="Banking Security.html?mode=review"
+                id="bankingSecurityReview"
+                class="review-course-btn"
+                style="display:none;"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Review
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     ALL TOPICS COMPLETED
+========================================================= -->
+
+<section
+    id="certificateSection"
+    style="display:none;"
+>
+
+    <div class="certificate-content">
+
+        <div class="certificate-icon">
+            <i class="fa-solid fa-certificate"></i>
+        </div>
+
+        <h2>
+            All Banking Topics Completed!
+        </h2>
+
+        <p>
+            You have successfully completed all five
+            Banking learning categories.
+        </p>
+
+        <button
+            type="button"
+            id="downloadCertificate"
+            class="certificate-btn"
+        >
+
+            <i class="fa-solid fa-download"></i>
+
+            Download Certificate
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+"use strict";
+
+
+/* =========================================================
+   RANDOM BANKING FACTS
+========================================================= */
+
+const bankingFacts = [
+
+    "Never share your ATM PIN, internet banking password or one-time password with anyone.",
+
+    "A savings account is generally used to keep money safely while earning interest on eligible balances.",
+
+    "An ATM can commonly be used for services such as cash withdrawal, balance enquiry and other supported banking transactions.",
+
+    "Always cover the keypad while entering your ATM PIN to help protect it from being observed.",
+
+    "Online banking allows customers to access supported banking services through a bank's website or mobile application.",
+
+    "Use strong and unique passwords for your banking accounts and avoid using easily guessed information.",
+
+    "Banks may offer different types of accounts designed for different financial needs.",
+
+    "Before taking a loan, understand the interest rate, repayment period, fees and other applicable charges.",
+
+    "Missing loan repayments can affect your credit history and may result in additional charges depending on the loan terms.",
+
+    "Never click suspicious links asking you to verify your bank account, card details or banking credentials.",
+
+    "Banks will generally not ask customers to disclose confidential passwords or OTPs over phone calls or messages.",
+
+    "Check transaction alerts and account statements regularly so that unusual transactions can be noticed quickly.",
+
+    "When using public Wi-Fi, avoid accessing sensitive banking services unless you are confident that the connection is secure.",
+
+    "Keep your banking mobile application and device operating system updated to receive important security fixes.",
+
+    "If you notice an unauthorised banking transaction, contact your bank through its official customer-service channel as soon as possible.",
+
+    "Do not save your ATM PIN, card PIN or banking passwords in easily accessible notes on your phone.",
+
+    "Before making a digital payment, check the recipient details and transaction amount carefully.",
+
+    "A debit card generally allows spending or withdrawing money from funds available in the linked bank account.",
+
+    "A credit card allows eligible users to borrow against a credit limit and repay according to the card's terms.",
+
+    "Keep your bank contact information and account details private and use only official banking websites and applications."
+
+];
+
+
+const factElement =
+    document.getElementById("bankingFact");
+
+
+const nextFactButton =
+    document.getElementById("nextFact");
+
+
+let currentFact = -1;
+
+
+function showRandomFact() {
+
+    let randomIndex;
+
+
+    do {
+
+        randomIndex =
+            Math.floor(
+                Math.random() *
+                bankingFacts.length
+            );
+
+    }
+
+    while (
+        bankingFacts.length > 1 &&
+        randomIndex === currentFact
+    );
+
+
+    currentFact =
+        randomIndex;
+
+
+    factElement.textContent =
+        bankingFacts[currentFact];
+
+}
+
+
+nextFactButton.addEventListener(
+    "click",
+    showRandomFact
+);
+
+
+showRandomFact();
+
+
+
+/* =========================================================
+   LOGGED-IN USER
+========================================================= */
+
+const loggedInEmail =
+    localStorage.getItem(
+        "loggedInEmail"
+    );
+
+
+
+/* =========================================================
+   TOPIC CONFIGURATION
+========================================================= */
+
+const topics = [
+
+    {
+        key: "bankAccounts",
+        name: "Bank Accounts",
+        page: "Bank Accounts.html"
+    },
+
+    {
+        key: "atm",
+        name: "ATM",
+        page: "ATM.html"
+    },
+
+    {
+        key: "onlineBanking",
+        name: "Online Banking",
+        page: "Online Banking.html"
+
+    },
+
+    {
+        key: "loans",
+        name: "Loans",
+        page: "Loans.html"
+    },
+
+    {
+        key: "bankingSecurity",
+        name: "Banking Security",
+        page: "Banking Security.html"
+    }
+
+];
+
+
+
+/* =========================================================
+   STORAGE KEY
+========================================================= */
+
+function getTopicStorageKey(
+    topicKey,
+    type
+) {
+
+    if (!loggedInEmail) {
+
+        return null;
+
+    }
+
+
+    return (
+        "learn2live_" +
+        topicKey +
+        "_" +
+        type +
+        "_" +
+        loggedInEmail
+    );
+
+}
+
+
+
+/* =========================================================
+   CHECK COMPLETED
+========================================================= */
+
+function isTopicCompleted(
+    topicKey
+) {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    const completedKey =
+        getTopicStorageKey(
+            topicKey,
+            "completed"
+        );
+
+
+    return (
+        localStorage.getItem(
+            completedKey
+        ) === "true"
+    );
+
+}
+
+
+
+/* =========================================================
+   CHECK PROGRESS
+========================================================= */
+
+function hasTopicProgress(
+    topicKey
+) {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    const progressKey =
+        getTopicStorageKey(
+            topicKey,
+            "progress"
+        );
+
+
+    const savedProgress =
+        localStorage.getItem(
+            progressKey
+        );
+
+
+    if (!savedProgress) {
+
+        return false;
+
+    }
+
+
+    try {
+
+        const progress =
+            JSON.parse(
+                savedProgress
+            );
+
+
+        return (
+            progress &&
+            typeof progress === "object"
+        );
+
+    }
+
+    catch (error) {
+
+        return false;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   UPDATE TOPIC CARD
+========================================================= */
+
+function updateTopicCard(
+    topic
+) {
+
+    const key =
+        topic.key;
+
+
+    const status =
+        document.getElementById(
+            key + "Status"
+        );
+
+
+    const continueButton =
+        document.getElementById(
+            key + "Continue"
+        );
+
+
+    const continueText =
+        document.getElementById(
+            key + "ContinueText"
+        );
+
+
+    const reviewButton =
+        document.getElementById(
+            key + "Review"
+        );
+
+
+    if (
+        !status ||
+        !continueButton ||
+        !continueText ||
+        !reviewButton
+    ) {
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    status.style.display =
+        "none";
+
+    reviewButton.style.display =
+        "none";
+
+    continueButton.style.display =
+        "inline-flex";
+
+
+
+    /* =====================================================
+       NO LOGIN
+    ====================================================== */
+
+    if (!loggedInEmail) {
+
+        continueText.textContent =
+            "Start " + topic.name;
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       COMPLETED
+    ====================================================== */
+
+    if (
+        isTopicCompleted(
+            key
+        )
+    ) {
+
+        status.style.display =
+            "inline-flex";
+
+        continueButton.style.display =
+            "none";
+
+        reviewButton.style.display =
+            "inline-flex";
+
+        return;
+
+    }
+
+
+
+    /* =====================================================
+       RESUME
+    ====================================================== */
+
+    if (
+        hasTopicProgress(
+            key
+        )
+    ) {
+
+        continueText.textContent =
+            "Resume " + topic.name;
+
+    }
+
+    else {
+
+        continueText.textContent =
+            "Start " + topic.name;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CHECK ALL TOPICS
+========================================================= */
+
+function areAllTopicsCompleted() {
+
+    if (!loggedInEmail) {
+
+        return false;
+
+    }
+
+
+    return topics.every(
+        function(topic) {
+
+            return isTopicCompleted(
+                topic.key
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   CERTIFICATE SECTION
+========================================================= */
+
+function updateCertificateSection() {
+
+    const section =
+        document.getElementById(
+            "certificateSection"
+        );
+
+
+    if (!section) {
+
+        return;
+
+    }
+
+
+    if (
+        areAllTopicsCompleted()
+    ) {
+
+        section.style.display =
+            "block";
+
+    }
+
+    else {
+
+        section.style.display =
+            "none";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   UPDATE EVERYTHING
+========================================================= */
+
+function updateAllTopics() {
+
+    topics.forEach(
+        function(topic) {
+
+            updateTopicCard(
+                topic
+            );
+
+        }
+    );
+
+
+    updateCertificateSection();
+
+}
+
+
+updateAllTopics();
+
+
+
+/* =========================================================
+   CARD CLICK
+========================================================= */
+
+document.querySelectorAll(
+    ".topic-card"
+).forEach(
+    function(card) {
+
+        card.addEventListener(
+            "click",
+            function(event) {
+
+                /*
+                 * Do not interfere with
+                 * Start / Resume / Review.
+                 */
+
+                if (
+                    event.target.closest(
+                        "a, button"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                const page =
+                    card.dataset.href;
+
+
+                if (page) {
+
+                    window.location.href =
+                        page;
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   CERTIFICATE BUTTON
+========================================================= */
+
+const downloadCertificate =
+    document.getElementById(
+        "downloadCertificate"
+    );
+
+
+if (downloadCertificate) {
+
+    downloadCertificate.addEventListener(
+        "click",
+        function() {
+
+            /*
+             * Safety check:
+             * all 5 must be completed.
+             */
+
+            if (
+                !areAllTopicsCompleted()
+            ) {
+
+                alert(
+                    "Please complete all Banking topics first."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * OPEN CERTIFICATE PAGE
+             */
+
+            window.location.href =
+                "certificate.html";
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   REFRESH WHEN RETURNING
+========================================================= */
+
+window.addEventListener(
+    "pageshow",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+window.addEventListener(
+    "focus",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+window.addEventListener(
+    "storage",
+    function() {
+
+        updateAllTopics();
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>

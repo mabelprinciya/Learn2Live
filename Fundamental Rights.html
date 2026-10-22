@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="auth.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fundamental Rights Course | Life Skills Hub</title>
+
+    <link rel="stylesheet" href="Fundamental Rights.css">
+
+</head>
+
+<body>
+
+    <h1>⚖️ Fundamental Rights</h1>
+
+
+    <!-- INTRODUCTION -->
+
+    <section>
+
+        <h2>📖 Introduction</h2>
+
+        <p>
+            Fundamental Rights are the basic rights guaranteed to people
+            by the Constitution of India. They help protect freedom,
+            equality, dignity, and justice. Understanding these rights
+            helps us know our rights and responsibilities as citizens.
+        </p>
+
+    </section>
+
+
+    <!-- FUNDAMENTAL RIGHTS -->
+
+    <section>
+
+        <h2>📚 Types of Fundamental Rights</h2>
+
+        <ol>
+
+            <li>
+                <strong>Right to Equality</strong> – Ensures equality
+                before the law and prohibits discrimination.
+            </li>
+
+            <li>
+                <strong>Right to Freedom</strong> – Provides important
+                freedoms such as freedom of speech and expression,
+                subject to reasonable restrictions.
+            </li>
+
+            <li>
+                <strong>Right Against Exploitation</strong> – Protects
+                people from human trafficking, forced labour, and
+                certain forms of child labour.
+            </li>
+
+            <li>
+                <strong>Right to Freedom of Religion</strong> – Gives
+                people freedom to practise, profess, and propagate
+                religion, subject to constitutional limitations.
+            </li>
+
+            <li>
+                <strong>Cultural and Educational Rights</strong> –
+                Protects the cultural and educational interests of
+                certain groups and minorities.
+            </li>
+
+            <li>
+                <strong>Right to Constitutional Remedies</strong> –
+                Allows people to approach the courts for enforcement
+                of Fundamental Rights.
+            </li>
+
+        </ol>
+
+    </section>
+
+
+    <!-- AWARENESS -->
+
+    <section>
+
+        <h2>🛡️ Why Fundamental Rights Are Important</h2>
+
+        <ul>
+
+            <li>
+                They protect individual freedom and dignity.
+            </li>
+
+            <li>
+                They promote equality and fairness.
+            </li>
+
+            <li>
+                They protect people from certain forms of exploitation.
+            </li>
+
+            <li>
+                They support freedom of religion and expression.
+            </li>
+
+            <li>
+                They provide legal protection when Fundamental Rights
+                are violated.
+            </li>
+
+        </ul>
+
+    </section>
+
+     <!-- YOUTUBE VIDEO -->
+
+    <section>
+    <h2>🎥 Fundamental Rights Video</h2>
+
+    <div class="video-wrapper">
+
+        <iframe
+            src="https://www.youtube.com/embed/d1ASjqiaQxw"
+            title="Fundamental Rights Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+</section>
+
+
+    <!-- REMEMBER -->
+
+    <section>
+
+        <h2>💡 Remember</h2>
+
+        <p>
+            Fundamental Rights are important protections provided by
+            the Constitution of India. We should understand our rights,
+            respect the rights of others, and follow the law.
+        </p>
+
+    </section>
+
+
+    <!-- QUIZ -->
+
+    <section id="quizSection" class="quiz-section">
+
+        <div class="quiz-icon">🧠</div>
+
+        <h2>Test Your Knowledge</h2>
+
+        <p>
+            You have completed the Fundamental Rights learning materials.
+            Take the 5-question quiz to complete this topic.
+        </p>
+
+        <a
+            href="Fundamental_Rights_quiz.html"
+            class="start-quiz-btn">
+
+            Start Fundamental Rights Quiz →
+
+        </a>
+
+    </section>
+
+
+    <!-- COMPLETION -->
+
+    <section
+        id="completionSection"
+        class="completion-section"
+        style="display:none;">
+
+        <div class="completion-icon">
+            🎉
+        </div>
+
+        <h2>
+            Fundamental Rights Course Completed!
+        </h2>
+
+        <p>
+            Congratulations! You have successfully completed
+            the Fundamental Rights topic.
+        </p>
+
+        <div class="completed-badge">
+            ✓ Fundamental Rights Completed
+        </div>
+
+    </section>
+
+
+    <script>
+
+        const loggedInEmail =
+            localStorage.getItem("loggedInEmail");
+
+
+        const completionSection =
+            document.getElementById("completionSection");
+
+
+        const quizSection =
+            document.getElementById("quizSection");
+
+
+        const urlParams =
+            new URLSearchParams(window.location.search);
+
+
+        const reviewMode =
+            urlParams.get("mode") === "review";
+
+
+        if (loggedInEmail) {
+
+            const completionKey =
+                "fundamentalRightsCompleted_" + loggedInEmail;
+
+
+            const completed =
+                localStorage.getItem(completionKey) === "true";
+
+
+            if (completed) {
+
+                completionSection.style.display = "block";
+
+            }
+
+
+            if (reviewMode && completed) {
+
+                quizSection.style.display = "none";
+
+                document.title =
+                    "Fundamental Rights Review | Life Skills Hub";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

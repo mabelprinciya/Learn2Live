@@ -1,0 +1,1654 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help Center | Learn2Live</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #f5f7fa;
+    --white: #ffffff;
+    --navy: #0b1736;
+    --navy2: #17264a;
+    --blue: #2454ff;
+    --blue-dark: #1942db;
+    --muted: #6d778b;
+    --border: #e1e6ef;
+    --pale: #f8faff;
+    --blue-soft: #edf3ff;
+    --shadow: 0 16px 45px rgba(19, 39, 83, .07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--navy);
+}
+
+button, input, textarea {
+    font: inherit;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.navbar {
+    min-height: 78px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: rgba(255,255,255,.94);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(15px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -.7px;
+}
+
+.brand-icon {
+    height: 42px;
+    width: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: var(--blue);
+    color: white;
+    font-size: 23px;
+    box-shadow: 0 7px 17px #2454ff38;
+}
+
+.brand span span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--blue);
+}
+
+.nav-login {
+    padding: 11px 23px;
+    border-radius: 12px;
+    color: white !important;
+    background: var(--navy);
+    font-weight: 600;
+}
+
+.nav-login:hover {
+    background: var(--blue);
+}
+
+.hero {
+    padding: 66px 7% 74px;
+    background:
+        radial-gradient(ellipse at 8% 0%, #dfe8ff 0, transparent 40%),
+        radial-gradient(ellipse at 96% 10%, #e8efff 0, transparent 32%),
+        var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.35fr .65fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 13px;
+    border-radius: 30px;
+    color: var(--blue);
+    background: var(--blue-soft);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.eyebrow i {
+    font-size: 16px;
+}
+
+.hero h1 {
+    max-width: 680px;
+    font-size: clamp(35px, 4.6vw, 58px);
+    line-height: 1.15;
+    letter-spacing: -2.2px;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero-description {
+    max-width: 570px;
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.search-box {
+    margin-top: 29px;
+    max-width: 590px;
+    height: 61px;
+    padding: 7px 8px 7px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 9px 30px #18346a0c;
+}
+
+.search-box > i {
+    font-size: 21px;
+    color: var(--muted);
+}
+
+.search-box input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: none;
+    color: var(--navy);
+    background: transparent;
+    font-size: 12px;
+}
+
+.search-box button {
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 11px;
+    padding: 12px 17px;
+    color: white;
+    background: var(--blue);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.search-box button:hover {
+    background: var(--blue-dark);
+}
+
+.hero-visual {
+    min-height: 290px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 17px;
+    border: 1px solid #dfe7ff;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #f7f9ff, #edf3ff);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-visual::before {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 35px solid #dce6ff;
+    right: -75px;
+    top: -80px;
+}
+
+.visual-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    position: relative;
+}
+
+.visual-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    color: white;
+    background: var(--blue);
+    font-size: 24px;
+}
+
+.visual-heading h3 {
+    font-size: 16px;
+}
+
+.visual-heading p {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.visual-ticket {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    border: 1px solid #e5eaf6;
+    border-radius: 15px;
+    padding: 14px;
+    position: relative;
+}
+
+.ticket-symbol {
+    width: 37px;
+    height: 37px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--blue-soft);
+    color: var(--blue);
+    font-size: 19px;
+}
+
+.ticket-copy {
+    flex: 1;
+}
+
+.ticket-copy strong {
+    display: block;
+    font-size: 11px;
+}
+
+.ticket-copy small {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.ticket-check {
+    color: #16a36a;
+    font-size: 19px;
+}
+
+.visual-note {
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.7;
+    position: relative;
+}
+
+main {
+    max-width: 1200px;
+    padding: 55px 0 75px;
+    margin: auto;
+    width: 86%;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.section-top h2 {
+    font-size: 27px;
+    letter-spacing: -.8px;
+}
+
+.section-top p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 7px;
+    line-height: 1.8;
+}
+
+.result-count {
+    color: var(--muted);
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr .95fr;
+    align-items: start;
+    gap: 25px;
+}
+
+.issue-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.issue-card {
+    min-height: 147px;
+    padding: 19px;
+    text-align: left;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--white);
+    transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+
+.issue-card:hover {
+    transform: translateY(-3px);
+    border-color: #b9caff;
+    box-shadow: var(--shadow);
+}
+
+.issue-card.selected {
+    border: 1.5px solid var(--blue);
+    background: #f5f8ff;
+    box-shadow: 0 7px 23px #2454ff12;
+}
+
+.issue-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    color: var(--blue);
+    background: var(--blue-soft);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.issue-card strong {
+    display: block;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.issue-card p {
+    margin-top: 6px;
+    font-size: 10px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.issue-card[hidden] {
+    display: none;
+}
+
+.no-results {
+    display: none;
+    grid-column: 1 / -1;
+    padding: 28px;
+    text-align: center;
+    background: white;
+    border: 1px dashed var(--border);
+    border-radius: 17px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.no-results.show {
+    display: block;
+}
+
+.detail-panel {
+    position: sticky;
+    top: 100px;
+    padding: 27px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.panel-top {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.panel-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.panel-label i {
+    font-size: 16px;
+}
+
+.panel-top h2 {
+    margin-top: 12px;
+    font-size: 22px;
+    line-height: 1.35;
+    letter-spacing: -.5px;
+}
+
+.panel-description {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.panel-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 23px 0;
+}
+
+.quick-title {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.steps {
+    list-style: none;
+    display: grid;
+    gap: 13px;
+}
+
+.steps li {
+    display: flex;
+    align-items: start;
+    gap: 11px;
+    color: #4f5c73;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: var(--blue-soft);
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.query-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 19px 0 8px;
+}
+
+.query-select,
+.query-message,
+.query-name,
+.query-email {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: #fbfcff;
+    color: var(--navy);
+    outline: none;
+    font-size: 11px;
+}
+
+.query-select:focus,
+.query-message:focus,
+.query-name:focus,
+.query-email:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px #2454ff12;
+}
+
+.query-message {
+    resize: vertical;
+    min-height: 92px;
+    line-height: 1.7;
+}
+
+.query-name, .query-email {
+    margin-bottom: 9px;
+}
+
+.send-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 14px;
+    margin-top: 13px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background: var(--blue);
+    font-size: 12px;
+    font-weight: 600;
+    transition: background .2s, transform .2s;
+}
+
+.send-button:hover {
+    background: var(--blue-dark);
+    transform: translateY(-1px);
+}
+
+.email-note {
+    text-align: center;
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 11px;
+    line-height: 1.8;
+}
+
+.email-note strong {
+    color: var(--navy2);
+    overflow-wrap: anywhere;
+}
+
+.empty-state {
+    display: none;
+    text-align: center;
+    padding: 25px 10px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.empty-state i {
+    display: block;
+    font-size: 30px;
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.bottom-help {
+    margin-top: 30px;
+    padding: 26px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #dfe7ff;
+    border-radius: 20px;
+    background: linear-gradient(110deg, #f0f4ff, #ffffff);
+}
+
+.bottom-help-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bottom-help-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    color: white;
+    background: var(--navy);
+    font-size: 22px;
+}
+
+.bottom-help h3 {
+    font-size: 14px;
+}
+
+.bottom-help p {
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.bottom-help a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 17px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.bottom-help a:hover {
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+footer {
+    padding: 25px 7%;
+    border-top: 1px solid var(--border);
+    background: white;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-brand {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.footer-brand span {
+    color: var(--blue);
+}
+
+.footer-copy {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 18px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.footer-links a:hover {
+    color: var(--blue);
+}
+
+@media (max-width: 950px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-visual {
+        min-height: auto;
+    }
+
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-panel {
+        position: static;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        padding: 15px 5%;
+        min-height: 70px;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .brand {
+        font-size: 19px;
+    }
+
+    .brand-icon {
+        width: 37px;
+        height: 37px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 11px;
+    }
+
+    .nav-login {
+        padding: 9px 12px;
+    }
+
+    .hero {
+        padding: 45px 5% 48px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .search-box {
+        height: 56px;
+        gap: 8px;
+        padding-left: 12px;
+    }
+
+    .search-box input {
+        font-size: 10px;
+    }
+
+    .search-box button {
+        padding: 11px 12px;
+        font-size: 10px;
+    }
+
+    main {
+        width: 90%;
+        padding: 40px 0 50px;
+    }
+
+    .section-top {
+        align-items: start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .section-top h2 {
+        font-size: 23px;
+    }
+
+    .issue-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .issue-card {
+        padding: 14px;
+        min-height: 145px;
+    }
+
+    .issue-card strong {
+        font-size: 11px;
+    }
+
+    .issue-card p {
+        font-size: 9px;
+    }
+
+    .detail-panel {
+        padding: 20px;
+    }
+
+    .panel-top h2 {
+        font-size: 20px;
+    }
+
+    .bottom-help {
+        align-items: stretch;
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .bottom-help a {
+        width: 100%;
+    }
+
+    .footer-inner {
+        align-items: start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 360px) {
+    .issue-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 33px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <a class="brand" href="index.html" aria-label="Learn2Live home">
+        <span class="brand-icon"><i class="ri-compass-3-line"></i></span>
+        <span>Learn<span>2</span>Live</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Help Center</a>
+        <a href="login.html" class="nav-login" id="loginLink">Login <i class="ri-arrow-right-up-line"></i></a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-inner">
+        <div>
+            <div class="eyebrow"><i class="ri-customer-service-2-line"></i> LEARN2LIVE HELP CENTER</div>
+            <h1>Every problem has a solution. <span>Let's find yours.</span></h1>
+            <p class="hero-description">
+                Having trouble? You're in the right place. Explore common issues,
+                find quick solutions, or tell us what's happening. We'll help you
+                get back on track.
+            </p>
+
+            <form class="search-box" id="searchForm">
+                <i class="ri-search-2-line"></i>
+                <input type="search" id="issueSearch"
+                       placeholder="Search login, quiz, certificate, account..."
+                       aria-label="Search help topics">
+                <button type="submit">Find Help</button>
+            </form>
+        </div>
+
+        <div class="hero-visual">
+            <div class="visual-heading">
+                <div class="visual-icon"><i class="ri-customer-service-2-fill"></i></div>
+                <div>
+                    <h3>Your support space</h3>
+                    <p>One place for all your questions</p>
+                </div>
+            </div>
+
+            <div class="visual-ticket">
+                <div class="ticket-symbol"><i class="ri-search-eye-line"></i></div>
+                <div class="ticket-copy">
+                    <strong>Find the issue</strong>
+                    <small>Choose a topic that matches your problem</small>
+                </div>
+                <i class="ri-check-line ticket-check"></i>
+            </div>
+
+            <div class="visual-ticket">
+                <div class="ticket-symbol"><i class="ri-lightbulb-flash-line"></i></div>
+                <div class="ticket-copy">
+                    <strong>Try a quick solution</strong>
+                    <small>Simple steps to help you move forward</small>
+                </div>
+                <i class="ri-check-line ticket-check"></i>
+            </div>
+
+            <p class="visual-note">
+                Still stuck? Describe your issue and prepare an email to our support team.
+            </p>
+        </div>
+    </div>
+</section>
+
+<main>
+    <div class="section-top">
+        <div>
+            <h2>What can we help you with?</h2>
+            <p>Select a category to explore common questions and possible solutions.</p>
+        </div>
+        <span class="result-count" id="resultCount">18 help topics</span>
+    </div>
+
+    <div class="workspace">
+        <div>
+            <div class="issue-list" id="issueList">
+
+                <button class="issue-card selected" data-category="account" data-search="account login signin signup password forgot reset register email verification">
+                    <span class="issue-icon"><i class="ri-user-settings-line"></i></span>
+                    <strong>Account & Login</strong>
+                    <p>Sign-in, passwords, registration and access.</p>
+                </button>
+
+                <button class="issue-card" data-category="profile" data-search="profile personal information name edit update details account">
+                    <span class="issue-icon"><i class="ri-user-line"></i></span>
+                    <strong>Profile & Personal Details</strong>
+                    <p>Profile information, editing and saved details.</p>
+                </button>
+
+                <button class="issue-card" data-category="quiz" data-search="quiz question answer wrong option score submit attempt loading">
+                    <span class="issue-icon"><i class="ri-question-answer-line"></i></span>
+                    <strong>Quizzes & Answers</strong>
+                    <p>Questions, answers, scores and quiz attempts.</p>
+                </button>
+
+                <button class="issue-card" data-category="progress" data-search="progress completed category learning status lesson not saved">
+                    <span class="issue-icon"><i class="ri-bar-chart-box-line"></i></span>
+                    <strong>Learning Progress</strong>
+                    <p>Completed topics, progress and saved activity.</p>
+                </button>
+
+                <button class="issue-card" data-category="certificate" data-search="certificate download generate completion missing completed quiz">
+                    <span class="issue-icon"><i class="ri-award-line"></i></span>
+                    <strong>Certificates</strong>
+                    <p>Completion status, certificate and downloads.</p>
+                </button>
+
+                <button class="issue-card" data-category="category" data-search="category first aid banking tax digital safety legal rights interview skills topic missing">
+                    <span class="issue-icon"><i class="ri-layout-grid-line"></i></span>
+                    <strong>Categories & Lessons</strong>
+                    <p>Missing lessons, topics and category content.</p>
+                </button>
+
+                <button class="issue-card" data-category="save" data-search="save data changes lost history recently viewed local storage refresh">
+                    <span class="issue-icon"><i class="ri-save-3-line"></i></span>
+                    <strong>Saved Data & History</strong>
+                    <p>Missing changes, history and saved information.</p>
+                </button>
+
+                <button class="issue-card" data-category="technical" data-search="website technical error blank page loading slow stuck crash not working">
+                    <span class="issue-icon"><i class="ri-tools-line"></i></span>
+                    <strong>Website & Technical Issues</strong>
+                    <p>Loading errors, blank screens and glitches.</p>
+                </button>
+
+                <button class="issue-card" data-category="mobile" data-search="mobile phone tablet responsive screen layout browser device">
+                    <span class="issue-icon"><i class="ri-smartphone-line"></i></span>
+                    <strong>Mobile & Display</strong>
+                    <p>Screen layout, buttons and mobile experience.</p>
+                </button>
+
+                <button class="issue-card" data-category="email" data-search="email notification verification message not received inbox spam">
+                    <span class="issue-icon"><i class="ri-mail-line"></i></span>
+                    <strong>Email & Notifications</strong>
+                    <p>Missing messages and notification questions.</p>
+                </button>
+
+                <button class="issue-card" data-category="security" data-search="privacy security personal data password account safety">
+                    <span class="issue-icon"><i class="ri-shield-check-line"></i></span>
+                    <strong>Privacy & Security</strong>
+                    <p>Account safety and personal information.</p>
+                </button>
+
+                <button class="issue-card" data-category="close" data-search="close delete deactivate remove account permanent">
+                    <span class="issue-icon"><i class="ri-user-unfollow-line"></i></span>
+                    <strong>Account Closure</strong>
+                    <p>Questions about deactivating your account.</p>
+                </button>
+
+                <button class="issue-card" data-category="feedback" data-search="feedback suggestion idea feature request improvement">
+                    <span class="issue-icon"><i class="ri-chat-smile-3-line"></i></span>
+                    <strong>Feedback & Suggestions</strong>
+                    <p>Share an idea to improve Learn2Live.</p>
+                </button>
+
+                <button class="issue-card" data-category="accessibility" data-search="accessibility readable text contrast keyboard access usability">
+                    <span class="issue-icon"><i class="ri-eye-line"></i></span>
+                    <strong>Accessibility & Usability</strong>
+                    <p>Readability, navigation and ease of use.</p>
+                </button>
+
+                <button class="issue-card" data-category="content" data-search="content incorrect outdated spelling explanation information">
+                    <span class="issue-icon"><i class="ri-file-text-line"></i></span>
+                    <strong>Content & Information</strong>
+                    <p>Incorrect details or unclear explanations.</p>
+                </button>
+
+                <button class="issue-card" data-category="performance" data-search="performance slow website browser cache internet connection">
+                    <span class="issue-icon"><i class="ri-speed-up-line"></i></span>
+                    <strong>Performance & Speed</strong>
+                    <p>Slow pages, delays and browser problems.</p>
+                </button>
+
+                <button class="issue-card" data-category="suggestion" data-search="new feature request new category more topics add functionality">
+                    <span class="issue-icon"><i class="ri-lightbulb-line"></i></span>
+                    <strong>Request a Feature</strong>
+                    <p>Suggest a new tool or learning feature.</p>
+                </button>
+
+                <button class="issue-card" data-category="other" data-search="other issue different problem question contact support something else">
+                    <span class="issue-icon"><i class="ri-question-mark"></i></span>
+                    <strong>Something Else</strong>
+                    <p>Any question that doesn't fit the categories.</p>
+                </button>
+
+                <div class="no-results" id="noResults">
+                    <i class="ri-search-line" style="font-size:26px"></i>
+                    <p>No matching topics found. Try another keyword or choose “Something Else”.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="detail-panel" id="detailPanel">
+            <div class="panel-top">
+                <div>
+                    <span class="panel-label"><i class="ri-sparkling-2-line"></i> QUICK HELP</span>
+                    <h2 id="detailTitle">Account & Login</h2>
+                </div>
+                <span class="issue-icon" style="margin:0; flex-shrink:0" id="detailIcon">
+                    <i class="ri-user-settings-line"></i>
+                </span>
+            </div>
+
+            <p class="panel-description" id="detailDescription">
+                Having trouble accessing your Learn2Live account? Start with these quick checks.
+            </p>
+
+            <div class="panel-divider"></div>
+
+            <h3 class="quick-title">Try these steps first</h3>
+            <ul class="steps" id="detailSteps">
+                <li><span class="step-number">01</span><span>Check that your email or username is entered correctly.</span></li>
+                <li><span class="step-number">02</span><span>Make sure there are no extra spaces in your details.</span></li>
+                <li><span class="step-number">03</span><span>Refresh the page and try signing in again.</span></li>
+            </ul>
+
+            <div class="panel-divider"></div>
+
+            <h3 class="quick-title">Still need help? Tell us about it.</h3>
+
+            <form id="supportForm">
+                <label class="query-label" for="queryType">What exactly is the issue?</label>
+                <select class="query-select" id="queryType" required>
+                    <option value="">Select a specific issue</option>
+                </select>
+
+                <label class="query-label" for="userName">Your name (optional)</label>
+                <input class="query-name" id="userName" type="text" maxlength="100" placeholder="Enter your name">
+
+                <label class="query-label" for="userEmail">Your email (optional)</label>
+                <input class="query-email" id="userEmail" type="email" maxlength="150" placeholder="Enter your email address">
+
+                <label class="query-label" for="queryMessage">Describe what happened</label>
+                <textarea class="query-message" id="queryMessage" maxlength="3000"
+                    placeholder="Tell us what you were doing, what went wrong, and any error message you saw..."
+                    required></textarea>
+
+                <button class="send-button" type="submit">
+                    <i class="ri-mail-send-line"></i> Prepare Support Email
+                </button>
+
+                <p class="email-note">
+                    Opens your email app with your message ready to send to
+                    <strong id="supportEmailDisplay">hello.learn2live@gmail.com</strong>
+                </p>
+            </form>
+        </section>
+    </div>
+
+    <section class="bottom-help">
+        <div class="bottom-help-content">
+            <div class="bottom-help-icon"><i class="ri-question-answer-line"></i></div>
+            <div>
+                <h3>Couldn't find your exact problem?</h3>
+                <p>Choose “Something Else” and describe your question. Every detail helps us understand it.</p>
+            </div>
+        </div>
+        <a href="#supportForm" id="contactNow"><i class="ri-arrow-down-line"></i> Contact Support</a>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <a href="index.html" class="footer-brand">Learn<span>2</span>Live</a>
+        <p class="footer-copy">© <span id="year"></span> Learn2Live. Learn something useful every day.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Help Center</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+/*
+  IMPORTANT:
+  Replace this with your real, working support email address.
+  This page does not create an email account automatically.
+*/
+const SUPPORT_EMAIL = "hello.learn2live@gmail.com";
+
+const helpData = {
+    account: {
+        title: "Account & Login",
+        icon: "ri-user-settings-line",
+        description: "Having trouble accessing Learn2Live? Check your login details and account status first.",
+        steps: [
+            "Check that your email or username is entered correctly.",
+            "Make sure your password is correct and there are no extra spaces.",
+            "Refresh the page and try again. If the issue continues, describe the exact error below."
+        ],
+        queries: [
+            "I cannot log in",
+            "My password is not working",
+            "I forgot my password",
+            "I cannot create an account",
+            "My account is not recognised",
+            "I get an error while signing in",
+            "I want to change my login details"
+        ]
+    },
+    profile: {
+        title: "Profile & Personal Details",
+        icon: "ri-user-line",
+        description: "Use this section for profile details that are missing, incorrect, or not updating as expected.",
+        steps: [
+            "Open your profile and review the information displayed.",
+            "Check whether your changes were saved before leaving the page.",
+            "If the details still look incorrect, explain which field needs attention."
+        ],
+        queries: [
+            "My profile details are missing",
+            "I cannot edit my profile",
+            "My changes are not saved",
+            "My name or details are incorrect",
+            "My profile is not loading"
+        ]
+    },
+    quiz: {
+        title: "Quizzes & Answers",
+        icon: "ri-question-answer-line",
+        description: "Report quiz questions, answer choices, submission problems, or scores that do not look right.",
+        steps: [
+            "Check that you selected an answer for each required question.",
+            "Submit the quiz only once and wait for the result to load.",
+            "Mention the quiz category and the question or result that caused the problem."
+        ],
+        queries: [
+            "The quiz will not start",
+            "A question is missing",
+            "An answer option is missing",
+            "My selected answer is not saved",
+            "I cannot submit the quiz",
+            "My score looks incorrect",
+            "The quiz freezes or loads forever",
+            "I want to report an incorrect answer"
+        ]
+    },
+    progress: {
+        title: "Learning Progress",
+        icon: "ri-bar-chart-box-line",
+        description: "Use these options if your learning activity or completion status does not appear correctly.",
+        steps: [
+            "Return to the category and check its completion status.",
+            "Refresh the progress page and confirm you are signed in to the right account.",
+            "Tell us which category or activity is missing from your progress."
+        ],
+        queries: [
+            "My progress is not updating",
+            "A completed category shows as incomplete",
+            "My activity is missing",
+            "My completion status is incorrect",
+            "My learning history is empty"
+        ]
+    },
+    certificate: {
+        title: "Certificates",
+        icon: "ri-award-line",
+        description: "If a certificate is unavailable or does not reflect your completed learning, check the completion status first.",
+        steps: [
+            "Check whether the required quiz or category is marked as completed.",
+            "Refresh the certificate page and try again.",
+            "If the certificate is still missing, tell us the category and what happens when you open it."
+        ],
+        queries: [
+            "My certificate is missing",
+            "I cannot download my certificate",
+            "The certificate will not open",
+            "My certificate details are incorrect",
+            "I completed the quiz but got no certificate",
+            "The certificate page is not loading"
+        ]
+    },
+    category: {
+        title: "Categories & Lessons",
+        icon: "ri-layout-grid-line",
+        description: "Let us know if a learning category, lesson, or topic is unavailable or not displaying correctly.",
+        steps: [
+            "Open the category again and check whether the content loads.",
+            "Refresh the page and check your internet connection.",
+            "Mention the category name and the specific lesson or topic involved."
+        ],
+        queries: [
+            "A category is missing",
+            "A lesson will not open",
+            "The topic content is blank",
+            "I cannot move to the next lesson",
+            "A category shows the wrong information"
+        ]
+    },
+    save: {
+        title: "Saved Data & History",
+        icon: "ri-save-3-line",
+        description: "Use this section for missing saved details, recently viewed items, or history that does not appear.",
+        steps: [
+            "Check that you are signed in to the account where the activity happened.",
+            "Refresh the page and revisit the relevant section.",
+            "Describe what should have been saved and when you noticed it was missing."
+        ],
+        queries: [
+            "My saved data disappeared",
+            "My recent activity is missing",
+            "My history is not showing",
+            "My changes disappear after refreshing",
+            "My saved items are incorrect"
+        ]
+    },
+    technical: {
+        title: "Website & Technical Issues",
+        icon: "ri-tools-line",
+        description: "Report pages that do not load, buttons that do nothing, error messages, or unexpected website behaviour.",
+        steps: [
+            "Refresh the page and wait for it to finish loading.",
+            "Check your internet connection and try the page again.",
+            "Tell us the page name, the action you tried, and any error message shown."
+        ],
+        queries: [
+            "The website will not open",
+            "I see a blank page",
+            "A button does not work",
+            "An error message appears",
+            "A page keeps reloading",
+            "The website stops responding",
+            "A feature is not working",
+            "Something looks broken"
+        ]
+    },
+    mobile: {
+        title: "Mobile & Display",
+        icon: "ri-smartphone-line",
+        description: "Tell us about display issues, buttons that are difficult to use, or layouts that do not fit your screen.",
+        steps: [
+            "Refresh the page and rotate your device if appropriate.",
+            "Try zooming back to the default browser view.",
+            "Mention your device type, browser, and which part of the page looks wrong."
+        ],
+        queries: [
+            "The layout does not fit my screen",
+            "Text is too small or cut off",
+            "Buttons overlap each other",
+            "The menu does not work on mobile",
+            "The page looks different on my device"
+        ]
+    },
+    email: {
+        title: "Email & Notifications",
+        icon: "ri-mail-line",
+        description: "Use this section for missing emails, account-related messages, or notification questions.",
+        steps: [
+            "Check your email address for typing errors.",
+            "Check spam or junk folders if you expected an email.",
+            "Tell us which message you expected and when you requested it."
+        ],
+        queries: [
+            "I did not receive an email",
+            "I cannot find a verification message",
+            "I am receiving an unexpected message",
+            "My email address is incorrect",
+            "I have a notification question"
+        ]
+    },
+    security: {
+        title: "Privacy & Security",
+        icon: "ri-shield-check-line",
+        description: "Tell us if you have concerns about account access, personal details, or how your information is handled.",
+        steps: [
+            "Do not include your password or other confidential information in this form.",
+            "If you suspect unauthorised access, secure your account where possible.",
+            "Describe the concern without sharing sensitive credentials."
+        ],
+        queries: [
+            "I am concerned about account security",
+            "I noticed unfamiliar account activity",
+            "I have a privacy question",
+            "I want to know how my data is used",
+            "I need help with account access"
+        ]
+    },
+    close: {
+        title: "Account Closure",
+        icon: "ri-user-unfollow-line",
+        description: "Ask questions about account closure or report a problem with the account closure process.",
+        steps: [
+            "Check your account settings for any available account options.",
+            "Make sure you understand which information or activity may be affected.",
+            "Describe what you want to do and any issue you encountered."
+        ],
+        queries: [
+            "I want to close my account",
+            "I cannot find the account closure option",
+            "My account closure request failed",
+            "I have a question about my account data"
+        ]
+    },
+    feedback: {
+        title: "Feedback & Suggestions",
+        icon: "ri-chat-smile-3-line",
+        description: "Your feedback helps us improve Learn2Live. Tell us what works well or what could be better.",
+        steps: [
+            "Describe the part of Learn2Live you are referring to.",
+            "Explain what you would like to improve and why.",
+            "Include an example if it helps make your suggestion clearer."
+        ],
+        queries: [
+            "I want to share feedback",
+            "I have a suggestion",
+            "I found a usability problem",
+            "I want to report an issue with content",
+            "I want to share a general comment"
+        ]
+    },
+    accessibility: {
+        title: "Accessibility & Usability",
+        icon: "ri-eye-line",
+        description: "Let us know if any part of the website is difficult to read, navigate, or interact with.",
+        steps: [
+            "Identify the page or feature that is difficult to use.",
+            "Describe what you expected to happen and what actually happened.",
+            "Share any change that would make the experience easier for you."
+        ],
+        queries: [
+            "Text is difficult to read",
+            "I have trouble navigating the website",
+            "Keyboard navigation is not working",
+            "A control is difficult to use",
+            "I have an accessibility suggestion"
+        ]
+    },
+    content: {
+        title: "Content & Information",
+        icon: "ri-file-text-line",
+        description: "Report information that appears incorrect, unclear, outdated, or incomplete.",
+        steps: [
+            "Identify the page, category, or lesson containing the content.",
+            "Describe the information that seems incorrect or unclear.",
+            "If possible, explain what needs to be reviewed."
+        ],
+        queries: [
+            "I found incorrect information",
+            "An explanation is unclear",
+            "Content appears outdated",
+            "I found a spelling mistake",
+            "Important information is missing"
+        ]
+    },
+    performance: {
+        title: "Performance & Speed",
+        icon: "ri-speed-up-line",
+        description: "Use this section for slow loading, delays, or pages that take longer than expected to respond.",
+        steps: [
+            "Check your connection and reload the page once.",
+            "Close unnecessary browser tabs if your device is running slowly.",
+            "Tell us which page is slow and whether the problem happens repeatedly."
+        ],
+        queries: [
+            "The website loads slowly",
+            "A page takes too long to open",
+            "The page freezes while loading",
+            "Actions take too long to complete",
+            "Performance is worse on my device"
+        ]
+    },
+    suggestion: {
+        title: "Request a Feature",
+        icon: "ri-lightbulb-line",
+        description: "Have an idea for a useful new tool, category, or feature? Tell us how it would help Learn2Live users.",
+        steps: [
+            "Describe the feature you would like to see.",
+            "Explain what problem it would solve.",
+            "Mention how you imagine it working, if you have an example."
+        ],
+        queries: [
+            "Request a new learning category",
+            "Suggest a new quiz feature",
+            "Request a progress feature",
+            "Suggest a new website tool",
+            "Request another improvement"
+        ]
+    },
+    other: {
+        title: "Something Else",
+        icon: "ri-question-mark",
+        description: "Can't find a matching category? No problem. Choose the closest option and describe your question below.",
+        steps: [
+            "Explain the problem in your own words.",
+            "Mention which page or feature you were using.",
+            "Include any relevant error message, without sharing passwords or confidential information."
+        ],
+        queries: [
+            "I have a general question",
+            "My issue is not listed",
+            "I need help with something else",
+            "I want to contact the support team"
+        ]
+    }
+};
+
+const issueCards = [...document.querySelectorAll(".issue-card")];
+const searchInput = document.getElementById("issueSearch");
+const resultCount = document.getElementById("resultCount");
+const noResults = document.getElementById("noResults");
+let currentCategory = "account";
+
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("supportEmailDisplay").textContent = SUPPORT_EMAIL;
+
+function renderCategory(category) {
+    const data = helpData[category];
+    if (!data) return;
+
+    currentCategory = category;
+
+    issueCards.forEach(card => {
+        card.classList.toggle("selected", card.dataset.category === category);
+        card.setAttribute("aria-pressed", String(card.dataset.category === category));
+    });
+
+    document.getElementById("detailTitle").textContent = data.title;
+    document.getElementById("detailIcon").innerHTML = `<i class="${data.icon}"></i>`;
+    document.getElementById("detailDescription").textContent = data.description;
+
+    const steps = document.getElementById("detailSteps");
+    steps.replaceChildren();
+
+    data.steps.forEach((step, index) => {
+        const li = document.createElement("li");
+        const number = document.createElement("span");
+        const text = document.createElement("span");
+
+        number.className = "step-number";
+        number.textContent = String(index + 1).padStart(2, "0");
+        text.textContent = step;
+
+        li.append(number, text);
+        steps.appendChild(li);
+    });
+
+    const queryType = document.getElementById("queryType");
+    queryType.replaceChildren();
+
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "Select a specific issue";
+    queryType.appendChild(placeholder);
+
+    data.queries.forEach(query => {
+        const option = document.createElement("option");
+        option.value = query;
+        option.textContent = query;
+        queryType.appendChild(option);
+    });
+
+    document.getElementById("queryMessage").placeholder =
+        `Describe your ${data.title.toLowerCase()} issue...`;
+}
+
+issueCards.forEach(card => {
+    card.addEventListener("click", () => {
+        renderCategory(card.dataset.category);
+
+        if (window.innerWidth <= 950) {
+            document.getElementById("detailPanel").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    });
+});
+
+function filterIssues(searchTerm) {
+    const term = searchTerm.trim().toLowerCase();
+    let visible = 0;
+
+    issueCards.forEach(card => {
+        const text = (
+            card.innerText + " " +
+            card.dataset.search + " " +
+            helpData[card.dataset.category].queries.join(" ")
+        ).toLowerCase();
+
+        const match = !term || text.includes(term);
+        card.hidden = !match;
+        if (match) visible++;
+    });
+
+    resultCount.textContent = `${visible} ${visible === 1 ? "topic" : "topics"} found`;
+    noResults.classList.toggle("show", visible === 0);
+}
+
+document.getElementById("searchForm").addEventListener("submit", event => {
+    event.preventDefault();
+    filterIssues(searchInput.value);
+
+    const term = searchInput.value.trim().toLowerCase();
+    if (!term) return;
+
+    const match = issueCards.find(card =>
+        !card.hidden &&
+        (
+            card.innerText + " " + card.dataset.search + " " +
+            helpData[card.dataset.category].queries.join(" ")
+        ).toLowerCase().includes(term)
+    );
+
+    if (match) {
+        renderCategory(match.dataset.category);
+        if (window.innerWidth <= 950) {
+            document.getElementById("detailPanel").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    }
+});
+
+searchInput.addEventListener("input", () => {
+    filterIssues(searchInput.value);
+});
+
+document.getElementById("contactNow").addEventListener("click", event => {
+    event.preventDefault();
+    document.getElementById("supportForm").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+    document.getElementById("queryMessage").focus({ preventScroll: true });
+});
+
+document.getElementById("supportForm").addEventListener("submit", event => {
+    event.preventDefault();
+
+    const selectedIssue = document.getElementById("queryType").value;
+    const message = document.getElementById("queryMessage").value.trim();
+    const name = document.getElementById("userName").value.trim();
+    const email = document.getElementById("userEmail").value.trim();
+
+    if (!selectedIssue) {
+        document.getElementById("queryType").focus();
+        alert("Please select the specific issue you are facing.");
+        return;
+    }
+
+    if (!message) {
+        document.getElementById("queryMessage").focus();
+        alert("Please describe your issue before continuing.");
+        return;
+    }
+
+    if (!SUPPORT_EMAIL || SUPPORT_EMAIL === "your-real-email@example.com") {
+        alert("Please configure the real Learn2Live support email in the page code first.");
+        return;
+    }
+
+    const subject = `[Learn2Live Support] ${helpData[currentCategory].title} - ${selectedIssue}`;
+
+    const body = [
+        "LEARN2LIVE SUPPORT REQUEST",
+        "--------------------------",
+        `Category: ${helpData[currentCategory].title}`,
+        `Issue: ${selectedIssue}`,
+        `Name: ${name || "Not provided"}`,
+        `Reply email: ${email || "Not provided"}`,
+        "",
+        "Issue description:",
+        message,
+        "",
+        "Browser/device details (optional):",
+        navigator.userAgent
+    ].join("\n");
+
+    const mailto = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+});
+
+/* Keep the existing Login link compatible with the site's localStorage keys. */
+const loginLink = document.getElementById("loginLink");
+if (localStorage.getItem("currentUser") || localStorage.getItem("currentUserId")) {
+    loginLink.href = "dashboard.html";
+    loginLink.innerHTML = 'Dashboard <i class="ri-arrow-right-up-line"></i>';
+}
+
+renderCategory("account");
+filterIssues("");
+</script>
+
+</body>
+</html>
