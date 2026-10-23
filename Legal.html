@@ -1254,8 +1254,18 @@ if (downloadCertificate) {
              * OPEN CERTIFICATE PAGE
              */
 
-            window.location.href =
-                "certificate.html";
+localStorage.setItem(
+    "selectedCertificate",
+    JSON.stringify({
+        skillKey: "<key>",
+        categoryKey: "<key>",
+        skillName: "<name>",
+        category: "<name>",
+        email: localStorage.getItem("loggedInEmail") || ""
+    })
+);
+
+window.location.href = "certificate.html";
 
         }
     );
