@@ -2973,11 +2973,39 @@ async function finishQuiz() {
 
 
     /* -----------------------------------------
-       GO TO DASHBOARD
+       GO BACK TO THE CATEGORY PAGE
     ----------------------------------------- */
 
     window.location.href =
-        "dashboard.html";
+        getCategoryPageUrl();
+
+}
+
+
+/* =========================================================
+   CATEGORY PAGE URL
+   Quiz finished -> go back to its own category page
+========================================================= */
+
+function getCategoryPageUrl() {
+
+    const pages = {
+        "first_aid": "firstaid.html",
+        "tax_basics": "tax.html",
+        "banking": "banking.html",
+        "digital_safety": "Digital Safety.html",
+        "legal_rights": "Legal.html",
+        "interview_skills": "interview.html"
+    };
+
+    const key =
+        String(getQuizCategory() || "")
+            .trim()
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "_")
+            .replace(/^_+|_+$/g, "");
+
+    return pages[key] || "dashboard.html";
 
 }
 
