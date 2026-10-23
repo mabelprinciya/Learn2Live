@@ -126,7 +126,9 @@
 
     function pageName() {
         var p = decodeURIComponent(location.pathname.split("/").pop() || "");
-        return p;
+        /* works with clean URLs too: /register -> register.html, /Login.HTML -> login.html */
+        if (p && p.indexOf(".") === -1) p += ".html";
+        return p.toLowerCase();
     }
 
     function norm(v) { return String(v || "").trim().toLowerCase(); }
